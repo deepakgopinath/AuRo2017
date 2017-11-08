@@ -1,0 +1,282 @@
+How can the experiment be redesigned?
+
+What metrics can be looked at?
+
+Rate of mode switches before and after the assistance across trials?, Should be significantly lower in the ideal case. If the mode selected was different. 
+Probability of the most probably goal after assistance across trials? Should expect a sharp increase
+
+Any goal? Or fixed goals?
+
+Blending always present. Very high threshold for helping. Should the threshold be adaptive? Sensitive to Time. progress to goal?
+No mode switch assistance. Manual mode switch. 
+Request assistance - Mandatory request. 
+Intermittent assistance. Timer based?
+
+What other metrics. Number of requests? 
+Subjective metrics?
+
+How to prime the user?
+
+User needs to know what the blending feels like. Should the user know how the robot gains confidence? (Whether it is directedness or distance base or agreement based?)
+Possible experiment idea:
+
+1. Simplify the setup possibly. 3 goals, same orientation. 
+								4 goals, different orientation.
+
+Any goal the user wants. However, blending has a much higher threshold. Therefore will only step if really really confident. 
+
+a. Trials with no requested assistance.
+b. Trials with request assistance. (mandatory?). At least one. How to correlate request with "progress towards goal (or the lack thereof)"
+   or
+   Trials with automated assistance. Assistance every 10-15 seconds? Automatically triggered. Or 
+possibly normalize the trajectory length. 
+
+hat do we expect?
+If the assistance makes any difference, then
+	a. the rate/number of mode switches AFTER the assistance will be less than without assistance. %Can possibly present windowed approach and show a drop in the number of mode switches...And correlate the "change" to the most informative modes? It is possible that the user identifies the most informative modes on their own in which case the change will be observed. 
+	b. the confidence associated with the most likely goal with sharply rise?. This will support our claim that "it will help the robot to make the intent inference confidently, quickly and accurately. "
+
+Tasks were lumped together for previous study. That might still work. What we need to show is the improvement over the course of a trial in which the assistance is requested. 
+
+Ensure that the trials are balanced that is they reach for all goals in a balanced fashion. Enforce only one goal. Don't change the destination. 
+Training period..
+References, no help than wrong help. HRI - Look into this. 
+
+
+GENRAL STUFF:
+
+1. Make sure IRB is fine. Questionnaire needs to be revised if needed and then submitted. 
+2. Look into payment info. Ask Mahdieh. ClinCard. Email Kathleen with study info and 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+TODO:
+
+1. Implement forward projection of probability distribution. Think of software structure. May need another package for it. Should this be interfacing with blend node at all?
+2. Need robot kinematics in Cartesian space. Understanding quaternion math. Need this for forward projection. Refer to Matlab code. Robotic Manipulation. The true robot model is different in different parts of the state space. Should I necessarily bother? Maybe take care of edges of the workspace. Simplistic approach would be treat it as a point mass. and assume infinite state space.  
+3. Generate p, pp, ppp etc by projecting for different time lengths. Maybe 1, 2, 3 seconds. 
+4. Make sure you understand how the probability distributions are organized. 
+
+
+DIM1
+[p n pp nn] - g1
+|p n pp nn] - g2
+|p n pp nn] - g3
+[p n pp nn] - g4
+DIM2
+[]
+|
+|
+|
+[]
+.
+.
+DIM6
+[]
+|
+|
+|
+[]
+Note: ppp and nnn is never used. So no need for it. Speeds up computation in a small way. 
+
+Each column from each dimension chunk is the projected p distribution. 
+
+5. Tune parameters of DFT to ensure proper intent inference. 
+
+DONE:
+
+1. Implemented DFT intent inference. 
+2. 
+
+
+
+
+
+
+
+TIMELINE:
+
+Nov 3rd and 4th:
+
+1. Start writing. 
+2. Finish forward projection using DFT module. Don't forget all the undecalred variables in the code (DONE)
+3. check if Low pass filtered instantaenous confidence works like DFT oinference. (DONE). Not exactly. DFT is better. 
+
+Nov 5th:
+
+1. Writing. (NOT DONE)
+
+
+Nov 6th:
+
+1. Finalize coding. (Tuning rise and decay params). 
+	Work on blend node. Pick goal with max confidence. Tune arbitration curve (DONE)
+2. Brain storm tasks. How to make it difficult? 
+3. Create structure on board for paper. 
+
+
+Nov 7th:
+1. Email Kathleen about study. Look into consent forms, Questionnaire etc (FIRST THING IN THE MORNING.) (DONE)
+2. Think hard about study design and finalize it. Think about training phase (DID)
+
+Should I have a rqt configure to tune the arbit functions. 
+2b. Once study design is kind of finalized, think about trial order, balancing trials, latin square generation etc. Use old scripts if necessary. The trial sheets are in the cabinet. (STudied old scripts and trial order gen). DONE
+4. Finish paper structure. Collect references (NOT YET). SOrt of
+5. Finalize code tuning. Also play with object setup for tasks. (SOME THOUGHTS)
+6. Implement head array code (9:30-11:30). Pull kinova driver button.py update from mahdieh and put it in mico_base ros-kinetic  DONE
+EaShould the DFT params be in dynamic areconfigure? MAybe. 
+
+
+Code related modifications: 
+Add distance to the excitatory part of the DS (DONE). Discard angles greater than 90deg? (Probably not. )
+ Play around with normalization of the inputs or not? What happens when it reaches the goal? it never gets inside the loop. And it keeps the probability at 1/n. Maybe make it 0?
+There is some funny quaternion stuff going on at the edges (top edge of worksapce etc)
+Modify translation dynamics to capture limitations at the edges of the workspace. Should I add nooise?
+
+Nov 8th:
+
+1. Print poster (LAST THING DURING THE DAY)
+2. Test code on Hardware. Code up new object positions and orientation once study is finalized. 
+3. Finalize writing structure. Start putting some dummy content (STARTED). Think about figures. Need to finalize all explanatory figure this weekend. 
+3b. Write out equations in paper. Notation. indices etc (TO DO) 
+4. Decide on what topics need to recorded. Add headers if needed. Use new msg types if needed. (Data collection pipeline)
+5. Play with blending params. Pfield speeds. Fix what happens to the probabilities when a goal is reached. 
+
+Ideas for figures:
+
+
+Use GIMP?????
+Figure illustrating disambiguation - Like Figure 1 in conference paper
+Figure illustrating layered architecture. Intent inference mechanism + Disambiguation on top. 
+Figure for intent inference? The features that contribute to the excitation of the system. 
+Figure illustrating the formula. Like in the poster. 
+
+
+
+
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+*********************************************************************************
+
+
+PAPER STRUCTURE:
+
+Overarching story:
+
+What is the paper about?
+Introduces a formalism for intent inference and an algorithm to maximize intent disambiguation in the context of assistive robotics. 
+why is this important?
+The success of an assistive system relies heavily on how accurate and confident is the robot in its prediction of human intent. The higher the confidence  the assistance provided will be more accurate and therefore more helpful and useful to the user. 
+
+The disambiguation layer is stacked on top of a given intent inference system and is only as good as the intent inference mechanism. Intent inference schemes which only focuses on instantaneous features discard information from the past human actions and can therefore lose information regarding the underlying human intent. Bayesian approaches work great, however requires a notion of what the human policy is given a task. Further, Bayesian inference under higher order Markovian assumptions can become computationally expensive and can create numerical underflows.  
+We devise an intent inference mechanism that specifies how the probability distribution over goals evolves in time deriving inspiration from the dynamic neural field literture. Cite Schoner work. Inference should be sensitive to the appropriate features. Directedness, Distance and Agreement. Directedness is the most informaive one. (Cite intention in motion tyope papers)
+
+Shared control:
+
+Look for work that cites that no help is better than incorrect help. 
+Ways to avoid incorrect help. Be super confident about the inference. 
+Look at Anca's work to look at arbitration functions that has high thresholds. 
+
+Blending formalism. 
+
+ABSTRACT:
+
+Primary contribution: Intent disambiguation scheme
+Secondary contribution: Intent inference mechanism inspired by dynamica field thoery. Why is this novel intent inference scheme necessary. Previous study indictaed that the robustness of the disambiguation scheme is closely tied to the inference power of the intent inference mechanism. Also identified that inference schemes that are not able to incorporate influences of past actions fail to pick contorl modes that are usueful and saisifies the use. 
+INTRODUCTION AND MOTIVATION:
+
+Assistive robots are becoming more complex and higher dimensional. However control interfaces used for control and limited and low dimensional. As a result the control space is partitioned into control modes. Shared autonomy can help in reducing the cognitive and physical burden.
+
+In order for Shared autonomy to help, the robot should have a method to perform intent inference. The more accurate intent inference, ensure more appropriate assistance which will have higher user acceptance and utility. Intent could either be indicated explicitly (by speech, pointing etc) or inferred. For inference, we typically rely on the information contained in human actions and environment. We focus on inferring intent from the control commands issued via the control interface. Therefore we develop an intent inference scheme. Inference in this context focuses on which goal is the user's intended goal. Maintain probability distribution. The evolution of probability distribution over time is influenced by current and past actions by the human. Biometric signals could give extra cues. but adds to the burden. cumbersome etc. we focus on user control commands. 
+
+However, Due to the sparsity of the signals issued by the user intent inference can be hard for the robot. Infent revealing actions need to be elicited. Elicit human actions that are legible for the robot such that the intent is revealed more clearly. Choose control modes that will reveal the human's intent to the robot more clearly. humans helping robots helping humans. Information seeking actions. 
+
+The proposed disambiguation scheme sits atop the intent inference layer in a shared control paradigm. The sucess of the disambiguation paraidgm is closely tied to the accruacy of the intent inference mechanism. Inference paradigms that are only sensitive to instantaenous features discard past history of control actions and trajectories. Dynamic Bayes networks can be used to perform intent inference. However, the inference becomes harder as the number of time steps increase. In our work, in order to ensure maximal suces of disambiguation siutaion we propose a dynamic field theory inspired mechanism for intent inference. We use principles inspired by dynamic neural fields to specify how the probability distribution over goals should evolve and influence each other. Parameters for rise and decay rate. etc....
+
+
+
+RELATED WORK:
+
+SHARED AUTONOMY - ? In general. 
+INTENT INFERENCE METHODOLOGIES - Instantaneous features, Bayesian, POMDP, DFT..
+MODE SWITCHING ASSISTANCE - Laura's work, Our work. 
+INTENT ELICITATION: INFORMATION ACQUISITON - Anca's, Dorsa, Todd's, Atanasov, 
+SYNERGY. HELP ME HELP YOU - CMU people. Shared intentionality, human-human. 
+Abstract:
+
+MATHEMATICAL FRAMEWORK:
+
+DISAMBIGUATION MECHANISM: Should this be revised? Clarify notation here? Should this be presented before the intent inference mechanism. Maybe make it general enough to convey that this works with any mechanism that specifies the generation of the probability distribution over goals. 
+Should recast spatial gradients in terms of time derivative. Is it equivalent to second derivtaive? not exactly...is it>
+
+
+INTENT INFERENCE MECHANISM:
+Experiment Design:
+DEscribe the tasks. DEscribe the training phase. DEscribe what each trial was like and the paradigms. 
+
+
+
+EXPERIMENTAL DESIGN: STUDY METHODS;
+
+training phase: Subjects gets used to the interfaces. Mostly teleoperation and make them realize how the robot will step in and provide blending assistance when it is super confident. Make sure the blending assistance is not confused with mode switched assistance. 
+
+testing phase: two tasks. Describe the self initiated paradigms
+
+Metrics: Ratio of number of mode switches before and after the trials. How to compare with and without? 
+Confidence rise. 
+Progress towrads goal. In terms of distance and closeness to target orientation. ??
+Total number of mode switches. Rate of mode switches. 
+Total time: 
+
+
+
+
+
+
+
+
+
+Introduction and Motivation: 
+More detailed than RSS. Clarify the structure of the system. Emphasize that this is built on "TOP" of a given intent inference scheme. Figure for the same. 
+Related work:
+Cite information gathering actions work from Dorsa etc. Info theoretic approaches to information acquisition. 
+
+Intent inference and shared control:
+DFT based intent inference scheme. Shared control paradigm. Arbitration that is very selective. For the most part stas out of the way. 
+Discuss the intent inference scheme in detail: 
+(Perform simulations right away. For instantaneous, and DFt based (incorporates history), maybe distance based as well)
+
+Disambiguation Metric Design:
+
+For DFt based, assume forward projection? Is this like MPC. Stochastic Linear model for robot? Or more sophistaicated nerual net based model? 
+
+Experiment design:
+
+null H1: After the optimal control mode has been selected, the rate of mode switches would not decrease. 
+null H2: After the optimal contol mode has been selected, the confidence associated with the most likely goal, is sharply going to increase. 
+
+Results:
+statistical analysis tools. what is the nature of data, what kind of significance testing do we need? Time series analysis? Correlation analysis of mode switches with some metric that captures the difficulty of the task?
+
+Discussion: (this should be extended)
+
+Conclusions:
+
+
+WHAT TO TAKE CARE OF WHEN WRITING THE PAPER:
+
+USE THE BOARD TO VISUALLY STRUCTURE THE PAPER
+SECTIONS, SUBSECTIONS, DIAGRAMS, MATH ETC. 
+
+1. Concise clear statements. 
+2. Consistency and Simplicity of notation.
+3. Check tense and spellings. 
+4. Take a fractal approach. Maybe take a look at Konrad's paper writing paper. 

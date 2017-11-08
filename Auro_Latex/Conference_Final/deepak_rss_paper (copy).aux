@@ -1,0 +1,97 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{tsui2008development,nuttin2002selection}
+\citation{choi2008laser}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of goal disambiguation along various control dimensions. Any motion of the end effector (purple) along the y-axis will not help the system to disambiguate the two goals (A and B). However, motion along the x-axis provides cues as to which goal.}}{1}{figure.1}}
+\newlabel{DE}{{1}{1}{Illustration of goal disambiguation along various control dimensions. Any motion of the end effector (purple) along the y-axis will not help the system to disambiguate the two goals (A and B). However, motion along the x-axis provides cues as to which goal}{figure.1}{}}
+\citation{volosyak2005rehabilitation}
+\citation{baker2017rational}
+\citation{baker2007goal,baker2009action}
+\citation{barrett2005accurate}
+\citation{donoghue2002connecting}
+\citation{monsell2003task}
+\citation{herlant2016assistive}
+\citation{herlant2016assistive}
+\citation{gopinath2017human}
+\citation{dragan2013legibility}
+\citation{holladay2014legible}
+\citation{atanasov2014information}
+\citation{miller2013trajectory,miller2016ergodic}
+\citation{goodfellow2010help}
+\citation{sorokin2010people}
+\citation{rosenthal2010effective}
+\@writefile{toc}{\contentsline {section}{\numberline {II}RELATED WORKS}{2}{section.2}}
+\newlabel{RW}{{II}{2}{RELATED WORKS}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Illustration of change in confidence with movement along a single control dimension. A very different distribution of confidences results from positive motion (beige) versus negative motion (blue). Snapshots after moving by amount $\Delta x$ highlighted by rectangles.}}{3}{figure.2}}
+\newlabel{DM_FIG}{{2}{3}{Illustration of change in confidence with movement along a single control dimension. A very different distribution of confidences results from positive motion (beige) versus negative motion (blue). Snapshots after moving by amount $\Delta x$ highlighted by rectangles}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}ALGORITHM DESIGN}{3}{section.3}}
+\newlabel{ALGO}{{III}{3}{ALGORITHM DESIGN}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Notation}{3}{subsection.3.1}}
+\newlabel{NOT}{{\unhbox \voidb@x \hbox {III-A}}{3}{Notation}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Disambiguation Metric}{3}{subsection.3.2}}
+\newlabel{DM}{{\unhbox \voidb@x \hbox {III-B}}{3}{Disambiguation Metric}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}1}Maximum of confidences}{3}{subsubsection.3.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}2}Difference between largest confidences}{3}{subsubsection.3.2.2}}
+\citation{dragan2012assistive,dragan2012formalizing,dragan2013policy}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}3}Separation in confidences}{4}{subsubsection.3.2.3}}
+\newlabel{COMP4}{{\unhbox \voidb@x \hbox {III-B}4}{4}{Gradients}{subsubsection.3.2.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}4}Gradients}{4}{subsubsection.3.2.4}}
+\newlabel{DK}{{1}{4}{Putting it all together}{equation.3.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}IMPLEMENTATION}{4}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Confidence Function}{4}{subsection.4.1}}
+\newlabel{CF}{{\unhbox \voidb@x \hbox {IV-A}}{4}{Confidence Function}{subsection.4.1}{}}
+\newlabel{C1}{{\unhbox \voidb@x \hbox {IV-A}}{4}{Confidence Function}{subsection.4.1}{}}
+\newlabel{C2}{{\unhbox \voidb@x \hbox {IV-A}}{4}{Confidence Function}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Control Sharing Paradigm}{4}{subsection.4.2}}
+\newlabel{BP}{{\unhbox \voidb@x \hbox {IV-B}}{4}{Control Sharing Paradigm}{subsection.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A prototypical arbitration function.}}{4}{figure.3}}
+\newlabel{ALPHA}{{3}{4}{A prototypical arbitration function}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Control dimensions best able to disambiguate intent. Using confidence functions \textbf  {C1} (top row) and \textbf  {C2} (bottom row). Left column: $\boldsymbol  {k}^*$ is X. Middle Column: $\boldsymbol  {k}^*$ is Y. Right Column: $\boldsymbol  {k}^*$ is Z. Magenta spheres indicate the goal locations (intent).}}{5}{figure.4}}
+\newlabel{HM_SEP}{{4}{5}{Control dimensions best able to disambiguate intent. Using confidence functions \textbf {C1} (top row) and \textbf {C2} (bottom row). Left column: $\boldsymbol {k}^*$ is X. Middle Column: $\boldsymbol {k}^*$ is Y. Right Column: $\boldsymbol {k}^*$ is Z. Magenta spheres indicate the goal locations (intent)}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}SIMULATION STUDY}{5}{section.5}}
+\newlabel{SIMRESULTS}{{V}{5}{SIMULATION STUDY}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Choice of Confidence Functions}{5}{subsection.5.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Best control dimension distribution for two different confidence functions.}}{5}{table.1}}
+\newlabel{HMD}{{I}{5}{Best control dimension distribution for two different confidence functions}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Disambiguation accuracy for off-axis motions}}{6}{table.2}}
+\newlabel{SIM}{{II}{6}{Disambiguation accuracy for off-axis motions}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Characterization of Simplifying Assumption}{6}{subsection.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Discussion}{6}{subsection.5.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}PILOT STUDY}{6}{section.6}}
+\newlabel{EXP}{{VI}{6}{PILOT STUDY}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Hardware}{6}{subsection.6.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end effector respectively.}}{6}{figure.6}}
+\newlabel{J2_HA}{{6}{6}{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end effector respectively}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Assistance Paradigms}{6}{subsection.6.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Pilot study tasks. \textit  {Left to right:} Training, Testing (Easy), Testing (Hard).}}{7}{figure.5}}
+\newlabel{TASKS}{{5}{7}{Pilot study tasks. \textit {Left to right:} Training, Testing (Easy), Testing (Hard)}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-C}}Tasks, Metrics and Protocol}{7}{subsection.6.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-D}}Pilot Study Results}{7}{subsection.6.4}}
+\newlabel{RES}{{\unhbox \voidb@x \hbox {VI-D}}{7}{Pilot Study Results}{subsection.6.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of Disambiguation and Manual paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). {\color  {blue}{{\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 54}}} indicates the median.}}{7}{figure.7}}
+\newlabel{DATAPLOT}{{7}{7}{Comparison of Disambiguation and Manual paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). {\color {blue}{\ding {54}}} indicates the median}{figure.7}{}}
+\bibstyle{plainnat}
+\bibdata{references}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Number of Disambiguation requests}}{8}{table.3}}
+\newlabel{ONDEMAND}{{III}{8}{Number of Disambiguation requests}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-E}}Future Work}{8}{subsection.6.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}CONCLUSIONS}{8}{section.7}}
+\newlabel{DC}{{VII}{8}{CONCLUSIONS}{section.7}{}}
