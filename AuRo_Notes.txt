@@ -135,21 +135,45 @@ Modify translation dynamics to capture limitations at the edges of the workspace
 
 Nov 8th:
 
-1. Print poster (LAST THING DURING THE DAY)
-2. Test code on Hardware. Code up new object positions and orientation once study is finalized. 
-3. Finalize writing structure. Start putting some dummy content (STARTED). Think about figures. Need to finalize all explanatory figure this weekend. 
-3b. Write out equations in paper. Notation. indices etc (TO DO) 
-4. Decide on what topics need to recorded. Add headers if needed. Use new msg types if needed. (Data collection pipeline)
-5. Play with blending params. Pfield speeds. Fix what happens to the probabilities when a goal is reached. 
+1. Print poster (LAST THING DURING THE DAY) (DONE)
+2. Test code on Hardware. Code up new object positions and orientation once study is finalized (TESTED A FEW DIFFERENT THINGS)
+3. Finalize writing structure. Start putting some dummy content (STARTED). 
+Think about figures. Need to finalize all explanatory figure this weekend. (SHared control architecture. )
+3b. Write out equations in paper. Notation. indices etc (TO DO) - PARTIALLY
+4. Decide on what topics need to recorded. Add headers if needed. Use new msg types if needed. (Data collection pipeline) (TODO)
+5. Play with blending params. Pfield speeds. Fix what happens to the probabilities when a goal is reached (KINDA)
 
+
+Nov 9th. 
+
+1. Try out goal configurations such that the "positions " of two goals are the same, however the orientations are different. Would it disambiguate properly. 
+
+Test out close by locations. The the probability won't rise beyond. TESTED THIS. DID FIXES IN MATLAB. UNNORMALIZED INPUT TO DS. POSSIBLY ELIMINATE GREATE THAN 90 DEGREE INPUT. 
+
+For close by locations the probabilities might not rise at all beyond min threshold. 
+
+1b. Test busy goal configurations. 
+ c. Test stacked goal configurations. 
+2. What happens to quaternion dynamics when it gets flipped. 
 Ideas for figures:
 
+
+Nov 10th:
+
+1. Look into related works properly. Start writing related works. Make progress of math formalism. start making figures for the intro etc. Think about how to present the motivation figure for disambiguation. 
+
+2. Make edits to ros code, based on matlab code. If distance > D and angle greater than 90deg: ignore the activation input. 
+What is the analogous condition in rotation space. 
+
+Nov 11th. 
+
+1. Start writing experiment section.
 
 Use GIMP?????
 Figure illustrating disambiguation - Like Figure 1 in conference paper
 Figure illustrating layered architecture. Intent inference mechanism + Disambiguation on top. 
-Figure for intent inference? The features that contribute to the excitation of the system. 
-Figure illustrating the formula. Like in the poster. 
+Figure for intent inference? The features that contribute to the excitation of the system. Nodes represtning individual probabilities.
+ Figure illustrating the formula. Like in the poster. 
 
 
 
@@ -193,7 +217,7 @@ Primary contribution: Intent disambiguation scheme
 Secondary contribution: Intent inference mechanism inspired by dynamica field thoery. Why is this novel intent inference scheme necessary. Previous study indictaed that the robustness of the disambiguation scheme is closely tied to the inference power of the intent inference mechanism. Also identified that inference schemes that are not able to incorporate influences of past actions fail to pick contorl modes that are usueful and saisifies the use. 
 INTRODUCTION AND MOTIVATION:
 
-Assistive robots are becoming more complex and higher dimensional. However control interfaces used for control and limited and low dimensional. As a result the control space is partitioned into control modes. Shared autonomy can help in reducing the cognitive and physical burden.
+Assistive robots are becoming more complex and higher dimensional. However control interfaces used for control and limited and low dimensional. As a result the control space is partitioned into control modes. Shared autonomy can help in reducing the cognitive and physical burden. Talk a little bit about what kinds of shared autonomous systems exist
 
 In order for Shared autonomy to help, the robot should have a method to perform intent inference. The more accurate intent inference, ensure more appropriate assistance which will have higher user acceptance and utility. Intent could either be indicated explicitly (by speech, pointing etc) or inferred. For inference, we typically rely on the information contained in human actions and environment. We focus on inferring intent from the control commands issued via the control interface. Therefore we develop an intent inference scheme. Inference in this context focuses on which goal is the user's intended goal. Maintain probability distribution. The evolution of probability distribution over time is influenced by current and past actions by the human. Biometric signals could give extra cues. but adds to the burden. cumbersome etc. we focus on user control commands. 
 
@@ -205,7 +229,9 @@ The proposed disambiguation scheme sits atop the intent inference layer in a sha
 
 RELATED WORK:
 
+References in introduction for control modes, etc. Fix reference. 
 SHARED AUTONOMY - ? In general. 
+
 INTENT INFERENCE METHODOLOGIES - Instantaneous features, Bayesian, POMDP, DFT..
 MODE SWITCHING ASSISTANCE - Laura's work, Our work. 
 INTENT ELICITATION: INFORMATION ACQUISITON - Anca's, Dorsa, Todd's, Atanasov, 
@@ -280,3 +306,49 @@ SECTIONS, SUBSECTIONS, DIAGRAMS, MATH ETC.
 2. Consistency and Simplicity of notation.
 3. Check tense and spellings. 
 4. Take a fractal approach. Maybe take a look at Konrad's paper writing paper. 
+
+
+
+
+
+***********************************************
+***********************************************
+***********************************************
+***********************************************
+***********************************************
+***********************************************
+
+STUDY DESIGN:
+
+Trial Order Scripts are kind of ready: Balanced across all subjects. 
+
+H1: Upon switching to the best disambiguating mode, the rate/number of mode switches will decrease
+H2: Upon switching to the best disambiguating mode, robot's confidence in the intended goal will rise sharply.
+H3: Upon switching to the best disambiguating mode, the progress (in terms of distance and angle) towards the goal will be faster. 
+
+INTERFACES: J2 and HA. 
+TASKS: ONE TRAINING TASK, TWO TASKS
+	Should it be single stage tasks or multistage tasks? Multistage tasks take longer. Each stage should be considered a trial. Furthermore, why should we incorporate gripper into the picture. Uncertainities in gripping can get in way of the precise questions we are trying to answer. Our formalism does not consider gripping. It is about getting to a goal location after which further manipulation can be performed. Finger is getting sticky and unpredictable. Don't have time to deal with that. 
+
+TESTING TASK 1:
+	1. ALL SAME ORIENTATIONS: 4-5 goals. 
+	2. Different orientations. Stacked configurations. 
+
+PARADIGMS: TWO
+	1. No help offered for the robot by the human. Full teleoperation. Blending kicks in only when confident. Can look at at what percentage of the time taken for task does the confidence rise happens. If we can show that with the help it happens earlier then, proves over point. 
+
+	2. At least one help offered by the human. 
+Training phase:
+	Objectives: Getting comfortable with the interfaces and mode switching. 
+				Autionomy. 1 objec. 
+				Multiple objects. 
+				Making them realize that if the robot is really confident then it will step and help in finishing the reaching task. 
+
+
+				Making them realize that they can help the robot out to become more confident. When ready they can offer help by pressing a button or asking me to convey it to the robot. The robot then will place the control in particular control mode and then user can contoinue to teleoperate the robot. 
+
+
+
+Multistage - Without grasping. Define combination. 
+
+Have MATLAB Simulation of the Dk computation. To motivate the disambiguation metric. 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -8,8 +8,151 @@
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{McGeer(1990)}]{McGeer01041990}
-McGeer T (1990) {Passive Dynamic Walking}. The International Journal of
-  Robotics Research 9(2):62--82
+\bibitem[{Baker et~al(2007)Baker, Tenenbaum, and Saxe}]{baker2007goal}
+Baker CL, Tenenbaum JB, Saxe RR (2007) Goal inference as inverse planning. In:
+  Proceedings of the Cognitive Science Society
+
+\bibitem[{Baker et~al(2009)Baker, Saxe, and Tenenbaum}]{baker2009action}
+Baker CL, Saxe RR, Tenenbaum JB (2009) Action understanding as inverse
+  planning. Cognition 113(3):329--349
+
+\bibitem[{Choi et~al(2008)Choi, Anderson, Glass, and Kemp}]{choi2008laser}
+Choi YS, Anderson CD, Glass JD, Kemp CC (2008) Laser pointers and a touch
+  screen: intuitive interfaces for autonomous mobile manipulation for the motor
+  impaired. In: Proceedings of the International SIGACCESS Conference on
+  Computers and Accessibility
+
+\bibitem[{Demeester et~al(2008)Demeester, H{\"u}ntemann, Vanhooydonck,
+  Vanacker, Van~Brussel, and Nuttin}]{demeester2008user}
+Demeester E, H{\"u}ntemann A, Vanhooydonck D, Vanacker G, Van~Brussel H, Nuttin
+  M (2008) User-adapted plan recognition and user-adapted shared control: A
+  bayesian approach to semi-autonomous wheelchair driving. Autonomous Robots
+  24(2):193--211
+
+\bibitem[{Downey et~al(2016)Downey, Weiss, Muelling, Venkatraman, Valois,
+  Hebert, Bagnell, Schwartz, and Collinger}]{downey2016blending}
+Downey JE, Weiss JM, Muelling K, Venkatraman A, Valois JS, Hebert M, Bagnell
+  JA, Schwartz AB, Collinger JL (2016) Blending of brain-machine interface and
+  vision-guided autonomous robotics improves neuroprosthetic arm performance
+  during grasping. Journal of neuroengineering and rehabilitation 13(1):28
+
+\bibitem[{Dragan and Srinivasa(2012)}]{dragan2012assistive}
+Dragan AD, Srinivasa SS (2012) Assistive teleoperation for manipulation tasks.
+  In: Proceedings of ACM/IEEE International Conference on Human-Robot
+  Interaction (HRI)
+
+\bibitem[{Driessen et~al(2005)Driessen, Kate, Liefhebber, Versluis, and
+  Van~Woerden}]{driessen2005collaborative}
+Driessen B, Kate TT, Liefhebber F, Versluis A, Van~Woerden J (2005)
+  Collaborative control of the manus manipulator. Universal Access in the
+  Information Society 4(2):165--173
+
+\bibitem[{Eftring and Boschian(1999)}]{eftring1999technical}
+Eftring H, Boschian K (1999) Technical results from manus user trials. In:
+  ICORR'99: International Conference on Rehabilitation Robotics
+
+\bibitem[{Gopinath and Argall(2017)}]{gopinath2017mode}
+Gopinath D, Argall B (2017) Mode switch assistance to maximize human intent
+  disambiguation. In: Robotics: Science and Systems
+
+\bibitem[{Gopinath et~al(2017)Gopinath, Jain, and Argall}]{gopinath2017human}
+Gopinath D, Jain S, Argall BD (2017) Human-in-the-loop optimization of shared
+  autonomy in assistive robotics. IEEE Robotics and Automation Letters
+  2(1):247--254
+
+\bibitem[{Herlant et~al(2016)Herlant, Holladay, and
+  Srinivasa}]{herlant2016assistive}
+Herlant LV, Holladay RM, Srinivasa SS (2016) Assistive teleoperation of robot
+  arms via automatic time-optimal mode switching. In: Proceedings of the
+  ACM/IEEE International Conference on Human-Robot Interaction (HRI)
+
+\bibitem[{Huete et~al(2012)Huete, Victores, Martinez, Gim{\'e}nez, and
+  Balaguer}]{huete2012personal}
+Huete AJ, Victores JG, Martinez S, Gim{\'e}nez A, Balaguer C (2012) Personal
+  autonomy rehabilitation in home environments by a portable assistive robot.
+  IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and
+  Reviews) 42(4):561--570
+
+\bibitem[{Kim et~al(2010)Kim, Hazlett, Godfrey, Rucks, Portee, Bricout,
+  Cunningham, and Behal}]{kim2010relationship}
+Kim DJ, Hazlett R, Godfrey H, Rucks G, Portee D, Bricout J, Cunningham T, Behal
+  A (2010) On the relationship between autonomy, performance, and satisfaction:
+  Lessons from a three-week user study with post-sci patients using a smart
+  6dof assistive robotic manipulator. In: Robotics and Automation (ICRA), 2010
+  IEEE International Conference on, IEEE, pp 217--222
+
+\bibitem[{Kim et~al(2012)Kim, Hazlett-Knudsen, Culver-Godfrey, Rucks,
+  Cunningham, Portee, Bricout, Wang, and Behal}]{kim2012autonomy}
+Kim DJ, Hazlett-Knudsen R, Culver-Godfrey H, Rucks G, Cunningham T, Portee D,
+  Bricout J, Wang Z, Behal A (2012) How autonomy impacts performance and
+  satisfaction: Results from a study with spinal cord injured subjects using an
+  assistive robot. IEEE Transactions on Systems, Man, and Cybernetics-Part A:
+  Systems and Humans 42(1):2--14
+
+\bibitem[{LaPlante et~al(1992)}]{laplante1992assistive}
+LaPlante MP, et~al (1992) Assistive technology devices and home accessibility
+  features: prevalence, payment, need, and trends. Advance data from vital and
+  health statistics
+
+\bibitem[{Liu et~al(2016)Liu, Hamrick, Fisac, Dragan, Hedrick, Sastry, and
+  Griffiths}]{liu2016goal}
+Liu C, Hamrick JB, Fisac JF, Dragan AD, Hedrick JK, Sastry SS, Griffiths TL
+  (2016) Goal inference improves objective and perceived performance in
+  human-robot collaboration. In: Proceedings of the 2016 International
+  Conference on Autonomous Agents \& Multiagent Systems, International
+  Foundation for Autonomous Agents and Multiagent Systems, pp 940--948
+
+\bibitem[{Muelling et~al(2017)Muelling, Venkatraman, Valois, Downey, Weiss,
+  Javdani, Hebert, Schwartz, Collinger, and Bagnell}]{muelling2017autonomy}
+Muelling K, Venkatraman A, Valois JS, Downey JE, Weiss J, Javdani S, Hebert M,
+  Schwartz AB, Collinger JL, Bagnell JA (2017) Autonomy infused teleoperation
+  with application to brain computer interface controlled manipulation.
+  Autonomous Robots pp 1--22
+
+\bibitem[{Nuttin et~al(2002)Nuttin, Vanhooydonck, Demeester, and
+  Van~Brussel}]{nuttin2002selection}
+Nuttin M, Vanhooydonck D, Demeester E, Van~Brussel H (2002) Selection of
+  suitable human-robot interaction techniques for intelligent wheelchairs. In:
+  Proceedings of 11th IEEE International Workshop on Robot and Human
+  Interactive Communication, IEEE, pp 146--151
+
+\bibitem[{Philips et~al(2007)Philips, Mill{\'a}n, Vanacker, Lew, Gal{\'a}n,
+  Ferrez, Van~Brussel, and Nuttin}]{philips2007adaptive}
+Philips J, Mill{\'a}n JdR, Vanacker G, Lew E, Gal{\'a}n F, Ferrez PW,
+  Van~Brussel H, Nuttin M (2007) Adaptive shared control of a brain-actuated
+  simulated wheelchair. In: Rehabilitation Robotics, 2007. ICORR 2007. IEEE
+  10th International Conference on, IEEE, pp 408--414
+
+\bibitem[{Sadigh et~al(2016{\natexlab{a}})Sadigh, Sastry, Seshia, and
+  Dragan}]{sadigh2016planning}
+Sadigh D, Sastry S, Seshia SA, Dragan AD (2016{\natexlab{a}}) Planning for
+  autonomous cars that leverage effects on human actions. In: Robotics: Science
+  and Systems
+
+\bibitem[{Sadigh et~al(2016{\natexlab{b}})Sadigh, Sastry, Seshia, and
+  Dragan}]{sadigh2016information}
+Sadigh D, Sastry SS, Seshia SA, Dragan A (2016{\natexlab{b}}) Information
+  gathering actions over human internal state. In: Intelligent Robots and
+  Systems (IROS), 2016 IEEE/RSJ International Conference on, IEEE, pp 66--73
+
+\bibitem[{Scherer(1996)}]{scherer1996outcomes}
+Scherer MJ (1996) Outcomes of assistive technology use on quality of life.
+  Disability and rehabilitation 18(9):439--448
+
+\bibitem[{Simpson et~al(2008)Simpson, Broughton, Gauthier, and
+  Prochazka}]{simpson2008tooth}
+Simpson T, Broughton C, Gauthier MJ, Prochazka A (2008) Tooth-click control of
+  a hands-free computer interface. IEEE Transactions on Biomedical Engineering
+  55(8):2050--2056
+
+\bibitem[{Storms and Tilbury(2014)}]{storms2014blending}
+Storms JG, Tilbury DM (2014) Blending of human and obstacle avoidance control
+  for a high speed mobile robot. In: American Control Conference (ACC), 2014,
+  IEEE, pp 3488--3493
+
+\bibitem[{Tsui et~al(2011)Tsui, Kim, Behal, Kontak, and Yanco}]{tsui2011want}
+Tsui KM, Kim DJ, Behal A, Kontak D, Yanco HA (2011) “{I} want that”:
+  Human-in-the-loop control of a wheelchair-mounted robotic arm. Applied
+  Bionics and Biomechanics 8(1):127--147
 
 \end{thebibliography}
