@@ -167,7 +167,14 @@ What is the analogous condition in rotation space.
 
 Nov 11th. 
 
-1. Start writing experiment section.
+1. Start writing experiment section - NOT YET
+
+Nov 12th. Write algorithm - DONE
+
+nov 13th.
+
+1. Practice talk. Read a little bit. Have some general ideas. Prepare for discussion - DONE
+2. Work on images in inskscape - STARTED. 
 
 Use GIMP?????
 Figure illustrating disambiguation - Like Figure 1 in conference paper
@@ -236,6 +243,8 @@ INTENT INFERENCE METHODOLOGIES - Instantaneous features, Bayesian, POMDP, DFT..
 MODE SWITCHING ASSISTANCE - Laura's work, Our work. 
 INTENT ELICITATION: INFORMATION ACQUISITON - Anca's, Dorsa, Todd's, Atanasov, 
 SYNERGY. HELP ME HELP YOU - CMU people. Shared intentionality, human-human. 
+
+
 Abstract:
 
 MATHEMATICAL FRAMEWORK:
@@ -264,7 +273,11 @@ Total time:
 
 
 
+NSF KEYNOTE :MISSY CUMMINGS:
 
+DENIS EDOGUMS
+
+Sesnor fusion. Cognitive System Laborarotu. 
 
 
 
@@ -352,3 +365,18 @@ Training phase:
 Multistage - Without grasping. Define combination. 
 
 Have MATLAB Simulation of the Dk computation. To motivate the disambiguation metric. 
+
+In our lab we work with subjects with motor impairments as a result of spinal cord injuries and focus on developing shared control assistive behaviors for different platforms such as robotic arms and smart wheelchairs. One of the key things that we understood from our studies is that the user satisfation needs to be high for end-user acceptanace and this in turn depends on how reliable the autonomy is and how adaptive it is to changing circumstances. In addition to the various uncertainities that are present in the environment one of the ky challenegs is the user's changing preferences and abilities. Furthermore this change can happen over multiple time sclaes. 
+
+We identify a few different research opportunities here. 
+
+Firstly data driven approaches with a focus on creation of longitudinal datasets over time scales can facilitate learning of human preferences in shared control and how behavior changes as well. 
+
+Secondly, this also provides us with a opportunity for robot learning from motor impaired nonexpert users and development of ML techniques that explicitly take into account the noisy and sparse nature of the training signal
+
+lastly, is there an opportunity to bridge high level behavioral models with 
+Ella:
+
+Trust
+
+Breakout group

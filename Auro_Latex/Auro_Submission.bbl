@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,6 +7,16 @@
   \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Amari(1977)}]{amari1977dynamics}
+Amari Si (1977) Dynamics of pattern formation in lateral-inhibition type neural
+  fields. Biological cybernetics 27(2):77--87
+
+\bibitem[{Atanasov et~al(2014)Atanasov, Le~Ny, Daniilidis, and
+  Pappas}]{atanasov2014information}
+Atanasov N, Le~Ny J, Daniilidis K, Pappas GJ (2014) Information acquisition
+  with sensing robots: Algorithms and error bounds. In: IEEE International
+  Conference on Robotics and Automation (ICRA)
 
 \bibitem[{Baker et~al(2007)Baker, Tenenbaum, and Saxe}]{baker2007goal}
 Baker CL, Tenenbaum JB, Saxe RR (2007) Goal inference as inverse planning. In:
@@ -41,6 +51,11 @@ Dragan AD, Srinivasa SS (2012) Assistive teleoperation for manipulation tasks.
   In: Proceedings of ACM/IEEE International Conference on Human-Robot
   Interaction (HRI)
 
+\bibitem[{Dragan et~al(2013)Dragan, Lee, and Srinivasa}]{dragan2013legibility}
+Dragan AD, Lee KC, Srinivasa SS (2013) Legibility and predictability of robot
+  motion. In: Proceedings of the ACM/IEEE International Conference on
+  Human-Robot Interaction (HRI)
+
 \bibitem[{Driessen et~al(2005)Driessen, Kate, Liefhebber, Versluis, and
   Van~Woerden}]{driessen2005collaborative}
 Driessen B, Kate TT, Liefhebber F, Versluis A, Van~Woerden J (2005)
@@ -50,6 +65,24 @@ Driessen B, Kate TT, Liefhebber F, Versluis A, Van~Woerden J (2005)
 \bibitem[{Eftring and Boschian(1999)}]{eftring1999technical}
 Eftring H, Boschian K (1999) Technical results from manus user trials. In:
   ICORR'99: International Conference on Rehabilitation Robotics
+
+\bibitem[{Erlhagen and Bicho(2006)}]{erlhagen2006dynamic}
+Erlhagen W, Bicho E (2006) The dynamic neural field approach to cognitive
+  robotics. Journal of neural engineering 3(3):R36
+
+\bibitem[{Erlhagen and Bicho(2014)}]{erlhagen2014dynamic}
+Erlhagen W, Bicho E (2014) A dynamic neural field approach to natural and
+  efficient human-robot collaboration. In: Neural fields, Springer, pp 341--365
+
+\bibitem[{Faubel and Sch{\"o}ner(2008)}]{faubel2008learning}
+Faubel C, Sch{\"o}ner G (2008) Learning to recognize objects on the fly: a
+  neurally based dynamic field approach. Neural networks 21(4):562--576
+
+\bibitem[{Goodfellow et~al(2010)Goodfellow, Koenig, Muja, Pantofaru, Sorokin,
+  and Takayama}]{goodfellow2010help}
+Goodfellow IJ, Koenig N, Muja M, Pantofaru C, Sorokin A, Takayama L (2010) Help
+  me help you: Interfaces for personal robots. In: Proceedings of ACM/IEEE
+  International Conference on Human-Robot Interaction (HRI)
 
 \bibitem[{Gopinath and Argall(2017)}]{gopinath2017mode}
 Gopinath D, Argall B (2017) Mode switch assistance to maximize human intent
@@ -65,6 +98,12 @@ Gopinath D, Jain S, Argall BD (2017) Human-in-the-loop optimization of shared
 Herlant LV, Holladay RM, Srinivasa SS (2016) Assistive teleoperation of robot
   arms via automatic time-optimal mode switching. In: Proceedings of the
   ACM/IEEE International Conference on Human-Robot Interaction (HRI)
+
+\bibitem[{Holladay et~al(2014)Holladay, Dragan, and
+  Srinivasa}]{holladay2014legible}
+Holladay RM, Dragan AD, Srinivasa SS (2014) Legible robot pointing. In: The
+  IEEE International Symposium on Robot and Human Interactive Communication
+  (RO-MAN)
 
 \bibitem[{Huete et~al(2012)Huete, Victores, Martinez, Gim{\'e}nez, and
   Balaguer}]{huete2012personal}
@@ -101,6 +140,15 @@ Liu C, Hamrick JB, Fisac JF, Dragan AD, Hedrick JK, Sastry SS, Griffiths TL
   human-robot collaboration. In: Proceedings of the 2016 International
   Conference on Autonomous Agents \& Multiagent Systems, International
   Foundation for Autonomous Agents and Multiagent Systems, pp 940--948
+
+\bibitem[{Miller and Murphey(2013)}]{miller2013trajectory}
+Miller LM, Murphey TD (2013) Trajectory optimization for continuous ergodic
+  exploration. In: American Control Conference (ACC)
+
+\bibitem[{Miller et~al(2016)Miller, Silverman, MacIver, and
+  Murphey}]{miller2016ergodic}
+Miller LM, Silverman Y, MacIver MA, Murphey TD (2016) Ergodic exploration of
+  distributed information. IEEE Transactions on Robotics 32(1):36--52
 
 \bibitem[{Muelling et~al(2017)Muelling, Venkatraman, Valois, Downey, Weiss,
   Javdani, Hebert, Schwartz, Collinger, and Bagnell}]{muelling2017autonomy}
@@ -139,20 +187,56 @@ Sadigh D, Sastry SS, Seshia SA, Dragan A (2016{\natexlab{b}}) Information
 Scherer MJ (1996) Outcomes of assistive technology use on quality of life.
   Disability and rehabilitation 18(9):439--448
 
+\bibitem[{Sch{\"o}ner(2008)}]{schoner2008dynamical}
+Sch{\"o}ner G (2008) Dynamical systems approaches to cognition. Cambridge
+  handbook of computational cognitive modeling pp 101--126
+
+\bibitem[{Sch{\"o}ner et~al(1995)Sch{\"o}ner, Dose, and
+  Engels}]{schoner1995dynamics}
+Sch{\"o}ner G, Dose M, Engels C (1995) Dynamics of behavior: Theory and
+  applications for autonomous robot architectures. Robotics and autonomous
+  systems 16(2-4):213--245
+
 \bibitem[{Simpson et~al(2008)Simpson, Broughton, Gauthier, and
   Prochazka}]{simpson2008tooth}
 Simpson T, Broughton C, Gauthier MJ, Prochazka A (2008) Tooth-click control of
   a hands-free computer interface. IEEE Transactions on Biomedical Engineering
   55(8):2050--2056
 
+\bibitem[{Sorokin et~al(2010)Sorokin, Berenson, Srinivasa, and
+  Hebert}]{sorokin2010people}
+Sorokin A, Berenson D, Srinivasa SS, Hebert M (2010) People helping robots
+  helping people: Crowdsourcing for grasping novel objects. In: Proceedings of
+  the IEEE/RSJ International Conference on Intelligent Robots and Systems
+  (IROS)
+
 \bibitem[{Storms and Tilbury(2014)}]{storms2014blending}
 Storms JG, Tilbury DM (2014) Blending of human and obstacle avoidance control
   for a high speed mobile robot. In: American Control Conference (ACC), 2014,
   IEEE, pp 3488--3493
 
+\bibitem[{Tomasello and Carpenter(2007)}]{tomasello2007shared}
+Tomasello M, Carpenter M (2007) Shared intentionality. Developmental science
+  10(1):121--125
+
+\bibitem[{Tomasello and Moll(2010)}]{tomasello2010gap}
+Tomasello M, Moll H (2010) The gap is social: Human shared intentionality and
+  culture. In: Mind the gap, Springer, pp 331--349
+
 \bibitem[{Tsui et~al(2011)Tsui, Kim, Behal, Kontak, and Yanco}]{tsui2011want}
 Tsui KM, Kim DJ, Behal A, Kontak D, Yanco HA (2011) “{I} want that”:
   Human-in-the-loop control of a wheelchair-mounted robotic arm. Applied
   Bionics and Biomechanics 8(1):127--147
+
+\bibitem[{Wilson and Cowan(1973)}]{wilson1973mathematical}
+Wilson HR, Cowan JD (1973) A mathematical theory of the functional dynamics of
+  cortical and thalamic nervous tissue. Biological Cybernetics 13(2):55--80
+
+\bibitem[{Zibner et~al(2011)Zibner, Faubel, Iossifidis, and
+  Schoner}]{zibner2011dynamic}
+Zibner SK, Faubel C, Iossifidis I, Schoner G (2011) Dynamic neural fields as
+  building blocks of a cortex-inspired architecture for robotic scene
+  representation. IEEE Transactions on Autonomous Mental Development
+  3(1):74--91
 
 \end{thebibliography}

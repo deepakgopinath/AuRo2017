@@ -24,67 +24,113 @@
 \providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
 \newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{gopinath2017mode}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of goal disambiguation along various control dimensions. Any motion of the end effector (green) along the y-axis will not help the system to disambiguate the two goals (A and B). However, motion along the x-axis provides cues as to which goal.}}{2}{figure.1}}
+\newlabel{fig:disamb}{{1}{2}{Illustration of goal disambiguation along various control dimensions. Any motion of the end effector (green) along the y-axis will not help the system to disambiguate the two goals (A and B). However, motion along the x-axis provides cues as to which goal}{figure.1}{}}
 \citation{philips2007adaptive,demeester2008user,gopinath2017human,muelling2017autonomy}
 \citation{tsui2011want,kim2010relationship,kim2012autonomy}
 \citation{driessen2005collaborative}
 \citation{downey2016blending,storms2014blending,muelling2017autonomy}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}}
-\newlabel{sec:related-work}{{2}{2}{Related Work}{section.2}{}}
 \citation{herlant2016assistive}
-\citation{gopinath2017mode}
 \citation{liu2016goal}
 \citation{choi2008laser}
 \citation{baker2007goal,baker2009action}
 \citation{dragan2012assistive,gopinath2017human}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Core components of a Shared Control Architecture. }}{3}{figure.2}}
+\newlabel{fig:shared_control}{{2}{3}{Core components of a Shared Control Architecture}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}}
+\newlabel{sec:related-work}{{2}{3}{Related Work}{section.2}{}}
 \citation{sadigh2016information,sadigh2016planning}
+\citation{atanasov2014information}
+\citation{miller2016ergodic,miller2013trajectory}
+\citation{tomasello2007shared,tomasello2010gap}
+\citation{sorokin2010people}
+\citation{goodfellow2010help}
+\citation{dragan2013legibility}
+\citation{holladay2014legible}
 \citation{gopinath2017mode}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Mathematical Algorithm}{3}{section.3}}
-\newlabel{sec:ma}{{3}{3}{Mathematical Algorithm}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Notation}{3}{subsection.3.1}}
-\newlabel{subsec:notation}{{3.1}{3}{Notation}{subsection.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Intent Disambiguation}{4}{subsection.3.2}}
-\newlabel{subsec:disamb}{{3.2}{4}{Intent Disambiguation}{subsection.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Forward projection of $\boldsymbol  {p}(t)$}{4}{subsubsection.3.2.1}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Calculate $\boldsymbol  {p}(\delta _t)$}}{4}{algorithm.1}}
-\newlabel{alg1}{{1}{4}{Forward projection of $\boldsymbol {p}(t)$}{algorithm.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Components of $D_k$}{4}{subsubsection.3.2.2}}
-\newlabel{sssec:components}{{3.2.2}{4}{Components of $D_k$}{subsubsection.3.2.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Mathematical Algorithm}{4}{section.3}}
+\newlabel{sec:ma}{{3}{4}{Mathematical Algorithm}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Notation}{4}{subsection.3.1}}
+\newlabel{ssec:notation}{{3.1}{4}{Notation}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Intent Disambiguation}{5}{subsection.3.2}}
+\newlabel{ssec:disamb}{{3.2}{5}{Intent Disambiguation}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Forward projection of $\boldsymbol  {p}(t)$}{5}{subsubsection.3.2.1}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Calculate $\boldsymbol  {p}(t_b)$, $\boldsymbol  {p}(t_c)$}}{5}{algorithm.1}}
+\newlabel{alg1}{{1}{5}{Forward projection of $\boldsymbol {p}(t)$}{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Components of $D_k$}{5}{subsubsection.3.2.2}}
+\newlabel{sssec:components}{{3.2.2}{5}{Components of $D_k$}{subsubsection.3.2.2}{}}
+\citation{gopinath2017mode}
+\citation{amari1977dynamics}
+\newlabel{DK}{{1}{6}{Components of $D_k$}{equation.3.1}{}}
+\newlabel{EQ2}{{2}{6}{Components of $D_k$}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Intent Inference and Shared Control}{6}{subsection.3.3}}
+\newlabel{ssec:inference}{{3.3}{6}{Intent Inference and Shared Control}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Dynamic Field Theory}{6}{subsubsection.3.3.1}}
+\newlabel{sssec:dft}{{3.3.1}{6}{Dynamic Field Theory}{subsubsection.3.3.1}{}}
+\citation{wilson1973mathematical}
+\citation{schoner2008dynamical}
+\citation{erlhagen2006dynamic}
+\citation{erlhagen2014dynamic}
+\citation{zibner2011dynamic}
+\citation{schoner1995dynamics}
+\citation{faubel2008learning}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Dynamic neural fields for Intent Inference}{7}{subsubsection.3.3.2}}
+\newlabel{sssec:dft_ii}{{3.3.2}{7}{Dynamic neural fields for Intent Inference}{subsubsection.3.3.2}{}}
+\newlabel{eq:dft}{{5}{7}{Dynamic neural fields for Intent Inference}{equation.3.5}{}}
 \bibstyle{spbasic}
 \bibdata{references}
-\bibcite{baker2007goal}{{1}{2007}{{Baker et~al}}{{Baker, Tenenbaum, and Saxe}}}
-\bibcite{baker2009action}{{2}{2009}{{Baker et~al}}{{Baker, Saxe, and Tenenbaum}}}
-\bibcite{choi2008laser}{{3}{2008}{{Choi et~al}}{{Choi, Anderson, Glass, and Kemp}}}
-\bibcite{demeester2008user}{{4}{2008}{{Demeester et~al}}{{Demeester, H{\"u}ntemann, Vanhooydonck, Vanacker, Van~Brussel, and Nuttin}}}
-\bibcite{downey2016blending}{{5}{2016}{{Downey et~al}}{{Downey, Weiss, Muelling, Venkatraman, Valois, Hebert, Bagnell, Schwartz, and Collinger}}}
-\bibcite{dragan2012assistive}{{6}{2012}{{Dragan and Srinivasa}}{{}}}
-\bibcite{driessen2005collaborative}{{7}{2005}{{Driessen et~al}}{{Driessen, Kate, Liefhebber, Versluis, and Van~Woerden}}}
-\bibcite{eftring1999technical}{{8}{1999}{{Eftring and Boschian}}{{}}}
-\bibcite{gopinath2017mode}{{9}{2017}{{Gopinath and Argall}}{{}}}
-\bibcite{gopinath2017human}{{10}{2017}{{Gopinath et~al}}{{Gopinath, Jain, and Argall}}}
-\bibcite{herlant2016assistive}{{11}{2016}{{Herlant et~al}}{{Herlant, Holladay, and Srinivasa}}}
-\bibcite{huete2012personal}{{12}{2012}{{Huete et~al}}{{Huete, Victores, Martinez, Gim{\'e}nez, and Balaguer}}}
-\bibcite{kim2010relationship}{{13}{2010}{{Kim et~al}}{{Kim, Hazlett, Godfrey, Rucks, Portee, Bricout, Cunningham, and Behal}}}
-\bibcite{kim2012autonomy}{{14}{2012}{{Kim et~al}}{{Kim, Hazlett-Knudsen, Culver-Godfrey, Rucks, Cunningham, Portee, Bricout, Wang, and Behal}}}
-\bibcite{laplante1992assistive}{{15}{1992}{{LaPlante et~al}}{{}}}
-\bibcite{liu2016goal}{{16}{2016}{{Liu et~al}}{{Liu, Hamrick, Fisac, Dragan, Hedrick, Sastry, and Griffiths}}}
-\bibcite{muelling2017autonomy}{{17}{2017}{{Muelling et~al}}{{Muelling, Venkatraman, Valois, Downey, Weiss, Javdani, Hebert, Schwartz, Collinger, and Bagnell}}}
-\bibcite{nuttin2002selection}{{18}{2002}{{Nuttin et~al}}{{Nuttin, Vanhooydonck, Demeester, and Van~Brussel}}}
-\bibcite{philips2007adaptive}{{19}{2007}{{Philips et~al}}{{Philips, Mill{\'a}n, Vanacker, Lew, Gal{\'a}n, Ferrez, Van~Brussel, and Nuttin}}}
-\bibcite{sadigh2016planning}{{20}{2016{a}}{{Sadigh et~al}}{{Sadigh, Sastry, Seshia, and Dragan}}}
-\bibcite{sadigh2016information}{{21}{2016{b}}{{Sadigh et~al}}{{Sadigh, Sastry, Seshia, and Dragan}}}
-\bibcite{scherer1996outcomes}{{22}{1996}{{Scherer}}{{}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Intent Inference and Shared Control}{5}{subsection.3.3}}
-\newlabel{subsec:inference}{{3.3}{5}{Intent Inference and Shared Control}{subsection.3.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Implementation}{5}{section.4}}
-\newlabel{sec:implementation}{{4}{5}{Implementation}{section.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Design - Study Methods}{5}{section.5}}
-\newlabel{sec:ed}{{5}{5}{Experimental Design - Study Methods}{section.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{5}{section.6}}
-\newlabel{sec:results}{{6}{5}{Results}{section.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{5}{section.7}}
-\newlabel{sec:discussions}{{7}{5}{Discussion}{section.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{5}{section.8}}
-\newlabel{sec:conclusions}{{8}{5}{Conclusion}{section.8}{}}
-\bibcite{simpson2008tooth}{{23}{2008}{{Simpson et~al}}{{Simpson, Broughton, Gauthier, and Prochazka}}}
-\bibcite{storms2014blending}{{24}{2014}{{Storms and Tilbury}}{{}}}
-\bibcite{tsui2011want}{{25}{2011}{{Tsui et~al}}{{Tsui, Kim, Behal, Kontak, and Yanco}}}
+\bibcite{amari1977dynamics}{{1}{1977}{{Amari}}{{}}}
+\bibcite{atanasov2014information}{{2}{2014}{{Atanasov et~al}}{{Atanasov, Le~Ny, Daniilidis, and Pappas}}}
+\bibcite{baker2007goal}{{3}{2007}{{Baker et~al}}{{Baker, Tenenbaum, and Saxe}}}
+\bibcite{baker2009action}{{4}{2009}{{Baker et~al}}{{Baker, Saxe, and Tenenbaum}}}
+\bibcite{choi2008laser}{{5}{2008}{{Choi et~al}}{{Choi, Anderson, Glass, and Kemp}}}
+\bibcite{demeester2008user}{{6}{2008}{{Demeester et~al}}{{Demeester, H{\"u}ntemann, Vanhooydonck, Vanacker, Van~Brussel, and Nuttin}}}
+\bibcite{downey2016blending}{{7}{2016}{{Downey et~al}}{{Downey, Weiss, Muelling, Venkatraman, Valois, Hebert, Bagnell, Schwartz, and Collinger}}}
+\bibcite{dragan2012assistive}{{8}{2012}{{Dragan and Srinivasa}}{{}}}
+\bibcite{dragan2013legibility}{{9}{2013}{{Dragan et~al}}{{Dragan, Lee, and Srinivasa}}}
+\bibcite{driessen2005collaborative}{{10}{2005}{{Driessen et~al}}{{Driessen, Kate, Liefhebber, Versluis, and Van~Woerden}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Shared Control}{8}{subsection.3.4}}
+\newlabel{ssec:shared}{{3.4}{8}{Shared Control}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Implementation}{8}{section.4}}
+\newlabel{sec:implementation}{{4}{8}{Implementation}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Design - Study Methods}{8}{section.5}}
+\newlabel{sec:ed}{{5}{8}{Experimental Design - Study Methods}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{8}{section.6}}
+\newlabel{sec:results}{{6}{8}{Results}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{8}{section.7}}
+\newlabel{sec:discussions}{{7}{8}{Discussion}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{8}{section.8}}
+\newlabel{sec:conclusions}{{8}{8}{Conclusion}{section.8}{}}
+\bibcite{eftring1999technical}{{11}{1999}{{Eftring and Boschian}}{{}}}
+\bibcite{erlhagen2006dynamic}{{12}{2006}{{Erlhagen and Bicho}}{{}}}
+\bibcite{erlhagen2014dynamic}{{13}{2014}{{Erlhagen and Bicho}}{{}}}
+\bibcite{faubel2008learning}{{14}{2008}{{Faubel and Sch{\"o}ner}}{{}}}
+\bibcite{goodfellow2010help}{{15}{2010}{{Goodfellow et~al}}{{Goodfellow, Koenig, Muja, Pantofaru, Sorokin, and Takayama}}}
+\bibcite{gopinath2017mode}{{16}{2017}{{Gopinath and Argall}}{{}}}
+\bibcite{gopinath2017human}{{17}{2017}{{Gopinath et~al}}{{Gopinath, Jain, and Argall}}}
+\bibcite{herlant2016assistive}{{18}{2016}{{Herlant et~al}}{{Herlant, Holladay, and Srinivasa}}}
+\bibcite{holladay2014legible}{{19}{2014}{{Holladay et~al}}{{Holladay, Dragan, and Srinivasa}}}
+\bibcite{huete2012personal}{{20}{2012}{{Huete et~al}}{{Huete, Victores, Martinez, Gim{\'e}nez, and Balaguer}}}
+\bibcite{kim2010relationship}{{21}{2010}{{Kim et~al}}{{Kim, Hazlett, Godfrey, Rucks, Portee, Bricout, Cunningham, and Behal}}}
+\bibcite{kim2012autonomy}{{22}{2012}{{Kim et~al}}{{Kim, Hazlett-Knudsen, Culver-Godfrey, Rucks, Cunningham, Portee, Bricout, Wang, and Behal}}}
+\bibcite{laplante1992assistive}{{23}{1992}{{LaPlante et~al}}{{}}}
+\bibcite{liu2016goal}{{24}{2016}{{Liu et~al}}{{Liu, Hamrick, Fisac, Dragan, Hedrick, Sastry, and Griffiths}}}
+\bibcite{miller2013trajectory}{{25}{2013}{{Miller and Murphey}}{{}}}
+\bibcite{miller2016ergodic}{{26}{2016}{{Miller et~al}}{{Miller, Silverman, MacIver, and Murphey}}}
+\bibcite{muelling2017autonomy}{{27}{2017}{{Muelling et~al}}{{Muelling, Venkatraman, Valois, Downey, Weiss, Javdani, Hebert, Schwartz, Collinger, and Bagnell}}}
+\bibcite{nuttin2002selection}{{28}{2002}{{Nuttin et~al}}{{Nuttin, Vanhooydonck, Demeester, and Van~Brussel}}}
+\bibcite{philips2007adaptive}{{29}{2007}{{Philips et~al}}{{Philips, Mill{\'a}n, Vanacker, Lew, Gal{\'a}n, Ferrez, Van~Brussel, and Nuttin}}}
+\bibcite{sadigh2016planning}{{30}{2016{a}}{{Sadigh et~al}}{{Sadigh, Sastry, Seshia, and Dragan}}}
+\bibcite{sadigh2016information}{{31}{2016{b}}{{Sadigh et~al}}{{Sadigh, Sastry, Seshia, and Dragan}}}
+\bibcite{scherer1996outcomes}{{32}{1996}{{Scherer}}{{}}}
+\bibcite{schoner2008dynamical}{{33}{2008}{{Sch{\"o}ner}}{{}}}
+\bibcite{schoner1995dynamics}{{34}{1995}{{Sch{\"o}ner et~al}}{{Sch{\"o}ner, Dose, and Engels}}}
+\bibcite{simpson2008tooth}{{35}{2008}{{Simpson et~al}}{{Simpson, Broughton, Gauthier, and Prochazka}}}
+\bibcite{sorokin2010people}{{36}{2010}{{Sorokin et~al}}{{Sorokin, Berenson, Srinivasa, and Hebert}}}
+\bibcite{storms2014blending}{{37}{2014}{{Storms and Tilbury}}{{}}}
+\bibcite{tomasello2007shared}{{38}{2007}{{Tomasello and Carpenter}}{{}}}
+\bibcite{tomasello2010gap}{{39}{2010}{{Tomasello and Moll}}{{}}}
+\bibcite{tsui2011want}{{40}{2011}{{Tsui et~al}}{{Tsui, Kim, Behal, Kontak, and Yanco}}}
+\bibcite{wilson1973mathematical}{{41}{1973}{{Wilson and Cowan}}{{}}}
+\bibcite{zibner2011dynamic}{{42}{2011}{{Zibner et~al}}{{Zibner, Faubel, Iossifidis, and Schoner}}}
