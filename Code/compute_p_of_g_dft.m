@@ -5,9 +5,9 @@ function [pg] = compute_p_of_g_dft( uh, xr, pg )
     tau = 3.8;
     h = 1/ng;
     curr_pg = compute_conf(uh, xr);
-    lambda = -2*ones(ng,ng);
+    lambda = 0*ones(ng,ng);
     lambda(1: ng+1: ng*ng) = 0;
-    lambda = 5*eye(ng) + lambda;
+    lambda = 4*eye(ng) + lambda;
     dpgdt = (-1/tau)*eye(ng)*pg + (h/tau)*ones(ng,1) + lambda*sigmoid(curr_pg); %ODE - Dynamics neural field. 
     pg = pg + dpgdt*delta_t; %Euler integration;
     pg(pg <=0) = realmin;

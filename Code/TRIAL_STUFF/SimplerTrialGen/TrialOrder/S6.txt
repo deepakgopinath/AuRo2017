@@ -1,0 +1,38 @@
+Tasks 	 	Inter 	 	Assis 	 	Goal 	 	Home 	 	InitM
+
+t2		 h		 w		 3		 1		 0
+t2		 h		 wo		 3		 3		 2
+t2		 h		 wo		 5		 3		 6
+t2		 h		 w		 4		 4		 0
+t2		 h		 w		 5		 2		 0
+t2		 h		 wo		 4		 4		 4
+t2		 j		 w		 1		 3		 0
+t2		 j		 wo		 3		 1		 2
+t2		 j		 wo		 3		 3		 1
+t2		 j		 w		 2		 3		 0
+t2		 j		 wo		 4		 1		 1
+t2		 j		 w		 4		 3		 0
+********************************
+t2		 h		 od		 2		 2		 4
+t2		 h		 od		 5		 1		 6
+t2		 j		 od		 5		 4		 3
+t2		 j		 od		 1		 1		 4
+################################
+################################
+t1		 h		 wo		 1		 4		 2
+t1		 h		 w		 4		 1		 0
+t1		 h		 w		 1		 3		 0
+t1		 h		 wo		 2		 4		 3
+t1		 h		 wo		 4		 4		 1
+t1		 h		 w		 2		 2		 0
+t1		 j		 wo		 4		 3		 3
+t1		 j		 w		 2		 4		 0
+t1		 j		 wo		 3		 1		 3
+t1		 j		 w		 1		 4		 0
+t1		 j		 w		 4		 2		 0
+t1		 j		 wo		 2		 2		 3
+********************************
+t1		 h		 od		 2		 2		 5
+t1		 h		 od		 1		 2		 1
+t1		 j		 od		 3		 4		 2
+t1		 j		 od		 4		 4		 4

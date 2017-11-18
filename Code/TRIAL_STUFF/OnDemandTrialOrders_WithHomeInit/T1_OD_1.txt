@@ -1,0 +1,4 @@
+hA od 4 h4 z
+j2 od 3 h2 xy
+j2 od 2 h1 xz
+hA od 1 h1 p

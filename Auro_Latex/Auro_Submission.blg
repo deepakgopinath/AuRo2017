@@ -4,44 +4,44 @@ The top-level auxiliary file: Auro_Submission.aux
 The style file: spbasic.bst
 Database file #1: references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 42 entries,
+You've used 51 entries,
             3270 wiz_defined-function locations,
-            899 strings with 14195 characters,
-and the built_in function-call counts, 63274 in all, are:
-= -- 6853
-> -- 1537
-< -- 25
-+ -- 685
-- -- 486
-* -- 4757
-:= -- 7295
-add.period$ -- 42
-call.type$ -- 42
-change.case$ -- 413
-chr.to.int$ -- 41
-cite$ -- 42
-duplicate$ -- 6352
-empty$ -- 4946
-format.name$ -- 629
-if$ -- 13263
+            948 strings with 15889 characters,
+and the built_in function-call counts, 78242 in all, are:
+= -- 8638
+> -- 1787
+< -- 32
++ -- 826
+- -- 564
+* -- 5770
+:= -- 8864
+add.period$ -- 51
+call.type$ -- 51
+change.case$ -- 490
+chr.to.int$ -- 50
+cite$ -- 51
+duplicate$ -- 7949
+empty$ -- 6042
+format.name$ -- 734
+if$ -- 16408
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 460
-newline$ -- 136
-num.names$ -- 168
-pop$ -- 1709
+missing$ -- 555
+newline$ -- 163
+num.names$ -- 204
+pop$ -- 2146
 preamble$ -- 1
-purify$ -- 329
+purify$ -- 391
 quote$ -- 0
-skip$ -- 2344
+skip$ -- 3010
 stack$ -- 0
-substring$ -- 6372
-swap$ -- 3090
-text.length$ -- 10
+substring$ -- 7899
+swap$ -- 4035
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 378
+type$ -- 459
 warning$ -- 0
-while$ -- 401
+while$ -- 490
 width$ -- 0
-write$ -- 465
+write$ -- 566

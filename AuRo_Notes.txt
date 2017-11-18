@@ -160,7 +160,7 @@ Ideas for figures:
 
 Nov 10th:
 
-1. Look into related works properly. Start writing related works. Make progress of math formalism. start making figures for the intro etc. Think about how to present the motivation figure for disambiguation. 
+1. Look into related works properly. Start writing related works. Make progress of math formalism. start making figures for the intro etc. Think about how to present the motivation figure f or disambiguation. 
 
 2. Make edits to ros code, based on matlab code. If distance > D and angle greater than 90deg: ignore the activation input. 
 What is the analogous condition in rotation space. 
@@ -176,14 +176,104 @@ nov 13th.
 1. Practice talk. Read a little bit. Have some general ideas. Prepare for discussion - DONE
 2. Work on images in inskscape - STARTED. 
 
-Use GIMP?????
-Figure illustrating disambiguation - Like Figure 1 in conference paper
-Figure illustrating layered architecture. Intent inference mechanism + Disambiguation on top. 
-Figure for intent inference? The features that contribute to the excitation of the system. Nodes represtning individual probabilities.
- Figure illustrating the formula. Like in the poster. 
+1. Disamb - done
+2. Shared control - DONE
+3. DFT excitation. - 
+figure to motivate disambiguation. Is this a proper simulation. 
+4. figure for pribabilities
+
+
+nov 15th:
+
+1. Update stuff in simulation. Normalization. Some parameter tuning. Gretaer than 90deg. Make sure current input stays 0. add real min properly (DONE) 
+2. Think about the exact tasks. NO GRIPPING. BUT STILL MULTISTAGE TASK. 
+	TEST HEADRRAY AND REQUEST OF ASSISTANCE WITH HEAD ARRAY, BUTTON SYSTEM (DONE)
+	TEST OUT GOAL SCENARIO WITH VERY SIMILAR POSITIONS BY DIFFERENT ORIENTATION. THIS CAN ARISE IN THESE MULTISTAGE TASKS. IN SIMULATION (DONE)
+	THINK ABOUT THE TASK. 
+	Both tasks are multistage. But first task will have one degree of rotations, similar ones always. Test head array and button for assistance request. 
+	How to make sure each segment is DONE? Proximity? Multistage will have issues of 
+	What data to collect? How to make analysis easier that way?
+
+	Modify distance such that only if angle is less than 90*. Maybe modify current input with that as well. Did this in MATLAB (DONE)
+
+	Test corner cases where forward projection of rotation is breaking down. What can be done? How to set random modes. How to set best mode. Don't mess this pu.  Use dynamic pfields? 
+
+	Tune blending parameters so that the "quickly" aspect stands out?! 0.55, 0.6? (DONE, ALMOST)
+
+	Can we compute Dk if the p(g), xr is known at any time? Can this be done in matlab. Posthoc. write code in matlab that would do this. with range limits in simulation etc. When a user switches to a mode. We might want to compute what the algorithm might have chosen. 
+
+	rEFERENCES for motion patterns conveying intention. no assistance > incorrect assistance
+
+
+3. Get ClinCards (DONE)
+4. After task is decided. Work on trial generation. 
+
+
+Nov 16th:
+
+1. Test building up task. 3 positions with 2 stages is 6 different "reaching goals". P
+	PLAY WITH BLEND PARAMS. THE MORE NUMBER OF GOALS, THE THRESHOLD HAS TO BE LOWER, BECAUSE INHERENTLY ISOLATION OF GOALS IS HARDER. THE DECAY PARAMETER IN THE DFT HAS TO BE LITTLE MORE? TOO MUCH HYSTERESIS. THE DECAY IN CONFIDENCE HAPPENS WHEN THERE IS NO USER CONTROL COMMAND. THE USER MIGHT BE PLANNING, MIGHT BE SWITCHING MODES, MIGHT BE JUST LOST. 
+	THINK ABOUT DISTANCE. IF SOMEONE CAME REALLY CLOSE AND THEN STARTED TO ROTATE SHOULD THE DISTANCE PLAY A ROLE AS WELL. 
+
+
+TRAINING TASK. 
+	1. USE TELEOPERATION. GET FAMILIAR WITH THE DEVICE AND INTERFACE. HAVE THE BLENDING RUNNIG, BUT KEEP ALPHA 0. 
+	2. DEMONSTRATE ASSISTANCE LEVEL. TWO GOALS. AND DEMONSTRATE THAT WHEN THE ROBOT IS VERY VERY CONFIDENT IT WILL HELP IN ACHIEVEING THE TASK. 
+	3. YOU CAN MAKE THE ROBOT TO STEP IN FASTER AND QUICKER BY PRESSING THIS BUTTON. THE ROBOT WILL SWITCH THE MODE AND YOU CAN CONTINUE TO OPERATE IN IT. 
+
+
+TESTING TASK:
+
+	DEFINE HOME POSITIONS WITH DIFFERENT LEVELS OF COMPLEXITY. HOW TO ASSESS COMPLEXITY. DISTANCE FROM THE TARGETS + 'DIFFERENCE IN OREINTATION (METRICS EXISTS'. wRITE A NODE THAT CAN COMPUTE THIS? QUICK HACK. GRAB TF SPIT OUT THE METRIC. IDENTIFY POSITIONS WHERE THIS BECOMES LARGER AND LARGER. 
+
+
+	TASK ONE:
+	3 PRESEPCIFED LOCATIONS. STAGE TWO IS ALWAYS EASIER? BECAUSE NO CHANGE IN ORIENTATION. (SORT OF)
+
+	TEST BEST MODE AT EACH OF THE LOCATIONS FOR UNIFORM DISTRIBUTION. (READY)
+	TEST BEST MODE AT EACH OF THE LOCATIONS AFTER REACHING THE POSITIONS (THE PROB ASSOCIATED WITH LOCATION WILL BE HIGHER)
+
+	TONIGHT: DEFINE HOME POSITIONS. Some high positions have issues going to some places. Make sure it is fine. 4 home positions is good. DONE
+
+	1 2 3 locations:
+	12 23 13 31 32 21 (DOOE)
+
+	1 2 3 4 1D rotation, 2D rotatuion?
+
+	CHANGE rOTATION BY 0.04 speed. Projection. 
 
 
 
+
+
+TASK TWO:
+3 PRESPECIFIED POSITIONS BY VARYING ORIENTATIONS AT EACH POSITION. 
+
+2. TOPICS TO RECORD. NAMING CONVENTION OF FILES. VIDEO SETUP. SCRIPT FOR TRAINING PHASE. 
+
+
+3. CLINCARD REGISTRATION TALK TO PEOPLE. CLINCARD PDFS TO PEOPLE. 
+
+Nov 17th:
+
+1. implement gripping. Reduce unceritainities in gripping by we doing the gripping. Wizard of Oz (11am)
+2. Finish the second task setup. Think of combination. How will making the second phase more complex affect the results. Without assistance quicker. 
+In second task, more mode switches will happen. Can be related to task difficulty. 
+
+3. Set up data recording? 
+
+Identify EVERYTHING that is of use. Setup publishers. The timings can be dealt with later. Publish. Have a data recording bash script which will take the filename as argument
+
+4. Reduce teleop speeds. For safety. 
+5. Create trial order for 12 subjects (3pm till 6pm)
+
+5. Collect dummy data? 
+
+ANalysis:
+
+should I convert to matfiles before. Might need original bagfiles. 
+Within subject: pre and post switch. 
+Across subjects: Number of mode switches. 
 
 *********************************************************************************
 *********************************************************************************
@@ -365,18 +455,3 @@ Training phase:
 Multistage - Without grasping. Define combination. 
 
 Have MATLAB Simulation of the Dk computation. To motivate the disambiguation metric. 
-
-In our lab we work with subjects with motor impairments as a result of spinal cord injuries and focus on developing shared control assistive behaviors for different platforms such as robotic arms and smart wheelchairs. One of the key things that we understood from our studies is that the user satisfation needs to be high for end-user acceptanace and this in turn depends on how reliable the autonomy is and how adaptive it is to changing circumstances. In addition to the various uncertainities that are present in the environment one of the ky challenegs is the user's changing preferences and abilities. Furthermore this change can happen over multiple time sclaes. 
-
-We identify a few different research opportunities here. 
-
-Firstly data driven approaches with a focus on creation of longitudinal datasets over time scales can facilitate learning of human preferences in shared control and how behavior changes as well. 
-
-Secondly, this also provides us with a opportunity for robot learning from motor impaired nonexpert users and development of ML techniques that explicitly take into account the noisy and sparse nature of the training signal
-
-lastly, is there an opportunity to bridge high level behavioral models with 
-Ella:
-
-Trust
-
-Breakout group

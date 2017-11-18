@@ -1,0 +1,4 @@
+j2 od 3
+hA od 2
+hA od 3
+j2 od 1

@@ -1,0 +1,12 @@
+hA wo 1
+hA w 4
+j2 wo 1
+j2 w 5
+j2 w 3
+j2 wo 5
+hA wo 4
+hA w 5
+j2 wo 2
+j2 w 4
+hA w 1
+hA wo 3

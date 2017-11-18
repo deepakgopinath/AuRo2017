@@ -1,0 +1,12 @@
+j2 wo 4 h4 xz
+hA w 1 h3 x
+j2 w 4 h4 rp
+hA wo 5 h1 p
+j2 w 5 h3 xy
+hA wo 1 h4 yt
+j2 wo 5 h3 y
+hA w 5 h2 p
+hA w 2 h4 z
+j2 w 1 h3 rp
+hA wo 2 h1 z
+j2 wo 2 h3 y
