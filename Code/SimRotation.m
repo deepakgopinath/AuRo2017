@@ -20,11 +20,14 @@ for i=1:length(T)+1
     disp(Rwa);
     Rwa = Rwa*MatrixExp3(d_ang*wbf);
     
-    w = d_ang*wbf;
-    a = norm(w);
-    uv = w/a;
-    u = sin(a/2.0)*uv;
-    z = cos(a/2.0);
-    q = [u;z];
+    
+%     w = d_ang*wbf;
+%     a = norm(w);
+%     uv = w/a;
+%     u = sin(a/2.0)*uv;
+%     z = cos(a/2.0);
+%     q = [u;z];
+%     R = q2dcm(q);
+%     Rwa = Rwa*R;
     
 end

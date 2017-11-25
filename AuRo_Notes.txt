@@ -222,6 +222,22 @@ TRAINING TASK.
 	3. YOU CAN MAKE THE ROBOT TO STEP IN FASTER AND QUICKER BY PRESSING THIS BUTTON. THE ROBOT WILL SWITCH THE MODE AND YOU CAN CONTINUE TO OPERATE IN IT. 
 
 
+Nov 17th:
+
+1. implement gripping. Reduce unceritainities in gripping by we doing the gripping. Wizard of Oz (11am)
+2. Finish the second task setup. Think of combination. How will making the second phase more complex affect the results. Without assistance quicker. 
+In second task, more mode switches will happen. Can be related to task difficulty. 
+
+3. Set up data recording? 
+
+Identify EVERYTHING that is of use. Setup publishers. The timings can be dealt with later. Publish. Have a data recording bash script which will take the filename as argument
+
+4. Reduce teleop speeds. For safety. 
+5. Create trial order for 12 subjects (3pm till 6pm)
+
+5. Collect dummy data? 
+
+
 TESTING TASK:
 
 	DEFINE HOME POSITIONS WITH DIFFERENT LEVELS OF COMPLEXITY. HOW TO ASSESS COMPLEXITY. DISTANCE FROM THE TARGETS + 'DIFFERENCE IN OREINTATION (METRICS EXISTS'. wRITE A NODE THAT CAN COMPUTE THIS? QUICK HACK. GRAB TF SPIT OUT THE METRIC. IDENTIFY POSITIONS WHERE THIS BECOMES LARGER AND LARGER. 
@@ -243,31 +259,73 @@ TESTING TASK:
 	CHANGE rOTATION BY 0.04 speed. Projection. 
 
 
+Nov 19th:
+
+1. check SD card. 
+
+1. Check if blending gets loaded properly. Load the server AFTER the init values in the node. 
+2. Publish potential field vel. Should not be hard. 
+3. Play with the memory parameter. Have a stronger memory. And be resistant to sudden changes more. But higher blend value, instead. So it takes time to be confident, but when confident it kicks in hard. 
+
+4. Make separator markers on the sheet. Add serial number by hand. Add pouring task mappings on both pages. Write out launch file switches. 
+5. Try out a different trans_disamb file? Add another goal?
 
 
+TONIGHT:
 
+Email Theo, Luis and Jannie. 
+
+Nov 20th:
+
+1. Continue writing about implementation. Experiments. This should be straightforward if I am smart. 
+2. Start to consolidate the data. Run scripts to convert into mat file.s Need to be ready before I leave for Jersey. 
+3. Start writing MAtlab code for simulation of best mode at every point in worksapce. Can be done in MATLAB. just right out the quat dynamics properly. 
+4. Clear videos. 
 TASK TWO:
 3 PRESPECIFIED POSITIONS BY VARYING ORIENTATIONS AT EACH POSITION. 
-
 2. TOPICS TO RECORD. NAMING CONVENTION OF FILES. VIDEO SETUP. SCRIPT FOR TRAINING PHASE. 
 
+3. CLINCARD REGISTRATION TALK TO PEOPLE. CLINCARD PDFS TO PEOPLE _DONE
 
-3. CLINCARD REGISTRATION TALK TO PEOPLE. CLINCARD PDFS TO PEOPLE. 
 
-Nov 17th:
+Nov 21:
 
-1. implement gripping. Reduce unceritainities in gripping by we doing the gripping. Wizard of Oz (11am)
-2. Finish the second task setup. Think of combination. How will making the second phase more complex affect the results. Without assistance quicker. 
-In second task, more mode switches will happen. Can be related to task difficulty. 
+1. Prepare Consent form, trial list, and questionnaire for H6 today. Setup camera batteries/sd card. 
+2. Review experiment script once again. 
 
-3. Set up data recording? 
+Nov 22:
 
-Identify EVERYTHING that is of use. Setup publishers. The timings can be dealt with later. Publish. Have a data recording bash script which will take the filename as argument
+1. Do both studies. 
+2. Begin transfer of videos into computer to clear up SD card. Tomorrow morning. 
+3. Finish simulation code. pull code into my laptop - PULLED CODE
+4. Discuss with Brenna what pictures need to be made???  ODNE
 
-4. Reduce teleop speeds. For safety. 
-5. Create trial order for 12 subjects (3pm till 6pm)
 
-5. Collect dummy data? 
+Simplify alorithm. Remove + and -. DONE
+nov 23:
+
+1. Transfer vidoes. Clear up SD card. 
+2. After studies. Convert bag files into mat. Take pictures of the scene. DONE
+
+
+
+
+ANALYSIS:
+
+1. Pull all data from bag files into appropriate mat sturcture. 
+
+2. Create data structure based on task and interface. This will require code coordination between the bagfile data and trial order data. Use info in trial order data to LOOK up bagfile data and collect them. 
+
+
+What needs to be collected? COrrelation ebtween times of assistance request and the subsequent confidence.
+blue, red, yellow, purple. (1,2,3,4)
+
+
+CODE STUFF:
+
+1. Write ps3 gripping service. Open and close. 
+2. Write trial generation script
+3. Write bash script for data collection
 
 ANalysis:
 

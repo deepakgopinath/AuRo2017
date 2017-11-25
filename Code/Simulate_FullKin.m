@@ -87,21 +87,29 @@ end
 
 %% simulation of kinematics systematically. 
 
-for i=1:nm %for each mode
+for i=1:nm %for each control mode
     for j=1:ng %for control commands towards each goal
-        if i <= 3
-            uh = xg(:, j) - xr;
+        if sum(cm{i} >= 4) %rotation modes
+            wbf = ones(3,1);
+            zero_dim = setdiff(4:6,cm{i});
+            for jj=1:length(zero_dim)
+                wbf(zero_dim(jj) - 3) = 0;
+            end
+            disp(wbf);
+        else %translation
+%             uh = xgs_T(:, j) - xr_T(1:3, 4);
         end
-        zero_dim = setdiff(1:nd,cm{i});
-        for jj=1:length(zero_dim)
-            uh(zero_dim(jj)) = 0;
+        if sum(cm{i} >= 4)
+            %simulate rotation
+            
         end
-        uh = 0.2*(uh/(norm(uh) + realmin));
-        for k=1:length(T)-1
-             traj(:, k+1, j) = sim_dyn(traj(:, k, j), uh); %sim_dyn intenrally updates global robot state
-             pgs(:, k+1, j) = compute_p_of_g_dft(uh, traj(:,k,j), pgs(:, k, j));
-        end
+        %simulate translation
+        
+%         for k=1:length(T)-1
+%              traj(:, k+1, j) = sim_dyn(traj(:, k, j), uh); %sim_dyn intenrally updates global robot state
+%              pgs(:, k+1, j) = compute_p_of_g_dft(uh, traj(:,k,j), pgs(:, k, j));
+%         end
     end
-    cell_pgs{i} = pgs;
-    cell_trajs{i} = traj;
+%     cell_pgs{i} = pgs;
+%     cell_trajs{i} = traj;
 end
