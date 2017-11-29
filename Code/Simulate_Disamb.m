@@ -4,9 +4,9 @@ global ng delta_t xg;
 num_dof = 3;
 ng = 3;
 nd = 3;
-nm = 2; %2-D interface in 3D world
-cm = {[1,2], [3]};
-% cm = {[1],[2],[3]};
+nm = 3; %2-D interface in 3D world
+% cm = {[1,2], [3]};
+cm = {[1],[2],[3]};
 delta_t = 0.05;
 % w1 = 0.5;
 % w2 = 0.5;
@@ -32,15 +32,15 @@ maxR = 0.5;
 minR = -0.5;
 minR  + (maxR - minR)*rand(1, ng);
 % xg = [minR  + (maxR - minR)*rand(1, ng); -rand(1, ng) - 0.02; 0.5*rand(1, ng) + 0.1] + rand(nd,1)*0.2 - rand(nd,1)*0.2; %random goal positions. These will be treated as fixed parameters.
-xg = [2, -1, 1.8;
-      2, -0.8, 0.1;
-      -1.5, -1.2, 0.8]';
+xg = [2, -2, 1.8;
+      -1.5, -1.2, 0.8;
+      2, -0.8, 0.1;]';
 pg0 = (1/ng)*ones(ng, 1);
 pg = (1/ng)*ones(ng, 1);
 project_time_list = [1,1,2,2]';
 projected_pg_list = zeros(nd*ng, length(project_time_list));
 % xr = [0.405, -0.128, 0.287]';
-xr = [0,0,0.5]';
+xr = [0,-1.4,0.7]';
 %%
 %PLOT GOALS AND ROBOT and UH
 figure;
@@ -122,9 +122,9 @@ for i=1:nm %number of modes, in columns
     for j=1:ng %to each goal, in rows
         pgs_data = curr_cell(:,:, j);
         subplot(ng, nm, (j-1)*nm  + 1 + i - 1);
-        plot(T, pgs_data', 'LineWidth', 2); grid on;
+        plot(T, pgs_data', 'LineWidth', 2); grid on; ylim([0,1.0]);
         if i == 1
-            ylabel(strcat('Target Goal ', num2str(j), ' P(g)') );
+            ylabel({strcat('Motion to Goal ', num2str(j)), ' P(g)'} );
         else
             ylabel('P(g)');
         end
@@ -136,6 +136,7 @@ for i=1:nm %number of modes, in columns
         
     end
 end
+
 %%
 % min_ws = -0.5;
 % max_ws = 0.5;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  22 NOV 2017 15:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  29 NOV 2017 08:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1066,7 +1066,7 @@ converted-to.pdf ./figures/Fig1_Disamb.eps>
 (epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/Fig1_Disamb-eps-converted-to.pdf, id=74, 663.47874pt x 478.78876pt>
+<./figures/Fig1_Disamb-eps-converted-to.pdf, id=78, 663.47874pt x 478.78876pt>
 File: ./figures/Fig1_Disamb-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/Fig1_Disamb-eps-converted-to.pdf>
@@ -1085,7 +1085,7 @@ ol-eps-converted-to.pdf ./figures/Fig2_SharedControl.eps>
 (epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/Fig2_SharedControl-eps-converted-to.pdf, id=83, 1554.80875pt x 921.4
+<./figures/Fig2_SharedControl-eps-converted-to.pdf, id=87, 1554.80875pt x 921.4
 425pt>
 File: ./figures/Fig2_SharedControl-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1135,44 +1135,188 @@ Package epstopdf Info: Source file: <./figures/INTER_4.eps>
 erted-to.pdf ./figures/INTER_4.eps>
 (epstopdf)             \includegraphics on input line 387.
 Package epstopdf Info: Output file is already uptodate.
-<./figures/INTER_4-eps-converted-to.pdf, id=320, 1144.275pt x 418.56375pt>
+<./figures/INTER_4-eps-converted-to.pdf, id=324, 1144.275pt x 418.56375pt>
 File: ./figures/INTER_4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/INTER_4-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/INTER_4-eps-converted-to.pdf used on input l
 ine 387.
 (pdftex.def)             Requested size: 238.9604pt x 93.20837pt.
+Package epstopdf Info: Source file: <./figures/Task_New.eps>
+(epstopdf)                    date: 2017-11-28 20:14:42
+(epstopdf)                    size: 6490402 bytes
+(epstopdf)             Output file: <./figures/Task_New-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 23:10:13
+(epstopdf)                    size: 337764 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/Task_New-eps-con
+verted-to.pdf ./figures/Task_New.eps>
+(epstopdf)             \includegraphics on input line 396.
+Package epstopdf Info: Output file is already uptodate.
 
+<./figures/Task_New-eps-converted-to.pdf, id=326, 1927.2pt x 542.025pt>
+File: ./figures/Task_New-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/Task_New-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/Task_New-eps-converted-to.pdf used on input 
+line 396.
+(pdftex.def)             Requested size: 495.0pt x 139.21115pt.
+ [8 <./figures/INTER_4-eps-converted-to.pdf>]
+Overfull \hbox (1.40538pt too wide) in paragraph at lines 414--415
+$[]$\OT1/cmr/m/n/10 (-20) : In the sec-ond phase of train-ing, the blending-
+ []
+
+[9 <./figures/Task_New-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figures/ms_t_j_ha.eps>
+(epstopdf)                    date: 2017-11-24 22:39:05
+(epstopdf)                    size: 34605 bytes
+(epstopdf)             Output file: <./figures/ms_t_j_ha-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-26 22:09:25
+(epstopdf)                    size: 9808 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/ms_t_j_ha-eps-co
+nverted-to.pdf ./figures/ms_t_j_ha.eps>
+(epstopdf)             \includegraphics on input line 449.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/ms_t_j_ha-eps-converted-to.pdf, id=364, 516.93124pt x 459.7175pt>
+File: ./figures/ms_t_j_ha-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./figures/ms_t_j_ha-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/ms_t_j_ha-eps-converted-to.pdf used on input
+ line 449.
+(pdftex.def)             Requested size: 267.6387pt x 238.0233pt.
+Package epstopdf Info: Source file: <./figures/j2_man_disamb_pattern_tight.eps>
+
+(epstopdf)                    date: 2017-11-29 07:53:47
+(epstopdf)                    size: 115757 bytes
+(epstopdf)             Output file: <./figures/j2_man_disamb_pattern_tight-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2017-11-29 07:55:56
+(epstopdf)                    size: 106639 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/j2_man_disamb_pa
+ttern_tight-eps-converted-to.pdf ./figures/j2_man_disamb_pattern_tight.eps>
+(epstopdf)             \includegraphics on input line 467.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/j2_man_disamb_pattern_tight-eps-converted-to.pdf, id=366, 619.31375p
+t x 543.02875pt>
+File: ./figures/j2_man_disamb_pattern_tight-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./figures/j2_man_disamb_pattern_tight-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/j2_man_disamb_pattern_tight-eps-converted-to
+.pdf used on input line 467.
+(pdftex.def)             Requested size: 396.01926pt x 299.6196pt.
+Package epstopdf Info: Source file: <./figures/ha_man_disamb_pattern_tight.eps>
+
+(epstopdf)                    date: 2017-11-28 23:38:59
+(epstopdf)                    size: 192165 bytes
+(epstopdf)             Output file: <./figures/ha_man_disamb_pattern_tight-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 23:39:31
+(epstopdf)                    size: 400453 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/ha_man_disamb_pa
+ttern_tight-eps-converted-to.pdf ./figures/ha_man_disamb_pattern_tight.eps>
+(epstopdf)             \includegraphics on input line 473.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/ha_man_disamb_pattern_tight-eps-converted-to.pdf, id=367, 754.82pt x
+ 543.02875pt>
+File: ./figures/ha_man_disamb_pattern_tight-eps-converted-to.pdf Graphic file (
+type pdf)
+ <use ./figures/ha_man_disamb_pattern_tight-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/ha_man_disamb_pattern_tight-eps-converted-to
+.pdf used on input line 473.
+(pdftex.def)             Requested size: 396.00151pt x 284.8872pt.
+Package epstopdf Info: Source file: <./figures/button_presses_average.eps>
+(epstopdf)                    date: 2017-11-28 22:02:04
+(epstopdf)                    size: 24399 bytes
+(epstopdf)             Output file: <./figures/button_presses_average-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-11-28 23:19:19
+(epstopdf)                    size: 7862 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/button_presses_a
+verage-eps-converted-to.pdf ./figures/button_presses_average.eps>
+(epstopdf)             \includegraphics on input line 486.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/button_presses_average-eps-converted-to.pdf, id=368, 739.76375pt x 6
+23.32875pt>
+File: ./figures/button_presses_average-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./figures/button_presses_average-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/button_presses_average-eps-converted-to.pdf 
+used on input line 486.
+(pdftex.def)             Requested size: 262.86205pt x 221.48775pt.
+Package epstopdf Info: Source file: <./figures/button_presses_average_tasks.eps
+>
+(epstopdf)                    date: 2017-11-28 22:02:22
+(epstopdf)                    size: 18827 bytes
+(epstopdf)             Output file: <./figures/button_presses_average_tasks-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 23:20:06
+(epstopdf)                    size: 7344 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/button_presses_a
+verage_tasks-eps-converted-to.pdf ./figures/button_presses_average_tasks.eps>
+(epstopdf)             \includegraphics on input line 493.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/button_presses_average_tasks-eps-converted-to.pdf, id=369, 739.76375
+pt x 623.32875pt>
+File: ./figures/button_presses_average_tasks-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./figures/button_presses_average_tasks-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/button_presses_average_tasks-eps-converted-t
+o.pdf used on input line 493.
+(pdftex.def)             Requested size: 262.86205pt x 221.48775pt.
+
+Underfull \vbox (badness 8170) has occurred while \output is active []
+
+ [10 <./figures/ms_t_j_ha-eps-converted-to.pdf> <./figures/button_presses_avera
+ge-eps-converted-to.pdf> <./figures/button_presses_average_tasks-eps-converted-
+to.pdf>]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+
+Overfull \vbox (15.3651pt too high) has occurred while \output is active []
+
+
+
+LaTeX Warning: Text page 11 contains only floats.
+
+
+Overfull \vbox (15.3651pt too high) has occurred while \output is active []
+
+
+[11 <./figures/j2_man_disamb_pattern_tight-eps-converted-to.pdf> <./figures/ha_
+man_disamb_pattern_tight-eps-converted-to.pdf>] (./Auro_Submission.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./figures/INTER_4-eps-converted-to.pdf>] (./Auro_Submission.bbl
+ [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 489.
 
-[11
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 566.
+
+[14
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 489.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
  (./Auro_Submission.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 489.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 489.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
 Package rerunfilecheck Info: File `Auro_Submission.out' has not changed.
-(rerunfilecheck)             Checksum: F7E0A9139916EF19807AC8E6A9FFCD8F;380.
+(rerunfilecheck)             Checksum: 8E6BA1849AB5FA803120D9CC97F2F4D5;434.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1181,7 +1325,7 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 489.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 566.
  )
 (\end occurred when \ifx on line 89 was incomplete)
 (\end occurred when \ifx on line 89 was incomplete)
@@ -1279,11 +1423,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 489.
 (\end occurred when \ifx on line 64 was incomplete)
 (\end occurred when \ifx on line 64 was incomplete) 
 Here is how much of TeX's memory you used:
- 16890 strings out of 495028
- 282305 string characters out of 6181497
- 474655 words of memory out of 5000000
- 19544 multiletter control sequences out of 15000+600000
- 23754 words of font info for 148 fonts, out of 8000000 for 9000
+ 16944 strings out of 495028
+ 284038 string characters out of 6181497
+ 475612 words of memory out of 5000000
+ 19574 multiletter control sequences out of 15000+600000
+ 24012 words of font info for 152 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,20n,51p,10423b,651s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/deepak/.texmf-var/fo
@@ -1309,10 +1453,10 @@ sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Auro_Submission.pdf (11 pages, 1978089 bytes).
+Output written on Auro_Submission.pdf (14 pages, 2842523 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 411 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
- 16976 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 533 PDF objects out of 1000 (max. 8388607)
+ 457 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 17014 words of extra memory for PDF output out of 17280 (max. 10000000)
 

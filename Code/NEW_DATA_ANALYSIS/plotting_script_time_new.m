@@ -1,10 +1,11 @@
 % parse_data;
 plotting_script_new;
+                
 interfaces = {'j', 'h'};
-interfaces_cell = {'ms_po_jon','ms_po_jwo','ms_re_jon','ms_re_jwo';
-                    'ms_po_hon','ms_po_hwo','ms_re_hon','ms_re_hwo'};
+interfaces_cell = {'t_po_jon','t_po_jwo','t_re_jon','t_re_jwo';
+                    't_po_hon','t_po_hwo','t_re_hon','t_re_hwo'};
 jit_factor = [0.02, 0.005];
-ylims = [60, 100];
+ylims = [200, 200];
 y1 = 1.0; y2 = 2.0;
 for kk=1:length(interfaces)
     v1 = eval(interfaces_cell{kk,2}); %Manual RsG
@@ -21,12 +22,20 @@ for kk=1:length(interfaces)
     if kk==1
 %         bh3 = boxplot([v1,v2], 'whisker', 200);
 %         set(bh3(:,2),'linewidth',2);
-        
+%         v1(v1 == 0) = [];
+%         v1 = [v1;median(v1)];
+%         v2(v2 == 0) = [];
+%         v2 = [v2;median(v2)];
+        disp(var(v1));disp(var(v2));
         bh5 = boxplot(v1, 'positions', y1, 'whisker', 200,'Widths', 0.3);set(bh5(:,1),'linewidth',2);
         bh6 = boxplot(v2, 'positions', y2,'whisker', 200,'Widths', 0.3);set(bh6(:,1),'linewidth',2);
     else
-%         v1(v1 == 0) = [];
-%         v1 = [v1;median(v1)];
+        v1(v1 == 0) = [];
+        v1 = [v1;median(v1)];
+        v2(v2 == 0) = [];
+        v2 = [v2;median(v2)];
+        
+        disp(var(v1));disp(var(v2));
         bh7 = boxplot(v1, 'positions', y1,'whisker', 200,'Widths', 0.3);set(bh7(:,1),'linewidth',2);
         bh8 = boxplot(v2, 'positions', y2,'whisker', 200,'Widths', 0.3);set(bh8(:,1),'linewidth',2);
     end
@@ -39,10 +48,10 @@ for kk=1:length(interfaces)
 %     scatter(y2, median(v2), 100, 'X', 'b', 'LineWidth',4.5);
     axis([0,3,0,ylims(kk)]);
     if kk == 1
-        set(gca, 'fontWeight', 'normal', 'YTick', 0:10:ylims(kk));
+        set(gca, 'fontWeight', 'normal', 'YTick', 0:40:ylims(kk));
         ylabel('\bf \fontsize{11} Task Completion Time (sec)');
     else
-        set(gca,  'fontWeight', 'normal', 'YTick', 0:10:ylims(kk));
+        set(gca,  'fontWeight', 'normal', 'YTick', 0:40:ylims(kk));
     end
 %     set(gca, 'XTick', 1:1:2);
     set(gca,'fontWeight','bold','Xtick',1:1:2);

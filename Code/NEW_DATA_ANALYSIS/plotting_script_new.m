@@ -7,7 +7,7 @@ interfaces_cell = {'ms_po_jon','ms_po_jwo','ms_re_jon','ms_re_jwo';
                     'ms_po_hon','ms_po_hwo','ms_re_hon','ms_re_hwo'};
                 
 jit_factor = [0.0, 0.0];
-ylims = [40, 100];
+ylims = [60, 100];
 y1 = 1.0; y2 = 2.0;
 for kk=1:length(interfaces)
     v1 = eval(interfaces_cell{kk,2}); %Manual RsG
@@ -82,7 +82,7 @@ for kk=1:length(interfaces)
     grid on;
     
     if kk == 1
-        set(gca,  'fontWeight', 'normal', 'YTick', 0:5:ylims(kk));
+        set(gca,  'fontWeight', 'normal', 'YTick', 0:10:ylims(kk));
         title('\bf \fontsize{16} Joystick  ');
         set(gca,'fontWeight','bold','Xtick',1:1:2);
 %         set(gca,'DefaultTextInterpreter', 'tex')

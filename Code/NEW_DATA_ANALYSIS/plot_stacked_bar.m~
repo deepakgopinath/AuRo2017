@@ -1,0 +1,78 @@
+close all;
+parse_data;
+
+%%
+interfaces = {'j', 'h'};
+interfaces_cell_ms = {'ms_po_jon','ms_po_jwo','ms_re_jon','ms_re_jwo';
+                    'ms_po_hon','ms_po_hwo','ms_re_hon','ms_re_hwo'};
+interfaces_cell_ar = {'na_po_jon','na_re_jon', 'na_po_hon', 'na_re_hon';
+                    'na_po_jon', 'na_po_hon', 'na_re_jon','na_re_hon'};
+
+                
+%% sum of button presses
+bp_jon = [sum(ms_re_jon + ms_po_jon), sum(na_re_jon + na_po_jon)];
+bp_jwo = [sum(ms_re_jwo + ms_po_jwo), 0];
+
+h1 = bar([0.8, 1.2], [bp_jon;bp_jwo], 'stacked'); grid on; hold on;
+set(h1(2), 'FaceColor', [1,0,0]);
+set(h1, 'EdgeColor', 'k', 'LineWidth', 1.2);
+bp_hon = [sum(ms_re_hon + ms_po_hon), sum(na_re_hon + na_po_hon)];
+bp_hwo = [sum(ms_re_hwo + ms_po_hwo), 0];
+
+
+h2 = bar([1.8, 2.2], [bp_hon;bp_hwo], 'stacked'); grid on; hold on;
+set(h2(2), 'FaceColor', [1,0,0]);
+set(h2, 'EdgeColor', 'k', 'LineWidth', 1.2);
+xlim([0,3]);
+
+ set(gca,'fontWeight','bold','Xtick',1:1:2);
+%  set(gca, 'XTickLabel', {'Joystick', 'Headarray'});
+xlabel({'Disamb Manual Disamb Manual','Joystick HeadArray'})
+ ylabel('\bf \fontsize{11} Number of Button Presses');
+ 
+ %% average of button presses
+bp_jon = [mean(ms_re_jon + ms_po_jon), mean(na_re_jon + na_po_jon)];
+bp_jwo = [mean(ms_re_jwo + ms_po_jwo), 0];
+
+h1 = bar([0.8, 1.2], [bp_jon;bp_jwo], 'stacked'); grid on; hold on;
+set(h1(2), 'FaceColor', [1,0,0]);
+set(h1, 'EdgeColor', 'k', 'LineWidth', 1.2);
+bp_hon = [mean(ms_re_hon + ms_po_hon), mean(na_re_hon + na_po_hon)];
+bp_hwo = [mean(ms_re_hwo + ms_po_hwo), 0];
+
+
+h2 = bar([1.8, 2.2], [bp_hon;bp_hwo], 'stacked'); grid on; hold on;
+set(h2(2), 'FaceColor', [1,0,0]);
+set(h2, 'EdgeColor', 'k', 'LineWidth', 1.2);
+xlim([0,3]);
+
+ set(gca,'fontWeight','bold','Xtick',1:1:2);
+%  set(gca, 'XTickLabel', {'Joystick', 'Headarray'});
+xlabel({'Disamb Manual Disamb Manual','Joystick HeadArray'})
+ ylabel('\bf \fontsize{11} Number of Button Presses');
+ legend('Mode Switch','Assistance Request', 'Location', 'north');
+ 
+ %%
+ bp_ron = [mean(ms_re_jon + ms_re_hon), mean(na_re_jon + na_re_jon)];
+bp_rwo = [mean(ms_re_jwo + ms_po_jwo), 0];
+
+h1 = bar([0.8, 1.2], [bp_jon;bp_jwo], 'stacked'); grid on; hold on;
+set(h1(2), 'FaceColor', [1,0,0]);
+set(h1, 'EdgeColor', 'k', 'LineWidth', 1.2);
+
+
+bp_pon = [mean(ms_re_hon + ms_po_hon), mean(na_re_hon + na_po_hon)];
+bp_pwo = [mean(ms_re_hwo + ms_po_hwo), 0];
+
+
+h2 = bar([1.8, 2.2], [bp_hon;bp_hwo], 'stacked'); grid on; hold on;
+set(h2(2), 'FaceColor', [1,0,0]);
+set(h2, 'EdgeColor', 'k', 'LineWidth', 1.2);
+xlim([0,3]);
+
+ set(gca,'fontWeight','bold','Xtick',1:1:2);
+%  set(gca, 'XTickLabel', {'Joystick', 'Headarray'});
+xlabel({'Disamb Manual Disamb Manual','Joystick HeadArray'})
+ ylabel('\bf \fontsize{11} Number of Button Presses');
+ legend('Mode Switch','Assistance Request', 'Location', 'north');
+ 

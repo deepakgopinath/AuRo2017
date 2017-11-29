@@ -333,6 +333,16 @@ should I convert to matfiles before. Might need original bagfiles.
 Within subject: pre and post switch. 
 Across subjects: Number of mode switches. 
 
+
+
+Sunday:
+
+1. Start writing the results section. Add what i have. 
+2. Finish the motivation plot. I have the code. Present them in a different way - THINK OF PRESENTATION
+3. See if the simulation code can be run completely in indigo - DONE
+4. 
+
+
 *********************************************************************************
 *********************************************************************************
 *********************************************************************************

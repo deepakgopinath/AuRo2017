@@ -10,12 +10,12 @@
 
 \bibitem[{Amari(1977)}]{amari1977dynamics}
 Amari Si (1977) Dynamics of pattern formation in lateral-inhibition type neural
-  fields. Biological cybernetics 27(2):77--87
+  fields. Biological Cybernetics 27(2):77--87
 
 \bibitem[{Argall et~al(2009)Argall, Chernova, Veloso, and
   Browning}]{argall2009survey}
 Argall BD, Chernova S, Veloso M, Browning B (2009) A survey of robot learning
-  from demonstration. Robotics and autonomous systems 57(5):469--483
+  from demonstration. Robotics and Autonomous Systems 57(5):469--483
 
 \bibitem[{Atanasov et~al(2014)Atanasov, Le~Ny, Daniilidis, and
   Pappas}]{atanasov2014information}
@@ -34,9 +34,8 @@ Baker CL, Saxe RR, Tenenbaum JB (2009) Action understanding as inverse
 \bibitem[{Calinon et~al(2012)Calinon, Li, Alizadeh, Tsagarakis, and
   Caldwell}]{calinon2012statistical}
 Calinon S, Li Z, Alizadeh T, Tsagarakis NG, Caldwell DG (2012) Statistical
-  dynamical systems for skills acquisition in humanoids. In: Humanoid Robots
-  (Humanoids), 2012 12th IEEE-RAS International Conference on, IEEE, pp
-  323--329
+  dynamical systems for skills acquisition in humanoids. In: 12th IEEE-RAS
+  International Conference on Humanoid Robots (Humanoids), IEEE, pp 323--329
 
 \bibitem[{Choi et~al(2008)Choi, Anderson, Glass, and Kemp}]{choi2008laser}
 Choi YS, Anderson CD, Glass JD, Kemp CC (2008) Laser pointers and a touch
@@ -56,7 +55,7 @@ Demeester E, H{\"u}ntemann A, Vanhooydonck D, Vanacker G, Van~Brussel H, Nuttin
 Downey JE, Weiss JM, Muelling K, Venkatraman A, Valois JS, Hebert M, Bagnell
   JA, Schwartz AB, Collinger JL (2016) Blending of brain-machine interface and
   vision-guided autonomous robotics improves neuroprosthetic arm performance
-  during grasping. Journal of neuroengineering and rehabilitation 13(1):28
+  during grasping. Journal of Neuroengineering and Rehabilitation 13(1):28
 
 \bibitem[{Dragan and Srinivasa(2012)}]{dragan2012assistive}
 Dragan AD, Srinivasa SS (2012) Assistive teleoperation for manipulation tasks.
@@ -75,12 +74,12 @@ Driessen B, Kate TT, Liefhebber F, Versluis A, Van~Woerden J (2005)
   Information Society 4(2):165--173
 
 \bibitem[{Eftring and Boschian(1999)}]{eftring1999technical}
-Eftring H, Boschian K (1999) Technical results from manus user trials. In:
-  ICORR'99: International Conference on Rehabilitation Robotics
+Eftring H, Boschian K (1999) Technical results from manus user trials. In: IEEE
+  2nd International Conference on Rehabilitation Robotics (ICORR)
 
 \bibitem[{Erlhagen and Bicho(2006)}]{erlhagen2006dynamic}
 Erlhagen W, Bicho E (2006) The dynamic neural field approach to cognitive
-  robotics. Journal of neural engineering 3(3):R36
+  robotics. Journal of Neural Engineering 3(3):R36
 
 \bibitem[{Erlhagen and Bicho(2014)}]{erlhagen2014dynamic}
 Erlhagen W, Bicho E (2014) A dynamic neural field approach to natural and
@@ -88,7 +87,7 @@ Erlhagen W, Bicho E (2014) A dynamic neural field approach to natural and
 
 \bibitem[{Faubel and Sch{\"o}ner(2008)}]{faubel2008learning}
 Faubel C, Sch{\"o}ner G (2008) Learning to recognize objects on the fly: a
-  neurally based dynamic field approach. Neural networks 21(4):562--576
+  neurally based dynamic field approach. Neural Networks 21(4):562--576
 
 \bibitem[{Goodfellow et~al(2010)Goodfellow, Koenig, Muja, Pantofaru, Sorokin,
   and Takayama}]{goodfellow2010help}
@@ -135,15 +134,15 @@ Khansari-Zadeh SM, Billard A (2011) Learning stable nonlinear dynamical systems
 
 \bibitem[{Khatib(1986)}]{khatib1986real}
 Khatib O (1986) Real-time obstacle avoidance for manipulators and mobile
-  robots. The international journal of robotics research 5(1):90--98
+  robots. The International Journal of Robotics Research 5(1):90--98
 
 \bibitem[{Kim et~al(2010)Kim, Hazlett, Godfrey, Rucks, Portee, Bricout,
   Cunningham, and Behal}]{kim2010relationship}
 Kim DJ, Hazlett R, Godfrey H, Rucks G, Portee D, Bricout J, Cunningham T, Behal
   A (2010) On the relationship between autonomy, performance, and satisfaction:
   Lessons from a three-week user study with post-sci patients using a smart
-  6dof assistive robotic manipulator. In: Robotics and Automation (ICRA), 2010
-  IEEE International Conference on, IEEE, pp 217--222
+  6dof assistive robotic manipulator. In: 2010 IEEE International Conference on
+  Robotics and Automation (ICRA), IEEE, pp 217--222
 
 \bibitem[{Kim et~al(2012)Kim, Hazlett-Knudsen, Culver-Godfrey, Rucks,
   Cunningham, Portee, Bricout, Wang, and Behal}]{kim2012autonomy}
@@ -193,19 +192,18 @@ Nuttin M, Vanhooydonck D, Demeester E, Van~Brussel H (2002) Selection of
   Ferrez, Van~Brussel, and Nuttin}]{philips2007adaptive}
 Philips J, Mill{\'a}n JdR, Vanacker G, Lew E, Gal{\'a}n F, Ferrez PW,
   Van~Brussel H, Nuttin M (2007) Adaptive shared control of a brain-actuated
-  simulated wheelchair. In: Rehabilitation Robotics, 2007. ICORR 2007. IEEE
-  10th International Conference on, IEEE, pp 408--414
+  simulated wheelchair. In: IEEE 10th International Conference on
+  Rehabilitation Robotics (ICORR), IEEE, pp 408--414
 
 \bibitem[{Ratliff et~al(2009)Ratliff, Zucker, Bagnell, and
   Srinivasa}]{ratliff2009chomp}
 Ratliff N, Zucker M, Bagnell JA, Srinivasa S (2009) Chomp: Gradient
-  optimization techniques for efficient motion planning. In: Robotics and
-  Automation, 2009. ICRA'09. IEEE International Conference on, IEEE, pp
-  489--494
+  optimization techniques for efficient motion planning. In: IEEE International
+  Conference on Robotics and Automation (ICRA), IEEE, pp 489--494
 
 \bibitem[{Rimon and Koditschek(1992)}]{rimon1992exact}
 Rimon E, Koditschek DE (1992) Exact robot navigation using artificial potential
-  functions. IEEE Transactions on robotics and automation 8(5):501--518
+  functions. IEEE Transactions on Robotics and Automation 8(5):501--518
 
 \bibitem[{Sadigh et~al(2016{\natexlab{a}})Sadigh, Sastry, Seshia, and
   Dragan}]{sadigh2016planning}
@@ -216,8 +214,8 @@ Sadigh D, Sastry S, Seshia SA, Dragan AD (2016{\natexlab{a}}) Planning for
 \bibitem[{Sadigh et~al(2016{\natexlab{b}})Sadigh, Sastry, Seshia, and
   Dragan}]{sadigh2016information}
 Sadigh D, Sastry SS, Seshia SA, Dragan A (2016{\natexlab{b}}) Information
-  gathering actions over human internal state. In: Intelligent Robots and
-  Systems (IROS), 2016 IEEE/RSJ International Conference on, IEEE, pp 66--73
+  gathering actions over human internal state. In: IEEE/RSJ International
+  Conference on Intelligent Robots and Systems (IROS), IEEE, pp 66--73
 
 \bibitem[{Schaal(1997)}]{schaal1997learning}
 Schaal S (1997) Learning from demonstration. In: Advances in neural information
@@ -225,7 +223,7 @@ Schaal S (1997) Learning from demonstration. In: Advances in neural information
 
 \bibitem[{Scherer(1996)}]{scherer1996outcomes}
 Scherer MJ (1996) Outcomes of assistive technology use on quality of life.
-  Disability and rehabilitation 18(9):439--448
+  Disability and Rehabilitation 18(9):439--448
 
 \bibitem[{Sch{\"o}ner(2008)}]{schoner2008dynamical}
 Sch{\"o}ner G (2008) Dynamical systems approaches to cognition. Cambridge
@@ -234,8 +232,8 @@ Sch{\"o}ner G (2008) Dynamical systems approaches to cognition. Cambridge
 \bibitem[{Sch{\"o}ner et~al(1995)Sch{\"o}ner, Dose, and
   Engels}]{schoner1995dynamics}
 Sch{\"o}ner G, Dose M, Engels C (1995) Dynamics of behavior: Theory and
-  applications for autonomous robot architectures. Robotics and autonomous
-  systems 16(2-4):213--245
+  applications for autonomous robot architectures. Robotics and Autonomous
+  Systems 16(2-4):213--245
 
 \bibitem[{Simpson et~al(2008)Simpson, Broughton, Gauthier, and
   Prochazka}]{simpson2008tooth}
@@ -252,14 +250,14 @@ Sorokin A, Berenson D, Srinivasa SS, Hebert M (2010) People helping robots
 
 \bibitem[{Storms and Tilbury(2014)}]{storms2014blending}
 Storms JG, Tilbury DM (2014) Blending of human and obstacle avoidance control
-  for a high speed mobile robot. In: American Control Conference (ACC), 2014,
-  IEEE, pp 3488--3493
+  for a high speed mobile robot. In: American Control Conference (ACC), IEEE,
+  pp 3488--3493
 
 \bibitem[{Tanner et~al(2003)Tanner, Loizou, and
   Kyriakopoulos}]{tanner2003nonholonomic}
 Tanner HG, Loizou SG, Kyriakopoulos KJ (2003) Nonholonomic navigation and
-  control of cooperating mobile manipulators. IEEE Transactions on robotics and
-  automation 19(1):53--64
+  control of cooperating mobile manipulators. IEEE Transactions on Robotics and
+  Automation 19(1):53--64
 
 \bibitem[{Tomasello and Carpenter(2007)}]{tomasello2007shared}
 Tomasello M, Carpenter M (2007) Shared intentionality. Developmental science
@@ -267,7 +265,7 @@ Tomasello M, Carpenter M (2007) Shared intentionality. Developmental science
 
 \bibitem[{Tomasello and Moll(2010)}]{tomasello2010gap}
 Tomasello M, Moll H (2010) The gap is social: Human shared intentionality and
-  culture. In: Mind the gap, Springer, pp 331--349
+  culture. In: Mind the Gap, Springer, pp 331--349
 
 \bibitem[{Tsui et~al(2011)Tsui, Kim, Behal, Kontak, and Yanco}]{tsui2011want}
 Tsui KM, Kim DJ, Behal A, Kontak D, Yanco HA (2011) “{I} want that”:

@@ -353,7 +353,7 @@ $$
 \right.
 $$
 with $\theta_i \in [0, 1] \;\forall\; i \in [1,2,3]$ and $ \theta_2 > \theta_1$. 
-For effective shared control, we set $\theta_1 = \frac{1.05}{n_g}, \theta_2 = \frac{1.10}{n_g}$ and $ \theta_3 = 0.7$.
+For effective shared control, we set $\theta_1 = \frac{1.2}{n_g}, \theta_2 = \frac{1.4}{n_g}$ and $ \theta_3 = 0.7$.
 
 The robot control command $\boldsymbol{u}_{r,g}$ is generated using a simple potential field which is defined in all parts of the state space~\cite{khatib1986real}. Every goal $g$ is associated with a potential field $P_g$ which treats $g$ as an attractor and all the other goals in the scene as repellers. For potential field $P_g$, the attractor velocity is given by
 \begin{equation*}
@@ -389,37 +389,114 @@ The experiments were performed using the MICO 6-DoF robotic arm (Kinova Robotics
 	\caption{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega$ indicate the translational and rotational velocities of the end-effector, respectively.}
 	\label{fig:interfaces}
 \end{figure}
-The users tele-operated the robot using two different control interfaces: a 2-axis joystick and a switch-based head array. The control signals captured from the interfaces were mapped to the Cartesian velocities of the end-effector (Figure~\ref{fig:interfaces}).
+The users teleoperated the robot using two different control interfaces: a 2-axis joystick and a switch-based head array. The control signals captured from the interfaces were mapped to the Cartesian velocities of the end-effector (Figure~\ref{fig:interfaces}).
 
 The joystick generated continuous control signals and the two dimensional mapping allowed for control of a maximum of two dimensions at a time. The 6-D control space was partitioned into four control modes that could be accessed using the buttons on the interface. On the other hand, the switch-based head array consisted of three switches embedded in the headset operated by the head and generated 1-D discrete signals. The switch at the back of the headset was used to cycle between the different control modes and the switches on the left and right controlled the motion of the robot's end effector in the positive and negative directions along the dimension corresponding to the selected control mode. An external button was provided to request the mode switch assistance. For both control interfaces the gripper had a dedicated control mode. 
-\subsection{Tasks and Protocol}
-Training: Three phases. Two different setups. Each phase was performed using both interfaces. Lasted a maximum of 35 minutes.	
+\begin{figure*}[ht!]
+	\includegraphics[keepaspectratio, width = \textwidth ]{./figures/Task_New.eps}
+	\caption{Study tasks performed by subjects. \textit{Left:} Single-step reaching task. \textit{Right:} Multi-step Pouring task. }
+	\label{fig:tasks}
+\end{figure*}
 
-\noindent\underline{\textit{Phase One}}: Perform simple reaching motion towards a plate. Purpose: Getting used to the control interface and mappings. 
+\subsubsection{Assistance Paradigms}
+Two kinds of mode switching assistance paradigms were evaluated in the study. Note that the blending assistance was always active in for both paradigms. Under the blending paradigm, the amount of assistance was directly proportional to the robot's confidence in estimating intent. Therefore, if intent inference improved as a result of goal disambiguation, more assistance would be provided by the robot likely resulting in better task performance. All trials started in a randomized initial control mode and home position. 
 
-\noindent\underline{\textit{Phase Two}}: Familiarity with the robot autonomy. Exposure to blending and how it affects task execution. Subject was informed that the robot autonomy will be present for all trials during the experiment. 
+\noindent\underline{\textit{Manual}}: During task execution the user performed all mode switches. 
 
-\noindent\underline{\textit{Phase Three}}: Multiple objects introduced. Subject was informed that when there are multiple objects in the scene, the robot can step in and help only if it has a good idea of which object they are going for. Furthermore, the subject was informed that the robot had the capability to pick a control mode that it thinks will help it figure out which goal you are going for and that the user can `tell' the robot to go ahead and pick that control mode. 
-In this phase, the subject was asked to explore this option by activating by no later than half way into a reaching trial. Furthermore, the subject was required to move as much as s/he can in the control mode chosen by the robot and observe the effects of autonomy. 
-
-
-\subsection{Testing paradigms}\label{ssec:testing_paradigms}
-Testing: Reaching task and pouring task
-
-\noindent\underline{\textit{Reaching}}
+\noindent\underline{\textit{Disambiguation}}: The user could request mode switch assistance at any time during task execution. Upon assistance request, the algorithm identified and switched the current control mode to the ``best mode'' $m^*$. The user was required to request assistance at least once during task execution.  
+\subsection{Task Descriptions}
 
 
-\subsection{Metrics}
-Comparision of confidence (mode of probability distibrution) pre/post assistance request. 
-Rate of mode switches pre/post assistance request. 
-Total number of mode switches
-Total time
-Timing of assistance request. Notion of difficulty and timing of mode switches and assistance request, correlation?
-Progress towards tasks pre/post assistance request. 
+\textbf{Training:} The training period consisted of three phases and two different task configurations. The subjects used both interfaces to perform the training tasks and lasted a maximum of 30 minutes.	
+
+\noindent\underline{\textit{Phase One}}: The subjects were asked to perform simple reaching motion towards a single goal in the scene. This phase was intended for the subjects to get familiarized with the control interface mappings and teleoperation of the robotic arm. 
+
+\noindent\underline{\textit{Phase Two}}: In the second phase of training, the blending-based shared autonomy was introduced. The subjects experienced how the robot helped in task execution. The subjects were informed that the robot autonomy will be present for all trials during the rest of the experiment. 
+
+\noindent\underline{\textit{Phase Three}}: For the third phase of the training, multiple objects were introduced in the scene. 
+%The subject was informed that when there are multiple objects in the scene, the robot can step in and help only if it has a good idea of which object they are going for. 
+Subjects were informed that the robot had the capability to pick a control mode that it thinks will help it figure out which goal they were going for and that the subject had the option to activate the robot to pick that control mode. 
+ The subject was asked to activate this option no later than half way into a reaching trial. Furthermore, the subject was also required to move as much as s/he can in the control mode chosen by the robot and observe the effects of autonomy. 
 
 
+\noindent\textbf{Testing:} Two different testing tasks were developed for our study. 
+
+\noindent\underline{\textit{Single-step:}} The user operated the robotic arm using both control interfaces to reach one of five objects on the table with a predefined orientation as the robot provides assistance (Figure~\ref{fig:tasks}, Left). 
+
+\noindent\underline{\textit{Multi-step:}} This was a multi-step pouring task. The robot was fitted with a cup with contents at the start of the trial. The user was required to pour the contents of the cup in one of the two containers and then place the cup down at one of the two specified locations with a specific orientation (Figure~\ref{fig:tasks}, Right). 
+
+\subsection{Study Protocol and Metrics}
+\noindent\textbf{Subjects:} For this study eight subjects were recruited (mean age: $31 \pm 11$, 3 males and 5 females). All participants gave their informed, signed consent to participate in the experiment, which was approved by Northwestern University's Institutional Review Board. 
+
+\noindent\textbf{Protocol:}
+A within-subjects study was conducted using a fractional factorial design in which the manipulated variables were the tasks, control interfaces and the assistance conditions. Each subject underwent an initial training period that lasted approximately thirty minutes after which the subject performed both tasks using both interfaces under the \textit{Manual} and \textit{Disambiguation} paradigms. The trials were balanced and the control interfaces and the paradigms were randomized and counterbalanced across all subjects to avoid ordering effects. Three trials were collected for the \textit{Manual} paradigm and five trials for the \textit{Disambiguation} paradigm. 
+
+\noindent\textbf{Metrics:}
+A number of objective metrics evaluated this study. \textit{Task completion time} is the amount of time a subject spent in accomplishing a task. \textit{Number of mode switches} refer to the number of times a user switched between various control modes during task execution. The number of mode switches is also an indirect measure of the effort put forth by the user while accomplishing the task. \textit{Distribution of assistance requests} reveal patterns in how subjects utilized the mode switch assistance during task execution. 
+%
+%Comparision of confidence (mode of probability distibrution) pre/post assistance request. 
+%Rate of mode switches pre/post assistance request. 
+%Total number of mode switches
+%Total time
+%Timing of assistance request. Notion of difficulty and timing of mode switches and assistance request, correlation?
+%Progress towards tasks pre/post assistance request. 
+
+\section{Simulation Analysis}
 \section{Results}\label{sec:results}
+Here we report the results of our subject study. The \textit{Disambiguation} paradigm demonstrated an improvement in task performance in terms of a decrease in the number of mode switches across both interfaces. Statistical significance is determined by the Wilcoxon Rank-Sum test in Figure~\ref{fig:man_disamb} where (***) indicates $p < 0.001$, (**) $p < 0.01$ and (*) $p < 0.05$.
+\begin{figure}[t]
+	\centering
+%	\includegraphics[width = 1.12\hsize, center]{./figures/ms_t_j_ha.eps}
+	\caption{Comparison of Manual and Disambiguation paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). Box plots show the median and the quartiles.}
+	\label{fig:man_disamb}
+\end{figure}
+
+\subsection{Observations across assistance paradigms}
+Figure~\ref{fig:man_disamb} top row reveals that the statistically significant decrease in the number of mode switches for both joystick and headarray when disambiguation assistance was utilized.
+(why? because the modes picked by the algorith. ALso resulted in reductions in the variance?)
+
+Task compleition times. no statistical difference between times. 
+Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spent
+ 
+Mode switches and task completion times
+
+number of assistance request. 
+
+\begin{figure*}[ht!]
+%	\centering
+	\includegraphics[ width = 0.8\textwidth, height=0.45\vsize ,center]{./figures/j2_man_disamb_pattern_tight.eps}
+%	\caption{}
+	\label{fig:j2_man_disamb}
+\end{figure*}
+\begin{figure*}[ht!]
+	\centering
+	\includegraphics[ width = 0.8\textwidth ,center]{./figures/ha_man_disamb_pattern_tight.eps}
+	\caption{Task compleition times. no statistical difference between times. 
+		Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spentTask compleition times. no statistical difference between times. 
+		Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spentTask compleition times. no statistical difference between times. 
+		Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spent}
+	\label{fig:ha_man_disamb}
+\end{figure*}
+
+
+Distribution of requests. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 1.1\hsize ,center]{./figures/button_presses_average.eps}
+	\caption{}
+	\label{fig:button_press_inter}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 1.1\hsize ,center]{./figures/button_presses_average_tasks.eps}
+	\caption{}
+	\label{fig:button_press_task}
+\end{figure}
 \section{Discussion}\label{sec:discussions}
+
+
 \section{Conclusion}\label{sec:conclusions}
 
 

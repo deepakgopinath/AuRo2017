@@ -1,4 +1,0 @@
-
-interfaces = {'j', 'h'};
-interfaces_cell = {'al_po_jon','al_po_jwo','al_re_jon','al_re_jwo';
-                    'al_po_hon','al_po_hwo','al_re_hon','al_re_hwo'};

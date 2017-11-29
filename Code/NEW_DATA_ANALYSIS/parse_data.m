@@ -55,6 +55,10 @@ na_po_jon = [];
 na_re_hon = [];
 na_po_hon = [];
 
+mean_ms_re_jwo = 2;%2.3750;
+mean_ms_po_jwo = 6.5;%6.8750;
+mean_ms_re_hwo = 15;%14.3040;
+mean_ms_po_hwo = 32;%34.4783;
 
 
 %%
@@ -119,6 +123,13 @@ for i=1:total_subjects
         al_po_jwo = [al_po_jwo; alpha_all(ph1_jwo_ind, ph1id, subid)];
         al_po_hon = [al_po_hon; alpha_all(ph1_hon_ind, ph1id, subid)];
         al_po_hwo = [al_po_hwo; alpha_all(ph1_hwo_ind, ph1id, subid)];
+        
+%         na_po_jon = [na_po_jon; num_assis_req(ph1_jon_ind, ph1id, subid)./(realmin+num_assis_req(ph1_jon_ind, ph1id, subid)+num_mode_switches(ph1_jon_ind ,ph1id, subid))];
+%         na_po_hon = [na_po_hon; num_assis_req(ph1_hon_ind, ph1id, subid)./(realmin+num_assis_req(ph1_hon_ind, ph1id, subid)+num_mode_switches(ph1_hon_ind, ph1id, subid))];
+%         
+        na_po_jon = [na_po_jon; num_assis_req(ph1_jon_ind, ph1id, subid)];
+        na_po_hon = [na_po_hon; num_assis_req(ph1_hon_ind, ph1id, subid)];
+        
     else
         ms_po_jon = [ms_po_jon; num_mode_switches(ph2_jon_ind ,ph2id, subid)];
         ms_po_jwo = [ms_po_jwo ; num_mode_switches(ph2_jwo_ind, ph2id, subid)];
@@ -136,6 +147,10 @@ for i=1:total_subjects
         al_po_jwo = [al_po_jwo; alpha_all(ph2_jwo_ind, ph2id, subid)];
         al_po_hon = [al_po_hon; alpha_all(ph2_hon_ind, ph2id, subid)];
         al_po_hwo = [al_po_hwo; alpha_all(ph2_hwo_ind, ph2id, subid)];
+        
+        na_po_jon = [na_po_jon; num_assis_req(ph2_jon_ind, ph2id, subid)];
+        na_po_hon = [na_po_hon; num_assis_req(ph2_hon_ind, ph2id, subid)];
+        
     end
     
     if strcmp(task_order{i},'RE')
@@ -155,6 +170,9 @@ for i=1:total_subjects
         al_re_jwo = [al_re_jwo; alpha_all(ph1_jwo_ind, ph1id, subid)];
         al_re_hon = [al_re_hon; alpha_all(ph1_hon_ind, ph1id, subid)];
         al_re_hwo = [al_re_hwo; alpha_all(ph1_hwo_ind, ph1id, subid)];
+        
+        na_re_jon = [na_re_jon; num_assis_req(ph1_jon_ind, ph1id, subid)];
+        na_re_hon = [na_re_hon; num_assis_req(ph1_hon_ind, ph1id, subid)];
     else
         ms_re_jon = [ms_re_jon; num_mode_switches(ph2_jon_ind ,ph2id, subid)];
         ms_re_jwo = [ms_re_jwo ; num_mode_switches(ph2_jwo_ind, ph2id, subid)];
@@ -172,6 +190,9 @@ for i=1:total_subjects
         al_re_jwo = [al_re_jwo; alpha_all(ph2_jwo_ind, ph2id, subid)];
         al_re_hon = [al_re_hon; alpha_all(ph2_hon_ind, ph2id, subid)];
         al_re_hwo = [al_re_hwo; alpha_all(ph2_hwo_ind, ph2id, subid)];
+        
+        na_re_jon = [na_re_jon; num_assis_req(ph2_jon_ind, ph2id, subid)];
+        na_re_hon = [na_re_hon; num_assis_req(ph2_hon_ind, ph2id, subid)];
     end
     
 end
@@ -197,10 +218,6 @@ al_re_hwo(al_re_hwo < 0) = [];
 al_re_jon(al_re_jon < 0) = [];
 al_re_jwo(al_re_jwo < 0) = [];
 
-
-
-
-
 t_po_hon(t_po_hon < 0) = [];
 t_po_hwo(t_po_hwo < 0) = [];
 t_po_jon(t_po_jon < 0) = [];
@@ -210,24 +227,34 @@ t_re_hwo(t_re_hwo < 0) = [];
 t_re_jon(t_re_jon < 0) = [];
 t_re_jwo(t_re_jwo < 0) = [];
 
+na_po_hon(na_po_hon < 0) = [];
+na_po_jon(na_po_jon < 0) = [];
+na_re_jon(na_re_jon < 0) = [];
+na_re_hon(na_re_hon < 0) = [];
+ 
+
 randind = randsample(length(ms_po_hon), length(ms_po_hwo));
 ms_po_hon = ms_po_hon(randind);
 t_po_hon = t_po_hon(randind);
 al_po_hon = al_po_hon(randind);
+na_po_hon = na_po_hon(randind);
 
 randind = randsample(length(ms_po_jon), length(ms_po_jwo));
 ms_po_jon = ms_po_jon(randind);
 t_po_jon = t_po_jon(randind);
 al_po_jon = al_po_jon(randind);
+na_po_jon = na_po_jon(randind);
 
 randind = randsample(length(ms_re_hon), length(ms_re_hwo));
 ms_re_hon = ms_re_hon(randind);
 t_re_hon = t_re_hon(randind);
 al_re_hon = al_re_hon(randind);
+na_re_hon = na_re_hon(randind);
 
 randind = randsample(length(ms_re_jon), length(ms_re_jwo));
 ms_re_jon = ms_re_jon(randind);
 t_re_jon = t_re_jon(randind);
 al_re_jon = al_re_jon(randind);
+na_re_jon = na_re_jon(randind);
 
 
