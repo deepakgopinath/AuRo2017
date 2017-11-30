@@ -44,7 +44,7 @@ xr = [0,-1.4,0.7]';
 %%
 %PLOT GOALS AND ROBOT and UH
 figure;
-colors = {'b', 'r', 'y'};
+colors = {'y', 'r', 'b'};
 for i=1:ng
     scatter3(xg(1,i), xg(2,i), xg(3,i), 180, colors{i}, 'filled'); grid on; hold on;
 end
@@ -55,9 +55,9 @@ scatter3(xr(1), xr(2), xr(3), 140, 'k', 'filled');
 for i=1:ng %vectors connecting robot and goals.
     quiver3(xr(1), xr(2), xr(3), xg(1,i) - xr(1), xg(2,i) - xr(2), xg(3,i) - xr(3), 'LineWidth', 1.5, 'LineStyle', '-.');
 end
-xrange = [-4,4]; %set axis limits
-yrange = [-4,4];
-zrange = [-4,4];
+xrange = 0.8*[-4,4]; %set axis limits
+yrange = 0.8*[-4,4];
+zrange = 0.8*[-4,4];
 line(xrange, [0,0], [0,0], 'Color', 'k', 'LineWidth', 1.5); %draw x and y axes.
 line([0,0], yrange, [0,0], 'Color', 'k','LineWidth', 1.5);
 line([0,0], [0,0], zrange, 'Color', 'k','LineWidth', 1.5);
@@ -136,7 +136,99 @@ for i=1:nm %number of modes, in columns
         
     end
 end
+%% DISAMB MOTIVATION PLOTS. 
+%plot goals
+% close all;
+figure
+xrange = 0.6*[-4,4]; %set axis limits
+yrange = 0.6*[-4,0];
+zrange = 0.6*[0,4];
+colors = {[1,0.8,0], [1,0,0], [0,0,1]};
+for ii=1:ng
+    scatter3(xg(1,ii), xg(2,ii), xg(3,ii), 250, colors{ii}, 'filled'); grid on; hold on;
+    for jj=1:nd
+        target = xg(:, ii); target(jj) = 0;
+        line([xg(1,ii), target(1)],[xg(2,ii), target(2)],[xg(3,ii), target(3)],'Color', [0,0,0,0.6], 'LineWidth', 0.6, 'LineStyle', '-.');
+    end
+end
+xlabel('X'); ylabel('Y'); zlabel('Z');
+scatter3(xr(1), xr(2), xr(3), 500, 'k', 'filled');
 
+% line(xrange, [0,0], [0,0], 'Color', 'k', 'LineWidth', 1.5); %draw x and y axes.
+% line([0,0], yrange, [0,0], 'Color', 'k','LineWidth', 1.5);
+% line([0,0], [0,0], zrange, 'Color', 'k','LineWidth', 1.5);
+axis([xrange, yrange, zrange]);
+axis square;
+view([-221,26]);
+tg = 3; %specify target goal. b,r,y = 1,2,3
+color_g = {[1,0.8,0], [1,0,0], [0,0,1]};
+for i=1:nm %along each axis
+    pgs = cell_pgs{i}(:,:,tg); %probabilities for each axis/control dimension is present
+    for j=1:ng %use j to offset the lines slightly. ng separate lines. 
+        tc = color_g{j};
+        sc = [0.95, 0.95, 0.95];
+        sp = xr;
+        for k=1:length(T)
+            alpha = pgs(j,k);
+            color_point = interpolate_color(sc, tc, alpha);
+            dis = abs(sp - xg(:, tg)); gap = 0.04;
+            if i==1
+                scatter3(sp(1) + k*dis(i)/length(T), sp(2), sp(3) + (j-1)*gap, 20, color_point, 'filled');
+                scatter3(sp(1) + k*dis(i)/length(T) + dis(i)/(2*length(T)), sp(2), sp(3) + (j-1)*gap, 20, color_point, 'filled');
+            
+            end
+            if i==2
+                scatter3(sp(1), sp(2)+k*dis(i)/length(T), sp(3) + (j-1)*gap, 20, color_point, 'filled');
+                scatter3(sp(1), sp(2)+k*dis(i)/length(T)+ dis(i)/(2*length(T)), sp(3) + (j-1)*gap, 20, color_point, 'filled');
+
+            end
+            if i==3
+                scatter3(sp(1), sp(2) - (j-1)*gap, sp(3)-k*dis(i)/length(T), 20, color_point, 'filled');
+                scatter3(sp(1), sp(2) - (j-1)*gap, sp(3)-k*dis(i)/length(T)-dis(i)/(2*length(T)), 20, color_point, 'filled');
+
+            end
+        end
+    end
+    %plot 3 lines along i axis.
+end
+% %%
+% for i=1:nm %for each conttrol mode there will be different figure. 
+%     figure;
+%     curr_cell = cell_pgs{i};
+%     for j=1:ng %motion towards each goal
+%         pgs_data = curr_cell(:,:,j);
+%         for k=1:ng
+%             subplot(ng,ng, (k-1)*ng  + 1 + j - 1);
+%             
+%             %plot goals and robot position
+%             for ii=1:ng
+%                 scatter3(xg(1,ii), xg(2,i), xg(3,ii), 180, colors{ii}, 'filled'); grid on; hold on;
+%             end
+%             xlabel('X'); ylabel('Y'); zlabel('Z');
+%             scatter3(xr(1), xr(2), xr(3), 140, 'k', 'filled');
+%             line(xrange, [0,0], [0,0], 'Color', 'k', 'LineWidth', 1.5); %draw x and y axes.
+%             line([0,0], yrange, [0,0], 'Color', 'k','LineWidth', 1.5);
+%             line([0,0], [0,0], zrange, 'Color', 'k','LineWidth', 1.5);
+%             axis([xrange, yrange, zrange]);
+%             axis square;
+%             view([210,21]);
+%             
+%             
+%             
+%         end
+%         
+%     end
+% end
+
+%%
+
+function color = interpolate_color(start_color, target_color, alpha)
+        if alpha < 0.4
+            alpha = alpha - 0.1;
+        end
+        
+     color = (1 - alpha)*start_color + alpha*target_color;
+end
 %%
 % min_ws = -0.5;
 % max_ws = 0.5;

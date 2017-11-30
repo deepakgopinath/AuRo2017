@@ -19,11 +19,11 @@
 \citation{laplante1992assistive}
 \citation{scherer1996outcomes,huete2012personal}
 \citation{simpson2008tooth,nuttin2002selection}
-\citation{herlant2016assistive}
-\citation{eftring1999technical}
 \providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
 \newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{herlant2016assistive}
+\citation{eftring1999technical}
 \citation{gopinath2017mode}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of goal disambiguation along various control dimensions. Any motion of the end effector (green) along the y-axis will not help the system to disambiguate the two goals (A and B). However, motion along the x-axis provides cues as to which goal.}}{2}{figure.1}}
 \newlabel{fig:disamb}{{1}{2}{Illustration of goal disambiguation along various control dimensions. Any motion of the end effector (green) along the y-axis will not help the system to disambiguate the two goals (A and B). However, motion along the x-axis provides cues as to which goal}{figure.1}{}}
@@ -49,25 +49,27 @@
 \citation{dragan2013legibility}
 \citation{holladay2014legible}
 \citation{gopinath2017mode}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Mathematical Algorithm}{4}{section.3}}
-\newlabel{sec:ma}{{3}{4}{Mathematical Algorithm}{section.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Mathematical Formalism}{4}{section.3}}
+\newlabel{sec:ma}{{3}{4}{Mathematical Formalism}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Notation}{4}{subsection.3.1}}
 \newlabel{ssec:notation}{{3.1}{4}{Notation}{subsection.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Intent Disambiguation}{5}{subsection.3.2}}
 \newlabel{ssec:disamb}{{3.2}{5}{Intent Disambiguation}{subsection.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Forward projection of $\boldsymbol  {p}(t)$}{5}{subsubsection.3.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Forward Projection of $\boldsymbol  {p}(t)$}{5}{subsubsection.3.2.1}}
+\newlabel{sssec:projection}{{3.2.1}{5}{Forward Projection of $\boldsymbol {p}(t)$}{subsubsection.3.2.1}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Calculate $\boldsymbol  {p}(t_b)$, $\boldsymbol  {p}(t_c)$}}{5}{algorithm.1}}
-\newlabel{alg1}{{1}{5}{Forward projection of $\boldsymbol {p}(t)$}{algorithm.1}{}}
+\newlabel{alg1}{{1}{5}{Forward Projection of $\boldsymbol {p}(t)$}{algorithm.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Components of $D_k$}{5}{subsubsection.3.2.2}}
 \newlabel{sssec:components}{{3.2.2}{5}{Components of $D_k$}{subsubsection.3.2.2}{}}
 \citation{gopinath2017mode}
-\citation{amari1977dynamics}
-\newlabel{DK}{{1}{6}{Components of $D_k$}{equation.3.1}{}}
-\newlabel{EQ2}{{2}{6}{Components of $D_k$}{equation.3.2}{}}
+\citation{gopinath2017mode}
+\citation{gopinath2017mode}
+\citation{schoner2015dynamic}
+\newlabel{DK}{{6}{6}{Components of $D_k$}{equation.3.6}{}}
+\newlabel{EQ2}{{7}{6}{Components of $D_k$}{equation.3.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Intent Inference}{6}{subsection.3.3}}
 \newlabel{ssec:inference}{{3.3}{6}{Intent Inference}{subsection.3.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Dynamic Field Theory}{6}{subsubsection.3.3.1}}
-\newlabel{sssec:dft}{{3.3.1}{6}{Dynamic Field Theory}{subsubsection.3.3.1}{}}
+\citation{amari1977dynamics}
 \citation{wilson1973mathematical}
 \citation{schoner2008dynamical}
 \citation{erlhagen2006dynamic}
@@ -75,42 +77,51 @@
 \citation{zibner2011dynamic}
 \citation{schoner1995dynamics}
 \citation{faubel2008learning}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Dynamic neural fields for Intent Inference}{7}{subsubsection.3.3.2}}
-\newlabel{sssec:dft_ii}{{3.3.2}{7}{Dynamic neural fields for Intent Inference}{subsubsection.3.3.2}{}}
-\newlabel{eq:dft}{{5}{7}{Dynamic neural fields for Intent Inference}{equation.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Control dimensions best able to disambiguate intent. Left column: $k^*$ is X. Middle Column: $k^*$ is Y. Right Column: $k^*$ is Z. Magenta spheres indicate the goal locations (intent). In this example, the goals are spread maximally along the x and z dimensions, and so inference happens more quickly if the human control commands are along x or z. We see that x and z are chosen more often as the most disambiguating dimensions when using intent inference function \textbf  {C2} (bottom row). Function \textbf  {C2} considers the instantaneous directedness of the human's control command towards that goal, while inference function \textbf  {C1} (top row) encodes only proximity to a given goal. Function \textbf  {C2} is considered to encode more information about the human's intent than \textbf  {C1}, with the result of stronger inference power---which is inherently linked to the disambiguation power of our algorithm. Further details in\nobreakspace  {}\cite  {gopinath2017mode}.}}{7}{figure.3}}
+\newlabel{fig:sim_res}{{3}{7}{Control dimensions best able to disambiguate intent. Left column: $k^*$ is X. Middle Column: $k^*$ is Y. Right Column: $k^*$ is Z. Magenta spheres indicate the goal locations (intent). In this example, the goals are spread maximally along the x and z dimensions, and so inference happens more quickly if the human control commands are along x or z. We see that x and z are chosen more often as the most disambiguating dimensions when using intent inference function \textbf {C2} (bottom row). Function \textbf {C2} considers the instantaneous directedness of the human's control command towards that goal, while inference function \textbf {C1} (top row) encodes only proximity to a given goal. Function \textbf {C2} is considered to encode more information about the human's intent than \textbf {C1}, with the result of stronger inference power---which is inherently linked to the disambiguation power of our algorithm. Further details in~\cite {gopinath2017mode}}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Dynamic Field Theory}{7}{subsubsection.3.3.1}}
+\newlabel{sssec:dft}{{3.3.1}{7}{Dynamic Field Theory}{subsubsection.3.3.1}{}}
 \citation{argall2009survey,schaal1997learning,khansari2011learning,calinon2012statistical}
 \citation{hsu2002randomized,ratliff2009chomp}
 \citation{rimon1992exact,tanner2003nonholonomic}
-\citation{khatib1986real}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Dynamic Neural Fields for Intent Inference}{8}{subsubsection.3.3.2}}
+\newlabel{sssec:dft_ii}{{3.3.2}{8}{Dynamic Neural Fields for Intent Inference}{subsubsection.3.3.2}{}}
+\newlabel{eq:dft}{{10}{8}{Dynamic Neural Fields for Intent Inference}{equation.3.10}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Shared Control}{8}{section.4}}
 \newlabel{sec:shared-control}{{4}{8}{Shared Control}{section.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Study Methods}{8}{section.5}}
-\newlabel{sec:ed}{{5}{8}{Study Methods}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Hardware}{8}{subsection.5.1}}
-\newlabel{ssec:hardware}{{5.1}{8}{Hardware}{subsection.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively.}}{8}{figure.3}}
-\newlabel{fig:interfaces}{{3}{8}{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Assistance Paradigms}{8}{subsubsection.5.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Study tasks performed by subjects. \textit  {Left:} Single-step reaching task. \textit  {Right:} Multi-step Pouring task. }}{9}{figure.4}}
-\newlabel{fig:tasks}{{4}{9}{Study tasks performed by subjects. \textit {Left:} Single-step reaching task. \textit {Right:} Multi-step Pouring task}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Task Descriptions}{9}{subsection.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Study Protocol and Metrics}{9}{subsection.5.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison of Manual and Disambiguation paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). Box plots show the median and the quartiles.}}{10}{figure.5}}
-\newlabel{fig:man_disamb}{{5}{10}{Comparison of Manual and Disambiguation paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). Box plots show the median and the quartiles}{figure.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Simulation Analysis}{10}{section.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Results}{10}{section.7}}
-\newlabel{sec:results}{{7}{10}{Results}{section.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Observations across assistance paradigms}{10}{subsection.7.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces }}{10}{figure.7}}
-\newlabel{fig:button_press_inter}{{7}{10}{}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces }}{10}{figure.8}}
-\newlabel{fig:button_press_task}{{8}{10}{}{figure.8}{}}
-\newlabel{fig:j2_man_disamb}{{7.1}{11}{Observations across assistance paradigms}{subsection.7.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Task compleition times. no statistical difference between times. Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spentTask compleition times. no statistical difference between times. Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spentTask compleition times. no statistical difference between times. Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spent}}{11}{figure.6}}
-\newlabel{fig:ha_man_disamb}{{6}{11}{Task compleition times. no statistical difference between times. Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spentTask compleition times. no statistical difference between times. Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spentTask compleition times. no statistical difference between times. Couple of reasons. The mode switch request takes 2-3s to process. Secondly, the user spent}{figure.6}{}}
+\citation{khatib1986real}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Study Methods}{9}{section.5}}
+\newlabel{sec:ed}{{5}{9}{Study Methods}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Hardware}{9}{subsection.5.1}}
+\newlabel{ssec:hardware}{{5.1}{9}{Hardware}{subsection.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively.}}{9}{figure.4}}
+\newlabel{fig:interfaces}{{4}{9}{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Assistance Paradigms}{9}{subsubsection.5.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Study tasks performed by subjects. \textit  {Left:} Single-step reaching task. \textit  {Right:} Multi-step Pouring task. }}{10}{figure.5}}
+\newlabel{fig:tasks}{{5}{10}{Study tasks performed by subjects. \textit {Left:} Single-step reaching task. \textit {Right:} Multi-step Pouring task}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Task Descriptions}{10}{subsection.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Study Protocol and Metrics}{10}{subsection.5.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{10}{section.6}}
+\newlabel{sec:results}{{6}{10}{Results}{section.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comparison of average number of button presses between \textit  {Disambiguation} and \textit  {Manual} Paradigms. \textit  {Left:} Grouped by control interfaces. \textit  {Right:} Grouped by tasks.}}{11}{figure.6}}
+\newlabel{fig:button_press}{{6}{11}{Comparison of average number of button presses between \textit {Disambiguation} and \textit {Manual} Paradigms. \textit {Left:} Grouped by control interfaces. \textit {Right:} Grouped by tasks}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Impact of Disambiguation on Task Performance}{11}{subsection.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Temporal Distribution of Disambiguation Requests}{11}{subsection.6.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Temporal pattern of button presses for each interface/task combination on a trial-by-trial basis for all subjects. Eight trials per subject per interface/task combination. Gray and red horizontal lines denote successful and unsuccessful trials respectively.}}{12}{figure.7}}
+\newlabel{fig:ha_man_disamb}{{7}{12}{Temporal pattern of button presses for each interface/task combination on a trial-by-trial basis for all subjects. Eight trials per subject per interface/task combination. Gray and red horizontal lines denote successful and unsuccessful trials respectively}{figure.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Characterization of the temporal distribution of assistance requests. The values in the table denotes the deviation of the temporal distribution from a uniform distribution. This deviation is captured using the \textit  {Skewness} measure. }}{12}{table.1}}
+\newlabel{table:skewness}{{1}{12}{Characterization of the temporal distribution of assistance requests. The values in the table denotes the deviation of the temporal distribution from a uniform distribution. This deviation is captured using the \textit {Skewness} measure}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Onset of robot assistance normalized with respect to task completion time. \textit  {Left:} Across interfaces. \textit  {Right:} Across tasks.}}{12}{figure.8}}
+\newlabel{fig:initial_blend}{{8}{12}{Onset of robot assistance normalized with respect to task completion time. \textit {Left:} Across interfaces. \textit {Right:} Across tasks}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Onset of Robot Assistance}{12}{subsection.6.3}}
+\newlabel{ssec:onset}{{6.3}{12}{Onset of Robot Assistance}{subsection.6.3}{}}
 \bibstyle{spbasic}
 \bibdata{references}
 \bibcite{amari1977dynamics}{{1}{1977}{{Amari}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{13}{section.7}}
+\newlabel{sec:discussions}{{7}{13}{Discussion}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{13}{section.8}}
+\newlabel{sec:conclusions}{{8}{13}{Conclusion}{section.8}{}}
 \bibcite{argall2009survey}{{2}{2009}{{Argall et~al}}{{Argall, Chernova, Veloso, and Browning}}}
 \bibcite{atanasov2014information}{{3}{2014}{{Atanasov et~al}}{{Atanasov, Le~Ny, Daniilidis, and Pappas}}}
 \bibcite{baker2007goal}{{4}{2007}{{Baker et~al}}{{Baker, Tenenbaum, and Saxe}}}
@@ -135,10 +146,6 @@
 \bibcite{huete2012personal}{{23}{2012}{{Huete et~al}}{{Huete, Victores, Martinez, Gim{\'e}nez, and Balaguer}}}
 \bibcite{khansari2011learning}{{24}{2011}{{Khansari-Zadeh and Billard}}{{}}}
 \bibcite{khatib1986real}{{25}{1986}{{Khatib}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{12}{section.8}}
-\newlabel{sec:discussions}{{8}{12}{Discussion}{section.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{12}{section.9}}
-\newlabel{sec:conclusions}{{9}{12}{Conclusion}{section.9}{}}
 \bibcite{kim2010relationship}{{26}{2010}{{Kim et~al}}{{Kim, Hazlett, Godfrey, Rucks, Portee, Bricout, Cunningham, and Behal}}}
 \bibcite{kim2012autonomy}{{27}{2012}{{Kim et~al}}{{Kim, Hazlett-Knudsen, Culver-Godfrey, Rucks, Cunningham, Portee, Bricout, Wang, and Behal}}}
 \bibcite{laplante1992assistive}{{28}{1992}{{LaPlante et~al}}{{}}}
@@ -155,13 +162,14 @@
 \bibcite{schaal1997learning}{{39}{1997}{{Schaal}}{{}}}
 \bibcite{scherer1996outcomes}{{40}{1996}{{Scherer}}{{}}}
 \bibcite{schoner2008dynamical}{{41}{2008}{{Sch{\"o}ner}}{{}}}
-\bibcite{schoner1995dynamics}{{42}{1995}{{Sch{\"o}ner et~al}}{{Sch{\"o}ner, Dose, and Engels}}}
-\bibcite{simpson2008tooth}{{43}{2008}{{Simpson et~al}}{{Simpson, Broughton, Gauthier, and Prochazka}}}
-\bibcite{sorokin2010people}{{44}{2010}{{Sorokin et~al}}{{Sorokin, Berenson, Srinivasa, and Hebert}}}
-\bibcite{storms2014blending}{{45}{2014}{{Storms and Tilbury}}{{}}}
-\bibcite{tanner2003nonholonomic}{{46}{2003}{{Tanner et~al}}{{Tanner, Loizou, and Kyriakopoulos}}}
-\bibcite{tomasello2007shared}{{47}{2007}{{Tomasello and Carpenter}}{{}}}
-\bibcite{tomasello2010gap}{{48}{2010}{{Tomasello and Moll}}{{}}}
-\bibcite{tsui2011want}{{49}{2011}{{Tsui et~al}}{{Tsui, Kim, Behal, Kontak, and Yanco}}}
-\bibcite{wilson1973mathematical}{{50}{1973}{{Wilson and Cowan}}{{}}}
-\bibcite{zibner2011dynamic}{{51}{2011}{{Zibner et~al}}{{Zibner, Faubel, Iossifidis, and Schoner}}}
+\bibcite{schoner2015dynamic}{{42}{2015}{{Sch{\"o}ner and Spencer}}{{}}}
+\bibcite{schoner1995dynamics}{{43}{1995}{{Sch{\"o}ner et~al}}{{Sch{\"o}ner, Dose, and Engels}}}
+\bibcite{simpson2008tooth}{{44}{2008}{{Simpson et~al}}{{Simpson, Broughton, Gauthier, and Prochazka}}}
+\bibcite{sorokin2010people}{{45}{2010}{{Sorokin et~al}}{{Sorokin, Berenson, Srinivasa, and Hebert}}}
+\bibcite{storms2014blending}{{46}{2014}{{Storms and Tilbury}}{{}}}
+\bibcite{tanner2003nonholonomic}{{47}{2003}{{Tanner et~al}}{{Tanner, Loizou, and Kyriakopoulos}}}
+\bibcite{tomasello2007shared}{{48}{2007}{{Tomasello and Carpenter}}{{}}}
+\bibcite{tomasello2010gap}{{49}{2010}{{Tomasello and Moll}}{{}}}
+\bibcite{tsui2011want}{{50}{2011}{{Tsui et~al}}{{Tsui, Kim, Behal, Kontak, and Yanco}}}
+\bibcite{wilson1973mathematical}{{51}{1973}{{Wilson and Cowan}}{{}}}
+\bibcite{zibner2011dynamic}{{52}{2011}{{Zibner et~al}}{{Zibner, Faubel, Iossifidis, and Schoner}}}

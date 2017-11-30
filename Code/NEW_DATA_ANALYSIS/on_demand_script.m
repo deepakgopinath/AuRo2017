@@ -3,7 +3,7 @@ interfaces = {'j', 'h'};
 interfaces_cell = {'na_po_jon','na_re_jon', 'na_po_hon', 'na_re_hon';
                     'na_po_jon', 'na_po_hon', 'na_re_jon','na_re_hon'};
                 
-ylims = [2.5, 2.5];
+ylims = [14,14];
 y1 = 1.0; y2 = 2.0;
 
 figure;
@@ -40,10 +40,10 @@ for kk=1:2
 %     scatter(y2, median(v2), 100, 'X', 'b', 'LineWidth',4.5);
     axis([0,3,0,ylims(kk)]);
     if kk == 1
-        set(gca, 'fontWeight', 'normal', 'YTick', 0:0.4:ylims(kk));
-        ylabel('\bf \fontsize{10} Assistance Request/Mode Switch');
+        set(gca, 'fontWeight', 'normal', 'YTick', 0:2:ylims(kk));
+        ylabel('\bf \fontsize{13} Number of Assistance Requests');
     else
-        set(gca,  'fontWeight', 'normal', 'YTick', 0:0.4:ylims(kk));
+        set(gca,  'fontWeight', 'normal', 'YTick', 0:2:ylims(kk));
     end
 %     set(gca, 'XTick', 1:1:2);
     set(gca,'fontWeight','bold','Xtick',1:1:2);

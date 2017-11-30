@@ -11,10 +11,10 @@ assis = {'wo', 'on'};
 task_order = {'PO','RE','RE','PO','RE','PO','PO','RE'}; %Phase 1 tasks. 
 trials_per_phase = 16;
 
+load('trial_order_testing_8.mat');
 loadData;
 
 %%
-load('trial_order_testing_8.mat');
 
 %%
 ms_re_jon = [];

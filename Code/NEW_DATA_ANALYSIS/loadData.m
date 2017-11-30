@@ -73,7 +73,8 @@ for i=1:total_subjects
 %         goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
         
         alpha = trim_data(alpha, false);
-        alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.6)/length(alpha(:, 1));
+%         alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
+        alpha_all(trialnum, ph, subid) = alpha(min(find(alpha(:, 1) > 0)), end)/total_time;
 %         goal_probabilities = trim_data(goal_probabilities, false);
         
 %         close all; figure;

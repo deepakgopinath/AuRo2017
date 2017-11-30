@@ -1,5 +1,6 @@
 % clear all; clc; close all;
 %%
+load('trial_order_testing_8.mat');
 
 subList = {'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 'H9'};
 total_subjects = length(subList);
@@ -50,7 +51,7 @@ ha_re_av = 1; %3 -mean
 ha_po_av = 2; %4 - mean
 j2_re_av = 2; %2 -mean
 j2_po_av = 1;
-for i=1:total_subjects
+for i=3:total_subjects
     user = subList{i};
     trialId = trialList(i);
     fnames = dir(user);
@@ -85,14 +86,48 @@ for i=1:total_subjects
             goal_probabilities(1, :) = [];
         end
         goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
-        
-        
-        alpha = trim_data(alpha, false);
-        alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.6)/length(alpha(:, 1));
         goal_probabilities = trim_data(goal_probabilities, false);
-        
-        
         goal_probabilities_all(trialnum, ph, subid) = {goal_probabilities};
+        
+        if strcmp(n(6:7), 'RE')
+            alpha = trim_data(alpha, false);
+            alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
+        else
+            if ph == 1
+                taskid = ph1_trial_mat{trialnum, 4 ,subid};  
+            else
+                taskid = ph2_trial_mat{trialnum, 4 ,subid};
+            end
+            if taskid == 1 || taskid == 2
+                gmarker = 2;
+            elseif taskid == 3 || taskid == 4
+                gmarker = 4;
+            end
+            [m, ind] = max(goal_probabilities(:, 1:end-1), [], 2);
+            %find all ind which is equal gmarker. 
+            gm_ind = find(ind == gmarker);
+            m_gm = m(gm_ind);
+            m_gm_max = find(m_gm == max(m_gm)); 
+            if isempty(m_gm_max)
+                continue;
+            end
+            m_gm_max = m_gm_max(1);
+            seg_break = gm_ind(m_gm_max);
+            alpha_seg = alpha(seg_break:end, 1);
+            
+            %find where gp rise and passes threshold right after the seg
+            %break
+            tempg = goal_probabilities(seg_break:end, 1:end-1);
+            tempg = max(tempg, [], 2);
+%             coeff = ones(1, 5)/5;
+%             smoothtempg = filter(coeff, 1, tempg); smoothtempg(1:3) = []; smoothtempg = [smoothtempg;smoothtempg(end)*ones(3,1)];
+            deltat = min(intersect(find(diff(tempg) > 0), find(tempg > 0.25))); %max goal probability above 0.25 means alpha > 0
+            frac = (goal_probabilities(seg_break+deltat, end) - goal_probabilities(seg_break, end))/(goal_probabilities(end, end) - goal_probabilities(seg_break, end));
+%             plot(goal_probabilities(:, 1:end-1));
+            disp(frac);
+%             close all;
+        end
+        
 %         close all; figure;
 %         plot(goal_probabilities(:, end)/goal_probabilities(end,end), goal_probabilities(:, 1:end-1)); hold on; grid on;  
         
@@ -282,12 +317,13 @@ num_assis_req([13,15], 1, 7) = -999;
 
 %%
 
-plt1 = 2; plt2 = 2;
+plt1 = 1; plt2 = 2;
+% figure;
 subplot(1,2,plt1);
 hold on; grid on;
 % axis([0,1,1,20]);
 ylim([0,20]);
-inter = 'HA'; task = 'PO';
+inter = 'J2'; task = 'PO';
 
 for i=1:total_subjects
     user = subList{i};
@@ -314,8 +350,8 @@ for i=1:total_subjects
         if strcmp(n(8:9), inter) && strcmp(n(6:7), task)
             if num_assis_req(trialnum, ph, subid) > 0
              %scatter plot for assistance requests. 
-%                 h1 = scatter(assistance_req_time_stamps{trialnum, ph, subid}/total_time, (i*2 + index*0.1)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
-                h1 = scatter(assistance_req_time_stamps{trialnum, ph, subid}, (i*2 + index*0.1)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
+                h1 = scatter(assistance_req_time_stamps{trialnum, ph, subid}/total_time, (i*2 + index*0.1)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
+%                 h1 = scatter(assistance_req_time_stamps{trialnum, ph, subid}, (i*2 + index*0.1)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
                 
                 hist_ar_norm_ts = [hist_ar_norm_ts; ar_norm_ts{trialnum, ph, subid}]; %normalized time stamps for assistance requests.
 %                 ms = mode_switch_time_stamps{trialnum, ph, subid};
@@ -327,15 +363,15 @@ for i=1:total_subjects
         if strcmp(n(8:9), inter) && strcmp(n(6:7), task) %scatter plot for user initiated mode switches. 
             disp(num_mode_switches(trialnum, ph, subid));
             if num_mode_switches(trialnum, ph, subid) > 0
-%                 h2 = scatter(mode_switch_time_stamps{trialnum, ph, subid}/total_time, (i*2 + index*0.1)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled', 'MarkerFaceAlpha', 0.5);
-                h2 = scatter(mode_switch_time_stamps{trialnum, ph, subid}, (i*2 + index*0.1)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled', 'MarkerFaceAlpha', 0.5);
+                h2 = scatter(mode_switch_time_stamps{trialnum, ph, subid}/total_time, (i*2 + index*0.1)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled', 'MarkerFaceAlpha', 0.5);
+%                 h2 = scatter(mode_switch_time_stamps{trialnum, ph, subid}, (i*2 + index*0.1)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled', 'MarkerFaceAlpha', 0.5);
 
             end
             
             if num_mode_switches(trialnum, ph, subid) >= 0
-                line([0, total_time], [i*2 + index*0.1, i*2 + index*0.1], 'Color', 0.0001*ones(3,1), 'LineWidth', 0.001);
+                line([0, 1.0], [i*2 + index*0.1, i*2 + index*0.1], 'Color', [0.01,0.01, 0.01, 0.2], 'LineWidth', 0.001);
             else
-                line([0, 50], [i*2 + index*0.1, i*2 + index*0.1], 'Color', [1, 0,0], 'LineWidth', 0.001);
+                line([0, 1.0], [i*2 + index*0.1, i*2 + index*0.1], 'Color', [1, 0,0, 0.2], 'LineWidth', 0.001);
             end
             index = index + 1;
         end
@@ -368,7 +404,7 @@ legend([h2, h1], 'Manual', 'Disamb');
 % ylabel('\bf \fontsize{11} Num of ondemand');
 % xlim([0,1]);
 % text(0.4, 12, strcat('Skewness = ',  num2str(round(skewness(hist_ar_norm_ts), 2))));
-% fprintf('The skewness of assistance requests is %f\n', skewness(hist_ar_norm_ts));
+fprintf('The skewness of assistance requests is %f\n', skewness(hist_ar_norm_ts));
 
 % subplot(2,2,plt1);
 % h = histogram(first_disamb_req);
@@ -376,9 +412,9 @@ legend([h2, h1], 'Manual', 'Disamb');
 % xlabel('\bf \fontsize{11}  First Disamb Index');
 % ylabel('\bf \fontsize{11} Hist Count');
 %%
-close all;
-peak_conf_from_disamb = zeros(trials_per_phase, length(phases), total_subjects);
-for i=1:total_subjects
+% close all;
+ peak_conf_from_disamb = zeros(trials_per_phase, length(phases), total_subjects);
+for i=2:total_subjects
     user = subList{i};
     trialId = trialList(i);
     fnames = dir(user);
@@ -408,12 +444,12 @@ for i=1:total_subjects
 %             scatter(mode_switch_time_stamps{trialnum, ph, subid}/total_time, (1/ng)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled', 'MarkerFaceAlpha', 0.5);
 %         end
         if num_assis_req(trialnum, ph, subid) > 0
-%             figure;
-%             plot(gp(:, end)/gp(end,end), gp(:,1:end-1)); hold on; grid on;
-%             if num_mode_switches(trialnum, ph, subid) > 0
-%                 scatter(mode_switch_time_stamps{trialnum, ph, subid}/total_time, (1/ng)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled', 'MarkerFaceAlpha', 0.5);
-%             end
-%             scatter(assistance_req_time_stamps{trialnum, ph, subid}/total_time, (1/ng)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
+            figure;
+            plot(gp(:, end), gp(:,1:end-1), 'LineWidth', 1.5); hold on; grid on;
+            if num_mode_switches(trialnum, ph, subid) > 0
+                h1 = scatter(mode_switch_time_stamps{trialnum, ph, subid}, (1/ng)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled');
+            end
+            h2 = scatter(assistance_req_time_stamps{trialnum, ph, subid}, (1/ng)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
         
         
             ar_ts = assistance_req_time_stamps{trialnum, ph, subid};
