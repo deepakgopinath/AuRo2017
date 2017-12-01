@@ -23,14 +23,6 @@ Atanasov N, Le~Ny J, Daniilidis K, Pappas GJ (2014) Information acquisition
   with sensing robots: Algorithms and error bounds. In: \textit{Proceedings of
   the IEEE International Conference on Robotics and Automation (ICRA)}
 
-\bibitem[{Baker et~al(2007)Baker, Tenenbaum, and Saxe}]{baker2007goal}
-Baker CL, Tenenbaum JB, Saxe RR (2007) Goal inference as inverse planning. In:
-  \textit{Proceedings of the Cognitive Science Society}
-
-\bibitem[{Baker et~al(2009)Baker, Saxe, and Tenenbaum}]{baker2009action}
-Baker CL, Saxe RR, Tenenbaum JB (2009) Action understanding as inverse
-  planning. \textit{Cognition} 113(3):329--349
-
 \bibitem[{Calinon et~al(2012)Calinon, Li, Alizadeh, Tsagarakis, and
   Caldwell}]{calinon2012statistical}
 Calinon S, Li Z, Alizadeh T, Tsagarakis NG, Caldwell DG (2012) Statistical
@@ -201,6 +193,14 @@ Philips J, Mill{\'a}n JdR, Vanacker G, Lew E, Gal{\'a}n F, Ferrez PW,
   simulated wheelchair. In: \textit{Proceedings of the IEEE International
   Conference on Rehabilitation Robotics (ICORR)}, IEEE, pp 408--414
 
+\bibitem[{Pilarski et~al(2012)Pilarski, Dawson, Degris, Carey, and
+  Sutton}]{pilarski2012dynamic}
+Pilarski PM, Dawson MR, Degris T, Carey JP, Sutton RS (2012) Dynamic switching
+  and real-time machine learning for improved human control of assistive
+  biomedical robots. In: \textit{Proceedings of the IEEE RAS \& EMBS
+  International Conference on Biomedical Robotics and Biomechatronics (BioRob)
+  }, IEEE, pp 296--302
+
 \bibitem[{Ratliff et~al(2009)Ratliff, Zucker, Bagnell, and
   Srinivasa}]{ratliff2009chomp}
 Ratliff N, Zucker M, Bagnell JA, Srinivasa S (2009) Chomp: Gradient
@@ -265,6 +265,12 @@ Sorokin A, Berenson D, Srinivasa SS, Hebert M (2010) People helping robots
 Storms JG, Tilbury DM (2014) Blending of human and obstacle avoidance control
   for a high speed mobile robot. In: \textit{American Control Conference
   (ACC)}, IEEE, pp 3488--3493
+
+\bibitem[{Taha et~al(2011)Taha, Mir{\'o}, and Dissanayake}]{taha2011pomdp}
+Taha T, Mir{\'o} JV, Dissanayake G (2011) A pomdp framework for modelling human
+  interaction with assistive robots. In: \textit{Proceedings of the IEEE
+  International Conference on Robotics and Automation (ICRA)}, IEEE, pp
+  544--549
 
 \bibitem[{Tanner et~al(2003)Tanner, Loizou, and
   Kyriakopoulos}]{tanner2003nonholonomic}
