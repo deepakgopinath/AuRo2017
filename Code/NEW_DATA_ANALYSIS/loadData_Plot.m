@@ -51,7 +51,7 @@ ha_re_av = 1; %3 -mean
 ha_po_av = 2; %4 - mean
 j2_re_av = 2; %2 -mean
 j2_po_av = 1;
-for i=3:total_subjects
+for i=1:total_subjects
     user = subList{i};
     trialId = trialList(i);
     fnames = dir(user);
@@ -91,7 +91,8 @@ for i=3:total_subjects
         
         if strcmp(n(6:7), 'RE')
             alpha = trim_data(alpha, false);
-            alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
+%             alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
+            alpha_all(trialnum, ph, subid) = alpha(min(find(alpha(:, 1) > 0)), end)/total_time;
         else
             if ph == 1
                 taskid = ph1_trial_mat{trialnum, 4 ,subid};  
@@ -124,6 +125,11 @@ for i=3:total_subjects
             deltat = min(intersect(find(diff(tempg) > 0), find(tempg > 0.25))); %max goal probability above 0.25 means alpha > 0
             frac = (goal_probabilities(seg_break+deltat, end) - goal_probabilities(seg_break, end))/(goal_probabilities(end, end) - goal_probabilities(seg_break, end));
 %             plot(goal_probabilities(:, 1:end-1));
+            alpha = trim_data(alpha, false);
+            disp(alpha(min(find(alpha(:, 1) > 0)), end)/total_time);
+            if alpha(min(find(alpha(:, 1) > 0)), end)/total_time < 0 
+                disp(alpha);
+            end
             disp(frac);
 %             close all;
         end
@@ -414,7 +420,7 @@ fprintf('The skewness of assistance requests is %f\n', skewness(hist_ar_norm_ts)
 %%
 % close all;
  peak_conf_from_disamb = zeros(trials_per_phase, length(phases), total_subjects);
-for i=2:total_subjects
+for i=1:total_subjects
     user = subList{i};
     trialId = trialList(i);
     fnames = dir(user);
@@ -439,13 +445,13 @@ for i=2:total_subjects
         gp = goal_probabilities_all{trialnum, ph, subid};
         ng = size(gp, 2) - 1;
         
-        
+        figure;
+        plot(gp(:, end), gp(:,1:end-1), 'LineWidth', 1.5); hold on; grid on;
 %         if num_mode_switches(trialnum, ph, subid) > 0
 %             scatter(mode_switch_time_stamps{trialnum, ph, subid}/total_time, (1/ng)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled', 'MarkerFaceAlpha', 0.5);
 %         end
         if num_assis_req(trialnum, ph, subid) > 0
-            figure;
-            plot(gp(:, end), gp(:,1:end-1), 'LineWidth', 1.5); hold on; grid on;
+            
             if num_mode_switches(trialnum, ph, subid) > 0
                 h1 = scatter(mode_switch_time_stamps{trialnum, ph, subid}, (1/ng)*ones(length(mode_switch_time_stamps{trialnum, ph, subid}), 1), 30, 'k', 'filled');
             end

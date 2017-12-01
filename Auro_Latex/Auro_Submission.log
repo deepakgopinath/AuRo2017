@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  30 NOV 2017 12:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  30 NOV 2017 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,22 +950,22 @@ Normal \dimen register pool exhausted, switching to extended pool.
 (./Auro_Submission.aux)
 \openout1 = `Auro_Submission.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -996,7 +996,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring OFF on input line 86.
+Package hyperref Info: Link coloring OFF on input line 88.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1006,15 +1006,15 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count197
 )
-LaTeX Info: Redefining \ref on input line 86.
-LaTeX Info: Redefining \pageref on input line 86.
-LaTeX Info: Redefining \nameref on input line 86.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
 
 (./Auro_Submission.out) (./Auro_Submission.out)
 \@outlinefile=\write3
 \openout3 = `Auro_Submission.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 86.
+LaTeX Info: Redefining \microtypecontext on input line 88.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1029,7 +1029,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 121.
+LaTeX Font Info:    Try loading font information for U+msa on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1037,7 +1037,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 121.
+LaTeX Font Info:    Try loading font information for U+msb on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1046,12 +1046,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 121.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 125.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 121.
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 121.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 125.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 125.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5519) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1066,15 +1066,15 @@ Package epstopdf Info: Source file: <./figures/Fig1_Disamb.eps>
 (epstopdf)                    size: 126768 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/Fig1_Disamb-eps-
 converted-to.pdf ./figures/Fig1_Disamb.eps>
-(epstopdf)             \includegraphics on input line 149.
+(epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/Fig1_Disamb-eps-converted-to.pdf, id=72, 663.47874pt x 478.78876pt>
+<./figures/Fig1_Disamb-eps-converted-to.pdf, id=74, 663.47874pt x 478.78876pt>
 File: ./figures/Fig1_Disamb-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/Fig1_Disamb-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/Fig1_Disamb-eps-converted-to.pdf used on inp
-ut line 149.
+ut line 153.
 (pdftex.def)             Requested size: 173.25302pt x 125.02275pt.
 Package epstopdf Info: Source file: <./figures/Fig2_SharedControl.eps>
 (epstopdf)                    date: 2017-11-14 15:29:37
@@ -1085,35 +1085,63 @@ Package epstopdf Info: Source file: <./figures/Fig2_SharedControl.eps>
 (epstopdf)                    size: 1445983 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/Fig2_SharedContr
 ol-eps-converted-to.pdf ./figures/Fig2_SharedControl.eps>
-(epstopdf)             \includegraphics on input line 159.
+(epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/Fig2_SharedControl-eps-converted-to.pdf, id=74, 1554.80875pt x 921.4
+<./figures/Fig2_SharedControl-eps-converted-to.pdf, id=76, 1554.80875pt x 921.4
 425pt>
 File: ./figures/Fig2_SharedControl-eps-converted-to.pdf Graphic file (type pdf)
 
  <use ./figures/Fig2_SharedControl-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/Fig2_SharedControl-eps-converted-to.pdf used
- on input line 159.
+ on input line 163.
 (pdftex.def)             Requested size: 495.0pt x 293.34914pt.
 
 Underfull \vbox (badness 4429) has occurred while \output is active []
 
- [2 <./figures/Fig1_Disamb-eps-converted-to.pdf>] [3 <./figures/Fig2_SharedCont
-rol-eps-converted-to.pdf>]
+ [2 <./figures/Fig1_Disamb-eps-converted-to.pdf>]
+Underfull \vbox (badness 2173) has occurred while \output is active []
+
+ [3 <./figures/Fig2_SharedControl-eps-converted-to.pdf>]
 Underfull \vbox (badness 2426) has occurred while \output is active []
 
  [4]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 217.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 220.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.94997> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 220.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <4.25> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 220.
+Package epstopdf Info: Source file: <./figures/disamb_motivation_new_origin_new
+_goals.eps>
+(epstopdf)                    date: 2017-11-30 21:33:37
+(epstopdf)                    size: 49232 bytes
+(epstopdf)             Output file: <./figures/disamb_motivation_new_origin_new
+_goals-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-30 21:43:21
+(epstopdf)                    size: 39004 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/disamb_motivatio
+n_new_origin_new_goals-eps-converted-to.pdf ./figures/disamb_motivation_new_ori
+gin_new_goals.eps>
+(epstopdf)             \includegraphics on input line 211.
+Package epstopdf Info: Output file is already uptodate.
 
-[5]
+<./figures/disamb_motivation_new_origin_new_goals-eps-converted-to.pdf, id=208,
+ 478.78876pt x 438.63875pt>
+File: ./figures/disamb_motivation_new_origin_new_goals-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use ./figures/disamb_motivation_new_origin_new_goals-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/disamb_motivation_new_origin_new_goals-eps-c
+onverted-to.pdf used on input line 211.
+(pdftex.def)             Requested size: 238.96417pt x 218.92393pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 228.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 231.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.94997> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 231.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <4.25> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 231.
+[5 <./figures/disamb_motivation_new_origin_new_goals-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figures/sim_res.eps>
 (epstopdf)                    date: 2017-11-30 11:54:47
 (epstopdf)                    size: 411428 bytes
@@ -1122,28 +1150,35 @@ Package epstopdf Info: Source file: <./figures/sim_res.eps>
 (epstopdf)                    size: 798493 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/sim_res-eps-conv
 erted-to.pdf ./figures/sim_res.eps>
-(epstopdf)             \includegraphics on input line 272.
+(epstopdf)             \includegraphics on input line 283.
 Package epstopdf Info: Output file is already uptodate.
- <./figures/sim_res-eps-converted-to.pdf, id=247, 1314.9125pt x 736.7525pt>
+
+<./figures/sim_res-eps-converted-to.pdf, id=234, 1314.9125pt x 736.7525pt>
 File: ./figures/sim_res-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/sim_res-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/sim_res-eps-converted-to.pdf used on input l
-ine 272.
-(pdftex.def)             Requested size: 569.25363pt x 299.59726pt.
- [6] [7 <./figures/sim_res-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 341.
- (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+ine 283.
+(pdftex.def)             Requested size: 569.25363pt x 280.80077pt.
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./figures/sim_res-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 352.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-[8]
+Underfull \vbox (badness 3612) has occurred while \output is active []
+
+ [8]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 387.
+(Font)              size <8> substituted on input line 398.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 387.
+(Font)              size <5> substituted on input line 398.
 
 Package epstopdf Info: Source file: <./figures/INTER_4.eps>
 (epstopdf)                    date: 2017-05-30 22:22:25
@@ -1153,19 +1188,15 @@ Package epstopdf Info: Source file: <./figures/INTER_4.eps>
 (epstopdf)                    size: 83448 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/INTER_4-eps-conv
 erted-to.pdf ./figures/INTER_4.eps>
-(epstopdf)             \includegraphics on input line 412.
+(epstopdf)             \includegraphics on input line 423.
 Package epstopdf Info: Output file is already uptodate.
-<./figures/INTER_4-eps-converted-to.pdf, id=351, 1144.275pt x 418.56375pt>
+<./figures/INTER_4-eps-converted-to.pdf, id=345, 1144.275pt x 418.56375pt>
 File: ./figures/INTER_4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/INTER_4-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/INTER_4-eps-converted-to.pdf used on input l
-ine 412.
+ine 423.
 (pdftex.def)             Requested size: 238.9604pt x 93.20837pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package epstopdf Info: Source file: <./figures/Task_New.eps>
 (epstopdf)                    date: 2017-11-28 20:14:42
 (epstopdf)                    size: 6490402 bytes
@@ -1174,20 +1205,18 @@ Package epstopdf Info: Source file: <./figures/Task_New.eps>
 (epstopdf)                    size: 337764 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/Task_New-eps-con
 verted-to.pdf ./figures/Task_New.eps>
-(epstopdf)             \includegraphics on input line 421.
+(epstopdf)             \includegraphics on input line 432.
 Package epstopdf Info: Output file is already uptodate.
-<./figures/Task_New-eps-converted-to.pdf, id=353, 1927.2pt x 542.025pt>
+
+<./figures/Task_New-eps-converted-to.pdf, id=347, 1927.2pt x 542.025pt>
 File: ./figures/Task_New-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/Task_New-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/Task_New-eps-converted-to.pdf used on input 
-line 421.
+line 432.
 (pdftex.def)             Requested size: 495.0pt x 139.21115pt.
-
-Underfull \vbox (badness 3965) has occurred while \output is active []
-
  [9 <./figures/INTER_4-eps-converted-to.pdf>]
-Overfull \hbox (1.40538pt too wide) in paragraph at lines 439--440
+Overfull \hbox (1.40538pt too wide) in paragraph at lines 450--451
 $[]$\OT1/cmr/m/n/10 (-20) : In the sec-ond phase of train-ing, the blending-
  []
 
@@ -1201,18 +1230,19 @@ Package epstopdf Info: Source file: <./figures/button_press_combined_shrunk.eps
 (epstopdf)                    size: 10166 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/button_press_com
 bined_shrunk-eps-converted-to.pdf ./figures/button_press_combined_shrunk.eps>
-(epstopdf)             \includegraphics on input line 457.
+(epstopdf)             \includegraphics on input line 468.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/button_press_combined_shrunk-eps-converted-to.pdf, id=369, 636.3775p
+<./figures/button_press_combined_shrunk-eps-converted-to.pdf, id=372, 636.3775p
 t x 360.34625pt>
 File: ./figures/button_press_combined_shrunk-eps-converted-to.pdf Graphic file 
 (type pdf)
 
 <use ./figures/button_press_combined_shrunk-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/button_press_combined_shrunk-eps-converted-t
-o.pdf used on input line 457.
+o.pdf used on input line 468.
 (pdftex.def)             Requested size: 495.0pt x 280.28816pt.
+ [10 <./figures/Task_New-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figures/j2_ha_man_disamb.eps>
 (epstopdf)                    date: 2017-11-30 08:56:49
 (epstopdf)                    size: 187025 bytes
@@ -1222,80 +1252,87 @@ o.pdf>
 (epstopdf)                    size: 199427 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/j2_ha_man_disamb
 -eps-converted-to.pdf ./figures/j2_ha_man_disamb.eps>
-(epstopdf)             \includegraphics on input line 487.
+(epstopdf)             \includegraphics on input line 498.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/j2_ha_man_disamb-eps-converted-to.pdf, id=373, 619.31375pt x 426.593
+<./figures/j2_ha_man_disamb-eps-converted-to.pdf, id=389, 619.31375pt x 426.593
 75pt>
 File: ./figures/j2_ha_man_disamb-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figures/j2_ha_man_disamb-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/j2_ha_man_disamb-eps-converted-to.pdf used o
-n input line 487.
+n input line 498.
 (pdftex.def)             Requested size: 445.49698pt x 306.88037pt.
- [10 <./figures/Task_New-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [11 <./figures/button_press_combined_shrunk-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <./figures/initial_blend.eps>
-(epstopdf)                    date: 2017-11-29 15:14:32
-(epstopdf)                    size: 28780 bytes
-(epstopdf)             Output file: <./figures/initial_blend-eps-converted-to.p
-df>
-(epstopdf)                    date: 2017-11-29 17:25:45
-(epstopdf)                    size: 8623 bytes
-(epstopdf)             Command: <repstopdf --outfile=./figures/initial_blend-ep
-s-converted-to.pdf ./figures/initial_blend.eps>
-(epstopdf)             \includegraphics on input line 520.
+Package epstopdf Info: Source file: <./figures/initial_blend_new.eps>
+(epstopdf)                    date: 2017-11-30 13:56:31
+(epstopdf)                    size: 28734 bytes
+(epstopdf)             Output file: <./figures/initial_blend_new-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-11-30 16:13:54
+(epstopdf)                    size: 8654 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/initial_blend_ne
+w-eps-converted-to.pdf ./figures/initial_blend_new.eps>
+(epstopdf)             \includegraphics on input line 531.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/initial_blend-eps-converted-to.pdf, id=408, 619.31375pt x 459.7175pt
->
-File: ./figures/initial_blend-eps-converted-to.pdf Graphic file (type pdf)
- <use ./figures/initial_blend-eps-converted-to.pdf>
-Package pdftex.def Info: ./figures/initial_blend-eps-converted-to.pdf used on i
-nput line 520.
-(pdftex.def)             Requested size: 238.96417pt x 177.38109pt.
+<./figures/initial_blend_new-eps-converted-to.pdf, id=408, 619.31375pt x 431.61
+25pt>
+File: ./figures/initial_blend_new-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./figures/initial_blend_new-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/initial_blend_new-eps-converted-to.pdf used 
+on input line 531.
+(pdftex.def)             Requested size: 238.96417pt x 166.53683pt.
+ [12 <./figures/j2_ha_man_disamb-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figures/gp_combined_with_line_gray.eps>
+(epstopdf)                    date: 2017-11-30 21:34:40
+(epstopdf)                    size: 2136952 bytes
+(epstopdf)             Output file: <./figures/gp_combined_with_line_gray-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-11-30 21:42:52
+(epstopdf)                    size: 158146 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/gp_combined_with
+_line_gray-eps-converted-to.pdf ./figures/gp_combined_with_line_gray.eps>
+(epstopdf)             \includegraphics on input line 554.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figures/gp_combined_with_line_gray-eps-converted-to.pdf, id=426, 626.34pt x 
+438.63875pt>
+File: ./figures/gp_combined_with_line_gray-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./figures/gp_combined_with_line_gray-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/gp_combined_with_line_gray-eps-converted-to.
+pdf used on input line 554.
+(pdftex.def)             Requested size: 238.96738pt x 200.81915pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <./figures/j2_ha_man_disamb-eps-converted-to.pdf> <./figures/initial_blend
--eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `fig:gp_evolution' on page 13 undefined on input line 
-539.
-
-
-LaTeX Warning: Reference `fig:gp_evolution' on page 13 undefined on input line 
-540.
-
-(./Auro_Submission.bbl [13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [13 <./figures/initial_blend_new-eps-converted-to.pdf> <./figures/gp_combined_
+with_line_gray-eps-converted-to.pdf>] (./Auro_Submission.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 622.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 635.
 
 [16
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 622.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 635.
  (./Auro_Submission.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 622.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 622.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 635.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 635.
 Package rerunfilecheck Info: File `Auro_Submission.out' has not changed.
 (rerunfilecheck)             Checksum: 61D474B85B254D3F2207EBEF93E81222;380.
 
@@ -1304,12 +1341,9 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 622.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 635.
  )
 (\end occurred when \ifx on line 89 was incomplete)
 (\end occurred when \ifx on line 89 was incomplete)
@@ -1407,11 +1441,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 622.
 (\end occurred when \ifx on line 64 was incomplete)
 (\end occurred when \ifx on line 64 was incomplete) 
 Here is how much of TeX's memory you used:
- 16994 strings out of 495028
- 284191 string characters out of 6181497
- 477717 words of memory out of 5000000
- 19577 multiletter control sequences out of 15000+600000
- 25786 words of font info for 171 fonts, out of 8000000 for 9000
+ 16997 strings out of 495028
+ 284731 string characters out of 6181497
+ 480449 words of memory out of 5000000
+ 19582 multiletter control sequences out of 15000+600000
+ 24859 words of font info for 166 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,20n,51p,10423b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/deepak/.texmf-var/fo
@@ -1437,10 +1471,10 @@ sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Auro_Submission.pdf (16 pages, 3349039 bytes).
+Output written on Auro_Submission.pdf (16 pages, 3543620 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
- 474 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
- 17001 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 482 compressed objects within 5 object streams
+ 134 named destinations out of 1000 (max. 500000)
+ 14451 words of extra memory for PDF output out of 17280 (max. 10000000)
 

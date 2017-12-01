@@ -327,11 +327,20 @@ CODE STUFF:
 2. Write trial generation script
 3. Write bash script for data collection
 
+
+
 ANalysis:
 
 should I convert to matfiles before. Might need original bagfiles. 
 Within subject: pre and post switch. 
 Across subjects: Number of mode switches. 
+
+115.4 14
+
+132.6 16.
+
+'H2PH1POHAT4'
+'H3PH1REHAT10'
 
 
 

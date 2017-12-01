@@ -63,19 +63,77 @@ for i=1:total_subjects
         end
         subid = str2double(n(2)) - 1; %H1 gets 1 H2 gets 2 and so on and so forth
         total_time_all(trialnum, ph, subid) = total_time;
-        
-        %alpha's time stamp is shared by all the ones 
-        
         alpha(1, :) = []; alpha(:, 2) = alpha(:, 2) - start_time;
         thread_times = alpha(:, 2);
         
-%         goal_probabilities(1, :) = []; 
-%         goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
+        goal_probabilities(1, :) = [];
+        if strcmp(n, 'H7PH2REJ2T5') || strcmp(n, 'H8PH2REHAT5') || strcmp(n, 'H9PH1REJ2T15')
+            goal_probabilities(1:2, :) = [];
+        end
+        if strcmp(n, 'H8PH2REHAT8')
+            goal_probabilities(1, :) = [];
+        end
+        goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
+        goal_probabilities = trim_data(goal_probabilities, false);
+        goal_probabilities_all(trialnum, ph, subid) = {goal_probabilities};
         
-        alpha = trim_data(alpha, false);
-%         alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
-        alpha_all(trialnum, ph, subid) = alpha(min(find(alpha(:, 1) > 0)), end)/total_time;
-%         goal_probabilities = trim_data(goal_probabilities, false);
+        if strcmp(n(6:7), 'RE')
+            alpha = trim_data(alpha, false);
+%             alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
+            alpha_all(trialnum, ph, subid) = alpha(min(find(alpha(:, 1) > 0)), end)/total_time;
+        else
+            if ph == 1
+                taskid = ph1_trial_mat{trialnum, 4 ,subid};  
+            else
+                taskid = ph2_trial_mat{trialnum, 4 ,subid};
+            end
+            if taskid == 1 || taskid == 2
+                gmarker = 2;
+            elseif taskid == 3 || taskid == 4
+                gmarker = 4;
+            end
+            [m, ind] = max(goal_probabilities(:, 1:end-1), [], 2);
+            %find all ind which is equal gmarker. 
+            gm_ind = find(ind == gmarker);
+            m_gm = m(gm_ind);
+            m_gm_max = find(m_gm == max(m_gm)); 
+            if isempty(m_gm_max)
+                continue;
+            end
+            m_gm_max = m_gm_max(1);
+            seg_break = gm_ind(m_gm_max);
+            alpha_seg = alpha(seg_break:end, 1);
+            
+            %find where gp rise and passes threshold right after the seg
+            %break
+            tempg = goal_probabilities(seg_break:end, 1:end-1);
+            tempg = max(tempg, [], 2);
+%             coeff = ones(1, 5)/5;
+%             smoothtempg = filter(coeff, 1, tempg); smoothtempg(1:3) = []; smoothtempg = [smoothtempg;smoothtempg(end)*ones(3,1)];
+            deltat = min(intersect(find(diff(tempg) > 0), find(tempg > 0.25))); %max goal probability above 0.25 means alpha > 0
+            frac = (goal_probabilities(seg_break+deltat, end) - goal_probabilities(seg_break, end))/(goal_probabilities(end, end) - goal_probabilities(seg_break, end));
+%             plot(goal_probabilities(:, 1:end-1));
+            alpha = trim_data(alpha, false);
+%             disp(alpha(min(find(alpha(:, 1) > 0)), end)/total_time);
+          
+            alpha_all(trialnum, ph, subid) = mean([alpha(min(find(alpha(:, 1) > 0)), end)/total_time, frac]);
+            
+            
+%             close all;
+        end
+        disp(alpha_all(trialnum, ph, subid));
+        %alpha's time stamp is shared by all the ones 
+        
+%         alpha(1, :) = []; alpha(:, 2) = alpha(:, 2) - start_time;
+%         thread_times = alpha(:, 2);
+%         
+% %         goal_probabilities(1, :) = []; 
+% %         goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
+%         
+%         alpha = trim_data(alpha, false);
+% %         alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
+%         alpha_all(trialnum, ph, subid) = alpha(min(find(alpha(:, 1) > 0)), end)/total_time;
+% %         goal_probabilities = trim_data(goal_probabilities, false);
         
 %         close all; figure;
 %         plot(goal_probabilities(:, end), goal_probabilities(:, 1:end-1)); hold on; grid on;  

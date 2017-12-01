@@ -33,8 +33,8 @@ minR = -0.5;
 minR  + (maxR - minR)*rand(1, ng);
 % xg = [minR  + (maxR - minR)*rand(1, ng); -rand(1, ng) - 0.02; 0.5*rand(1, ng) + 0.1] + rand(nd,1)*0.2 - rand(nd,1)*0.2; %random goal positions. These will be treated as fixed parameters.
 xg = [2, -2, 1.8;
-      -1.5, -1.2, 0.8;
-      2, -0.8, 0.1;]';
+      -1.5, -1.1, 1;
+      2, -0.4, 0.1;]';
 pg0 = (1/ng)*ones(ng, 1);
 pg = (1/ng)*ones(ng, 1);
 project_time_list = [1,1,2,2]';
@@ -147,9 +147,25 @@ colors = {[1,0.8,0], [1,0,0], [0,0,1]};
 for ii=1:ng
     scatter3(xg(1,ii), xg(2,ii), xg(3,ii), 250, colors{ii}, 'filled'); grid on; hold on;
     for jj=1:nd
-        target = xg(:, ii); target(jj) = 0;
+        target = xg(:, ii); 
+        if jj==1 || jj==2
+            target(jj) = -2.4;
+        else
+            target(jj) = 0;
+        end
         line([xg(1,ii), target(1)],[xg(2,ii), target(2)],[xg(3,ii), target(3)],'Color', [0,0,0,0.6], 'LineWidth', 0.6, 'LineStyle', '-.');
     end
+end
+
+for jj=1:nd
+    target = xr;
+    if jj==1 || jj==2
+        target(jj) = -2.4;
+    else
+        target(jj) = 0;
+    end
+    line([xr(1), target(1)],[xr(2), target(2)],[xr(3), target(3)],'Color', [0,0,0,0.6], 'LineWidth', 0.6, 'LineStyle', '-.');
+    
 end
 xlabel('X'); ylabel('Y'); zlabel('Z');
 scatter3(xr(1), xr(2), xr(3), 500, 'k', 'filled');
@@ -159,7 +175,8 @@ scatter3(xr(1), xr(2), xr(3), 500, 'k', 'filled');
 % line([0,0], [0,0], zrange, 'Color', 'k','LineWidth', 1.5);
 axis([xrange, yrange, zrange]);
 axis square;
-view([-221,26]);
+% view([-221,26]);
+view([117 11]);
 tg = 3; %specify target goal. b,r,y = 1,2,3
 color_g = {[1,0.8,0], [1,0,0], [0,0,1]};
 for i=1:nm %along each axis
@@ -168,9 +185,22 @@ for i=1:nm %along each axis
         tc = color_g{j};
         sc = [0.95, 0.95, 0.95];
         sp = xr;
+        if i==1
+            if j==1
+                max_prob =  max(pgs(1, :));
+            elseif j == 3
+                max_prob = max(pgs(3,:));
+            else
+                max_prob = 1;
+            end
+        elseif i==2 || i==3
+            if j==3
+                max_prob = max(pgs(3,:));
+            end
+        end
         for k=1:length(T)
             alpha = pgs(j,k);
-            color_point = interpolate_color(sc, tc, alpha);
+            color_point = interpolate_color(sc, tc, alpha, max_prob);
             dis = abs(sp - xg(:, tg)); gap = 0.04;
             if i==1
                 scatter3(sp(1) + k*dis(i)/length(T), sp(2), sp(3) + (j-1)*gap, 20, color_point, 'filled');
@@ -222,12 +252,12 @@ end
 
 %%
 
-function color = interpolate_color(start_color, target_color, alpha)
-        if alpha < 0.4
-            alpha = alpha - 0.1;
-        end
+function color = interpolate_color(start_color, target_color, alpha, max_prob)
+%         if alpha < 0.4
+%             alpha = alpha - 0.1;
+%         end
         
-     color = (1 - alpha)*start_color + alpha*target_color;
+     color = (1.0 - alpha/max_prob)*start_color + (alpha/max_prob)*target_color;
 end
 %%
 % min_ws = -0.5;

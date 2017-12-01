@@ -34,7 +34,6 @@
 \citation{herlant2016assistive}
 \citation{liu2016goal}
 \citation{choi2008laser}
-\citation{baker2007goal,baker2009action}
 \citation{dragan2012assistive,gopinath2017human}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Core components of a Shared Control Architecture. }}{3}{figure.2}}
 \newlabel{fig:shared_control}{{2}{3}{Core components of a Shared Control Architecture}{figure.2}{}}
@@ -55,73 +54,75 @@
 \newlabel{ssec:notation}{{3.1}{4}{Notation}{subsection.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Intent Disambiguation}{5}{subsection.3.2}}
 \newlabel{ssec:disamb}{{3.2}{5}{Intent Disambiguation}{subsection.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Illustration of how goal confidences change upon motion along control dimensions. The three colored lines along each dimension represent the confidences associated with a goal of corresponding color. One can see that motion along certain control dimensions result in sharper rise in confidences for some goals compared to others.}}{5}{figure.3}}
+\newlabel{fig:disamb_motivation}{{3}{5}{Illustration of how goal confidences change upon motion along control dimensions. The three colored lines along each dimension represent the confidences associated with a goal of corresponding color. One can see that motion along certain control dimensions result in sharper rise in confidences for some goals compared to others}{figure.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Forward Projection of $\boldsymbol  {p}(t)$}{5}{subsubsection.3.2.1}}
 \newlabel{sssec:projection}{{3.2.1}{5}{Forward Projection of $\boldsymbol {p}(t)$}{subsubsection.3.2.1}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Calculate $\boldsymbol  {p}(t_b)$, $\boldsymbol  {p}(t_c)$}}{5}{algorithm.1}}
-\newlabel{alg1}{{1}{5}{Forward Projection of $\boldsymbol {p}(t)$}{algorithm.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Components of $D_k$}{5}{subsubsection.3.2.2}}
 \newlabel{sssec:components}{{3.2.2}{5}{Components of $D_k$}{subsubsection.3.2.2}{}}
 \citation{gopinath2017mode}
 \citation{gopinath2017mode}
 \citation{gopinath2017mode}
-\citation{schoner2015dynamic}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Calculate $\boldsymbol  {p}(t_b)$, $\boldsymbol  {p}(t_c)$}}{6}{algorithm.1}}
+\newlabel{alg1}{{1}{6}{Forward Projection of $\boldsymbol {p}(t)$}{algorithm.1}{}}
 \newlabel{DK}{{6}{6}{Components of $D_k$}{equation.3.6}{}}
 \newlabel{EQ2}{{7}{6}{Components of $D_k$}{equation.3.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Intent Inference}{6}{subsection.3.3}}
 \newlabel{ssec:inference}{{3.3}{6}{Intent Inference}{subsection.3.3}{}}
+\citation{schoner2015dynamic}
 \citation{amari1977dynamics}
 \citation{wilson1973mathematical}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Control dimensions best able to disambiguate intent. Left column: $k^*$ is X. Middle Column: $k^*$ is Y. Right Column: $k^*$ is Z. Magenta spheres indicate the goal locations (intent). In this example, the goals are spread maximally along the x and z dimensions, and so inference happens more quickly if the human control commands are along x or z. We see that x and z are chosen more often as the most disambiguating dimensions when using intent inference function \textbf  {C2} (bottom row). Function \textbf  {C2} considers the instantaneous directedness of the human's control command towards that goal, while inference function \textbf  {C1} (top row) encodes only proximity to a given goal. Function \textbf  {C2} is considered to encode more information about the human's intent than \textbf  {C1}, with the result of stronger inference power---which is inherently linked to the disambiguation power of our algorithm. Further details in\nobreakspace  {}\cite  {gopinath2017mode}.}}{7}{figure.4}}
+\newlabel{fig:sim_res}{{4}{7}{Control dimensions best able to disambiguate intent. Left column: $k^*$ is X. Middle Column: $k^*$ is Y. Right Column: $k^*$ is Z. Magenta spheres indicate the goal locations (intent). In this example, the goals are spread maximally along the x and z dimensions, and so inference happens more quickly if the human control commands are along x or z. We see that x and z are chosen more often as the most disambiguating dimensions when using intent inference function \textbf {C2} (bottom row). Function \textbf {C2} considers the instantaneous directedness of the human's control command towards that goal, while inference function \textbf {C1} (top row) encodes only proximity to a given goal. Function \textbf {C2} is considered to encode more information about the human's intent than \textbf {C1}, with the result of stronger inference power---which is inherently linked to the disambiguation power of our algorithm. Further details in~\cite {gopinath2017mode}}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Dynamic Field Theory}{7}{subsubsection.3.3.1}}
+\newlabel{sssec:dft}{{3.3.1}{7}{Dynamic Field Theory}{subsubsection.3.3.1}{}}
 \citation{schoner2008dynamical}
 \citation{erlhagen2006dynamic}
 \citation{erlhagen2014dynamic}
 \citation{zibner2011dynamic}
 \citation{schoner1995dynamics}
 \citation{faubel2008learning}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Control dimensions best able to disambiguate intent. Left column: $k^*$ is X. Middle Column: $k^*$ is Y. Right Column: $k^*$ is Z. Magenta spheres indicate the goal locations (intent). In this example, the goals are spread maximally along the x and z dimensions, and so inference happens more quickly if the human control commands are along x or z. We see that x and z are chosen more often as the most disambiguating dimensions when using intent inference function \textbf  {C2} (bottom row). Function \textbf  {C2} considers the instantaneous directedness of the human's control command towards that goal, while inference function \textbf  {C1} (top row) encodes only proximity to a given goal. Function \textbf  {C2} is considered to encode more information about the human's intent than \textbf  {C1}, with the result of stronger inference power---which is inherently linked to the disambiguation power of our algorithm. Further details in\nobreakspace  {}\cite  {gopinath2017mode}.}}{7}{figure.3}}
-\newlabel{fig:sim_res}{{3}{7}{Control dimensions best able to disambiguate intent. Left column: $k^*$ is X. Middle Column: $k^*$ is Y. Right Column: $k^*$ is Z. Magenta spheres indicate the goal locations (intent). In this example, the goals are spread maximally along the x and z dimensions, and so inference happens more quickly if the human control commands are along x or z. We see that x and z are chosen more often as the most disambiguating dimensions when using intent inference function \textbf {C2} (bottom row). Function \textbf {C2} considers the instantaneous directedness of the human's control command towards that goal, while inference function \textbf {C1} (top row) encodes only proximity to a given goal. Function \textbf {C2} is considered to encode more information about the human's intent than \textbf {C1}, with the result of stronger inference power---which is inherently linked to the disambiguation power of our algorithm. Further details in~\cite {gopinath2017mode}}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Dynamic Field Theory}{7}{subsubsection.3.3.1}}
-\newlabel{sssec:dft}{{3.3.1}{7}{Dynamic Field Theory}{subsubsection.3.3.1}{}}
-\citation{argall2009survey,schaal1997learning,khansari2011learning,calinon2012statistical}
-\citation{hsu2002randomized,ratliff2009chomp}
-\citation{rimon1992exact,tanner2003nonholonomic}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Dynamic Neural Fields for Intent Inference}{8}{subsubsection.3.3.2}}
 \newlabel{sssec:dft_ii}{{3.3.2}{8}{Dynamic Neural Fields for Intent Inference}{subsubsection.3.3.2}{}}
 \newlabel{eq:dft}{{10}{8}{Dynamic Neural Fields for Intent Inference}{equation.3.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Shared Control}{8}{section.4}}
-\newlabel{sec:shared-control}{{4}{8}{Shared Control}{section.4}{}}
+\citation{argall2009survey,schaal1997learning,khansari2011learning,calinon2012statistical}
+\citation{hsu2002randomized,ratliff2009chomp}
+\citation{rimon1992exact,tanner2003nonholonomic}
 \citation{khatib1986real}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Shared Control}{9}{section.4}}
+\newlabel{sec:shared-control}{{4}{9}{Shared Control}{section.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Study Methods}{9}{section.5}}
 \newlabel{sec:ed}{{5}{9}{Study Methods}{section.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Hardware}{9}{subsection.5.1}}
 \newlabel{ssec:hardware}{{5.1}{9}{Hardware}{subsection.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively.}}{9}{figure.4}}
-\newlabel{fig:interfaces}{{4}{9}{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively.}}{9}{figure.5}}
+\newlabel{fig:interfaces}{{5}{9}{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega $ indicate the translational and rotational velocities of the end-effector, respectively}{figure.5}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Assistance Paradigms}{9}{subsubsection.5.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Study tasks performed by subjects. \textit  {Left:} Single-step reaching task. \textit  {Right:} Multi-step Pouring task. }}{10}{figure.5}}
-\newlabel{fig:tasks}{{5}{10}{Study tasks performed by subjects. \textit {Left:} Single-step reaching task. \textit {Right:} Multi-step Pouring task}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Study tasks performed by subjects. \textit  {Left:} Single-step reaching task. \textit  {Right:} Multi-step Pouring task. }}{10}{figure.6}}
+\newlabel{fig:tasks}{{6}{10}{Study tasks performed by subjects. \textit {Left:} Single-step reaching task. \textit {Right:} Multi-step Pouring task}{figure.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Task Descriptions}{10}{subsection.5.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Study Protocol and Metrics}{10}{subsection.5.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{10}{section.6}}
-\newlabel{sec:results}{{6}{10}{Results}{section.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Comparison of average number of button presses between \textit  {Disambiguation} and \textit  {Manual} Paradigms. \textit  {Left:} Grouped by control interfaces. \textit  {Right:} Grouped by tasks.}}{11}{figure.6}}
-\newlabel{fig:button_press}{{6}{11}{Comparison of average number of button presses between \textit {Disambiguation} and \textit {Manual} Paradigms. \textit {Left:} Grouped by control interfaces. \textit {Right:} Grouped by tasks}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comparison of average number of button presses between \textit  {Disambiguation} and \textit  {Manual} Paradigms. \textit  {Left:} Grouped by control interfaces. \textit  {Right:} Grouped by tasks.}}{11}{figure.7}}
+\newlabel{fig:button_press}{{7}{11}{Comparison of average number of button presses between \textit {Disambiguation} and \textit {Manual} Paradigms. \textit {Left:} Grouped by control interfaces. \textit {Right:} Grouped by tasks}{figure.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{11}{section.6}}
+\newlabel{sec:results}{{6}{11}{Results}{section.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Impact of Disambiguation on Task Performance}{11}{subsection.6.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Temporal Distribution of Disambiguation Requests}{11}{subsection.6.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Temporal pattern of button presses for each interface/task combination on a trial-by-trial basis for all subjects. Eight trials per subject per interface/task combination. Gray and red horizontal lines denote successful and unsuccessful trials respectively.}}{12}{figure.7}}
-\newlabel{fig:ha_man_disamb}{{7}{12}{Temporal pattern of button presses for each interface/task combination on a trial-by-trial basis for all subjects. Eight trials per subject per interface/task combination. Gray and red horizontal lines denote successful and unsuccessful trials respectively}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Temporal pattern of button presses for each interface/task combination on a trial-by-trial basis for all subjects. Eight trials per subject per interface/task combination. Gray and red horizontal lines denote successful and unsuccessful trials respectively.}}{12}{figure.8}}
+\newlabel{fig:ha_man_disamb}{{8}{12}{Temporal pattern of button presses for each interface/task combination on a trial-by-trial basis for all subjects. Eight trials per subject per interface/task combination. Gray and red horizontal lines denote successful and unsuccessful trials respectively}{figure.8}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Characterization of the temporal distribution of assistance requests. The values in the table denotes the deviation of the temporal distribution from a uniform distribution. This deviation is captured using the \textit  {Skewness} measure. }}{12}{table.1}}
 \newlabel{table:skewness}{{1}{12}{Characterization of the temporal distribution of assistance requests. The values in the table denotes the deviation of the temporal distribution from a uniform distribution. This deviation is captured using the \textit {Skewness} measure}{table.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Onset of robot assistance normalized with respect to task completion time. \textit  {Left:} Across interfaces. \textit  {Right:} Across tasks.}}{12}{figure.8}}
-\newlabel{fig:initial_blend}{{8}{12}{Onset of robot assistance normalized with respect to task completion time. \textit {Left:} Across interfaces. \textit {Right:} Across tasks}{figure.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Onset of Robot Assistance}{12}{subsection.6.3}}
 \newlabel{ssec:onset}{{6.3}{12}{Onset of Robot Assistance}{subsection.6.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Onset of robot assistance normalized with respect to task completion time. \textit  {Left:} Across interfaces. \textit  {Right:} Across tasks.}}{13}{figure.9}}
+\newlabel{fig:initial_blend}{{9}{13}{Onset of robot assistance normalized with respect to task completion time. \textit {Left:} Across interfaces. \textit {Right:} Across tasks}{figure.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{13}{section.7}}
+\newlabel{sec:discussions}{{7}{13}{Discussion}{section.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Time evolution of goal probabilities. \textit  {Top:} Multi-step task. \textit  {Bottom:} Single-step task. The gray horizontal line above denotes the minimum threshold for robot assistance. The thick black line at the bottom denotes non-zero human control commands. The red and black dots indicate button presses that are assistance requests and mode switches respectively. }}{13}{figure.10}}
+\newlabel{fig:gp_evolution}{{10}{13}{Time evolution of goal probabilities. \textit {Top:} Multi-step task. \textit {Bottom:} Single-step task. The gray horizontal line above denotes the minimum threshold for robot assistance. The thick black line at the bottom denotes non-zero human control commands. The red and black dots indicate button presses that are assistance requests and mode switches respectively}{figure.10}{}}
 \bibstyle{spbasic}
 \bibdata{references}
 \bibcite{amari1977dynamics}{{1}{1977}{{Amari}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{13}{section.7}}
-\newlabel{sec:discussions}{{7}{13}{Discussion}{section.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{13}{section.8}}
-\newlabel{sec:conclusions}{{8}{13}{Conclusion}{section.8}{}}
 \bibcite{argall2009survey}{{2}{2009}{{Argall et~al}}{{Argall, Chernova, Veloso, and Browning}}}
 \bibcite{atanasov2014information}{{3}{2014}{{Atanasov et~al}}{{Atanasov, Le~Ny, Daniilidis, and Pappas}}}
 \bibcite{baker2007goal}{{4}{2007}{{Baker et~al}}{{Baker, Tenenbaum, and Saxe}}}
@@ -139,6 +140,8 @@
 \bibcite{faubel2008learning}{{16}{2008}{{Faubel and Sch{\"o}ner}}{{}}}
 \bibcite{goodfellow2010help}{{17}{2010}{{Goodfellow et~al}}{{Goodfellow, Koenig, Muja, Pantofaru, Sorokin, and Takayama}}}
 \bibcite{gopinath2017mode}{{18}{2017}{{Gopinath and Argall}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{14}{section.8}}
+\newlabel{sec:conclusions}{{8}{14}{Conclusion}{section.8}{}}
 \bibcite{gopinath2017human}{{19}{2017}{{Gopinath et~al}}{{Gopinath, Jain, and Argall}}}
 \bibcite{herlant2016assistive}{{20}{2016}{{Herlant et~al}}{{Herlant, Holladay, and Srinivasa}}}
 \bibcite{holladay2014legible}{{21}{2014}{{Holladay et~al}}{{Holladay, Dragan, and Srinivasa}}}
