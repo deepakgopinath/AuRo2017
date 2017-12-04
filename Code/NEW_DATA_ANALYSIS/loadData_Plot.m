@@ -323,13 +323,13 @@ num_assis_req([13,15], 1, 7) = -999;
 
 %%
 
-plt1 = 1; plt2 = 2;
+plt1 = 2; plt2 = 2;
 % figure;
 subplot(1,2,plt1);
 hold on; grid on;
 % axis([0,1,1,20]);
 ylim([0,20]);
-inter = 'J2'; task = 'PO';
+inter = 'HA'; task = 'PO';
 
 for i=1:total_subjects
     user = subList{i};
@@ -377,7 +377,7 @@ for i=1:total_subjects
             if num_mode_switches(trialnum, ph, subid) >= 0
                 line([0, 1.0], [i*2 + index*0.1, i*2 + index*0.1], 'Color', [0.01,0.01, 0.01, 0.2], 'LineWidth', 0.001);
             else
-                line([0, 1.0], [i*2 + index*0.1, i*2 + index*0.1], 'Color', [1, 0,0, 0.2], 'LineWidth', 0.001);
+                line([0, 1.0], [i*2 + index*0.1, i*2 + index*0.1], 'Color', [0.01,0.01, 0.01, 0.2], 'LineWidth', 0.001);
             end
             index = index + 1;
         end
@@ -400,7 +400,7 @@ if strcmp(task, 'PO')
 else
     task_title = 'SingleStep';
 end
-title(strcat(inter_title, '/', task_title));
+title(strcat(inter_title));
 % legend('Disamb', 'Manual');
 legend([h2, h1], 'Manual', 'Disamb');
 % subplot(1,2,plt2);

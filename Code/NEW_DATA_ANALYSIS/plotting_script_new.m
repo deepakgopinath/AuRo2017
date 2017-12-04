@@ -97,6 +97,7 @@ for kk=1:length(interfaces)
     end
     
     [p,h] = ranksum(v1, v2);
+    disp(p);
     ypos = max(max(v1), max(v2)); yoffset = 0.2;
     if p <= 0.05
         line([y1, y1], [ypos + yoffset, ypos+2*yoffset], 'LineWidth', 2.0);
