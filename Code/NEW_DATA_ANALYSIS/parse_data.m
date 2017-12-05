@@ -1,4 +1,7 @@
-% clear all; clc; close all;
+%% THIS SCRIPT IS RESPONSIBLE FOR LOADING UP ALL DATA FROM THE MAT FILES, USING loadData.m AND STORING THE DATA IN APPROPRIATE
+%% MATRICES ACCORDING TO INTERFACE/CONDITION/TASK COMBINATION. 
+
+clear all; clc; close all;
 
 %%
 subList = {'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 'H9'};
@@ -6,18 +9,19 @@ total_subjects = length(subList);
 trialList = (1:8)';
 phases = {'PH1','PH2'};
 interfaces = {'J2', 'HA'};
-tasks = {'RE','PO'};
+tasks = {'RE','PO'}; %REACHING AND POURING. 
 assis = {'wo', 'on'};
-task_order = {'PO','RE','RE','PO','RE','PO','PO','RE'}; %Phase 1 tasks. 
+task_order = {'PO','RE','RE','PO','RE','PO','PO','RE'}; %Phase 1 tasks FOR EACH SUBJECTS. 
 trials_per_phase = 16;
 
-load('trial_order_testing_8.mat');
+load('trial_order_testing_8.mat'); % LOAD THE TRIAL ORDER. THIS IS FOR loadData TO CHECK FOR SOME CRITERION. 
 loadData;
 
 %%
 
-%%
-ms_re_jon = [];
+%% EACH MATRIX IS NAMED VAR_TASK_INTERcONDITION
+% MODE SWITCHES
+ms_re_jon = []; 
 ms_po_jon = [];
 ms_re_jwo = [];
 ms_po_jwo = [];
@@ -27,6 +31,7 @@ ms_po_hon = [];
 ms_re_hwo = [];
 ms_po_hwo = [];
 
+%TASK COMPLEITION TIME
 t_re_jon = [];
 t_po_jon = [];
 t_re_jwo = [];
@@ -37,7 +42,7 @@ t_po_hon = [];
 t_re_hwo = [];
 t_po_hwo = [];
 
-
+%ALPHA VALUES FOR EACH TRIAL.
 al_re_jon = [];
 al_po_jon = [];
 al_re_jwo = [];
@@ -48,13 +53,14 @@ al_po_hon = [];
 al_re_hwo = [];
 al_po_hwo = [];
 
-
+%NUM OF ASSISTANCE REQUESTS
 na_re_jon = [];
 na_po_jon = [];
 
 na_re_hon = [];
 na_po_hon = [];
 
+% MEDIAN AND MEAN OF EACH MODE SWITCH. WAS COMPUTED FROM DATA AND THEN HARD CODED. 
 mean_ms_re_jwo = 2;%2.3750;
 mean_ms_po_jwo = 6.5;%6.8750;
 mean_ms_re_hwo = 15;%14.3040;
@@ -68,8 +74,9 @@ for i=1:total_subjects
     ph1_trial_list = ph1_trial_mat(:,:,trialId);
     ph2_trial_list = ph2_trial_mat(:,:,trialId);
     
-    %fix human errors in trial conditions
-    if strcmp(user, 'H9')
+    %fix human errors in trial conditions. TARGETS, HOME POSITION AND INIT
+    %MODES
+    if strcmp(user, 'H9') 
         ph2_trial_list{12, 4} = 4;
     elseif strcmp(user, 'H3')
         ph1_trial_list{11, 6} = 2;
@@ -199,6 +206,8 @@ end
 
 %downsample
 
+%REMOVE ALL THOSE TRIALS WHICH HAD FAILURES. loadData.m POPULATES THOSE
+%TRIALS WITH -999. 
 ms_po_hon(ms_po_hon < 0) = [];
 ms_po_hwo(ms_po_hwo < 0) = [];
 ms_po_jon(ms_po_jon < 0) = [];
@@ -232,6 +241,8 @@ na_po_jon(na_po_jon < 0) = [];
 na_re_jon(na_re_jon < 0) = [];
 na_re_hon(na_re_hon < 0) = [];
  
+%% SINCE THE NUMBER OF 'WITHOUT' IS 3 TRIALS AND 'DISAMB' IS 5, BEFORE ANALYSIS NEED TO RANDOMLY SAMPLE 3 OUT OF 5 FROM THE DISAMB TRIALS
+%% THIS IS WHAT HAPPENS IN THIS SECTION
 
 randind = randsample(length(ms_po_hon), length(ms_po_hwo));
 ms_po_hon = ms_po_hon(randind);

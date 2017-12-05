@@ -11,22 +11,26 @@
 % task_order = {'PO','RE','RE','PO','RE','PO','PO','RE'}; %Phase 1 tasks. 
 % trials_per_phase = 16;
 
+%% THE CHUNK OF CODE GETS LOADED IN parse_data.m. IF loadData.m IS RUN ALONE, THE UNCOMMENT THE PREVIOUS BLOCK.
 
-%%
+%% INITIALIZE ALL CELLS/MATRICES TO HOLD DATA FROM THE .MAT FILES. 
 
-total_time_all = zeros(trials_per_phase, length(phases), total_subjects);
+total_time_all = zeros(trials_per_phase, length(phases), total_subjects); %TASK COMPLETION TIMES. 
 
 %user initiated modeswitches =  total_mode_switches - number of assistance
 %requests. 
-num_assis_req = zeros(trials_per_phase, length(phases), total_subjects); %onlty for trials with 'on' mode 
-ar_norm_ts = cell(trials_per_phase, length(phases), total_subjects);
-num_mode_switches = zeros(trials_per_phase, length(phases), total_subjects);
-mode_switch_time_stamps = cell(trials_per_phase, length(phases), total_subjects);
-current_mode_time_stamps = cell(trials_per_phase, length(phases), total_subjects);
-mode_switches_all = cell(trials_per_phase, length(phases), total_subjects);
-current_mode_all = cell(trials_per_phase, length(phases), total_subjects);
 
-%cdim and cmode coming from ONLY mode switches
+num_assis_req = zeros(trials_per_phase, length(phases), total_subjects); %number of assistance requests for 'disamb' trials. For 'without' trials this is by default zero
+ar_norm_ts = cell(trials_per_phase, length(phases), total_subjects); %normalized time at which assistance request happened. The 'same' variable might be used in a different run to store unnornmalized time. 
+num_mode_switches = zeros(trials_per_phase, length(phases), total_subjects); %number of button presses that correspond to user inititated mode switch
+mode_switch_time_stamps = cell(trials_per_phase, length(phases), total_subjects); % time stamps at which the user-initiated mode switches happened.
+current_mode_time_stamps = cell(trials_per_phase, length(phases), total_subjects); % time stamps current mode tracks the 'actual mode' in which the operation happens. This is message that is used to light up the LED mode switch display.
+mode_switches_all = cell(trials_per_phase, length(phases), total_subjects); % mode switches for all trials.
+current_mode_all = cell(trials_per_phase, length(phases), total_subjects); % current mode for all trials. 
+
+%cdim and cmode coming from ONLY system initiated mode switches. There will
+%be one for each time the user requested mode switch assistance in the
+%disamb trials. 
 cdim_ar_time_stamps = cell(trials_per_phase, length(phases), total_subjects);
 cmode_ar_time_stamps = cell(trials_per_phase, length(phases), total_subjects);
 cdim_ar_conf_all = cell(trials_per_phase, length(phases), total_subjects);
@@ -37,7 +41,6 @@ assistance_req_time_stamps = cell(trials_per_phase, length(phases), total_subjec
 assistance_req_mode_switch_all = cell(trials_per_phase, length(phases), total_subjects);
 
 %ALPHA TIME SERIES
-
 alpha_all = zeros(trials_per_phase, length(phases), total_subjects);
 
 %%
@@ -61,101 +64,126 @@ for i=1:total_subjects
         elseif strcmp(n(3:5), 'PH2')
             ph = 2;
         end
-        subid = str2double(n(2)) - 1; %H1 gets 1 H2 gets 2 and so on and so forth
-        total_time_all(trialnum, ph, subid) = total_time;
-        alpha(1, :) = []; alpha(:, 2) = alpha(:, 2) - start_time;
-        thread_times = alpha(:, 2);
+        subid = str2double(n(2)) - 1; %H2 gets 1 H3 gets 2 and so on and so forth, since the FIRST subject is H2
+        total_time_all(trialnum, ph, subid) = total_time; %store total time. 
+        alpha(1, :) = []; %REMOVE ZEROS FROM FIRST ROW. 
+        alpha(:, 2) = alpha(:, 2) - start_time; %zero alpha_time to start_time so that they are synced. 
+        thread_times = alpha(:, 2); %thread refers to the time stamps of the thread that publishes blendedvel, alpha, etc. 
         
-        goal_probabilities(1, :) = [];
+        goal_probabilities(1, :) = []; % REMOVE ZEROS FROM FIRST ROW. 
+        
+        %MAKE SOME TIME STAMPS ADJUSTMENTS. 
         if strcmp(n, 'H7PH2REJ2T5') || strcmp(n, 'H8PH2REHAT5') || strcmp(n, 'H9PH1REJ2T15')
             goal_probabilities(1:2, :) = [];
         end
         if strcmp(n, 'H8PH2REHAT8')
             goal_probabilities(1, :) = [];
         end
-        goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
-        goal_probabilities = trim_data(goal_probabilities, false);
-        goal_probabilities_all(trialnum, ph, subid) = {goal_probabilities};
         
+        % APPEND TIME STAMP VECTOR TO goal_probabilities matrix. 
+        goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
+        goal_probabilities = trim_data(goal_probabilities, false); %shift the time to start_time. 
+        goal_probabilities_all(trialnum, ph, subid) = {goal_probabilities}; %store in the appropriate cell. 
+        
+        %IF SINGLE STAGE REACHING TASK, GO AHEAD AND STORE ALPHA VALS. 
         if strcmp(n(6:7), 'RE')
             alpha = trim_data(alpha, false);
+            % EITHER STORE THE PERCENTAGE TIME FOR WHICH ALPHA IS ABOVE 0.
+            % FRACTION OF THE TOTAL TIME IN WHICH ASSISTANCE PRESENT 
 %             alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
+
+            % STORE THE TIME STAMP AT WHICH THE ALPHA "FIRST" BECAME NON
+            % ZERO. tHAT IS THE EARLIEST TIME AT WHICH THE ASSISTANCE
+            % KICKED IN. 
             alpha_all(trialnum, ph, subid) = alpha(min(find(alpha(:, 1) > 0)), end)/total_time;
         else
+            
+            %FOR THE TWO STAGE TASK, FIGURE OUT WHERE THE FIRST STAGE OF
+            %THE TASK ENDED. 
+            %GRAB THE 'SUB-GOAL' FOR THE FIRST STAGE. FIND THE TIME STAMP
+            %AT WHICH THW GOAL PROBABILITY ASSOCIATED WITH GOAL PEAKED.
+            %THIS IS THE END OF STAGE ONE MARKER. FIND THE POINT AFTER THIS
+            %MARKER WHERE THE GOAL PROBABILITY RISES ABOVE THRESHOLD WITH
+            %POSITIVE SLOPE AND THIS IS THE TIME AT WHICH ASSISTANCE KICKS
+            %IN FOR THE SECOND STAGE. 
+            
             if ph == 1
                 taskid = ph1_trial_mat{trialnum, 4 ,subid};  
             else
                 taskid = ph2_trial_mat{trialnum, 4 ,subid};
             end
+            %GRAB WHICH GOAL IS THE SUB-GOAL FOR STAGE ONE. 
             if taskid == 1 || taskid == 2
                 gmarker = 2;
             elseif taskid == 3 || taskid == 4
                 gmarker = 4;
             end
+            
             [m, ind] = max(goal_probabilities(:, 1:end-1), [], 2);
             %find all ind which is equal gmarker. 
-            gm_ind = find(ind == gmarker);
-            m_gm = m(gm_ind);
-            m_gm_max = find(m_gm == max(m_gm)); 
-            if isempty(m_gm_max)
+            gm_ind = find(ind == gmarker); % FIND ALL ROWS WHERE THE MAX WAS THE GMARKERTH GOAL. 
+            m_gm = m(gm_ind); %MAX GOAL PROBABILITY FOR ALL GM_IND ROW NUMBERS. 
+            m_gm_max = find(m_gm == max(m_gm)); % FIND THE MAX OF M_Gm. 
+            if isempty(m_gm_max) % IF EMPTY, SOMETHING FUNNY HAPPENED AND IGNORE. THIS IS PROBABLY TWO TRIALS. 
                 continue;
             end
-            m_gm_max = m_gm_max(1);
-            seg_break = gm_ind(m_gm_max);
-            alpha_seg = alpha(seg_break:end, 1);
+            m_gm_max = m_gm_max(1); % GET THE FIRST MAX. 
+            seg_break = gm_ind(m_gm_max); % TIME STAMP AT WHICH THE FIRST SEGMENT ENDED. 
+            alpha_seg = alpha(seg_break:end, 1); %GRAB THE ALPHAS FROM THE SEGMENT BREAK TILL THE END. 
             
-            %find where gp rise and passes threshold right after the seg
+            %find where gOAL pROBABILITIES rise and pass THE  threshold right after the seg
             %break
-            tempg = goal_probabilities(seg_break:end, 1:end-1);
-            tempg = max(tempg, [], 2);
+            tempg = goal_probabilities(seg_break:end, 1:end-1); %GRAB GOAL PROBABIILITIES FROMS EGMENT BREAK TILL END
+            tempg = max(tempg, [], 2); % FIND MAX
+            
+            %OPTIONAL SMOOTHING OF GOAL PROBABILITIES TO REMOVE JITTER. 
 %             coeff = ones(1, 5)/5;
 %             smoothtempg = filter(coeff, 1, tempg); smoothtempg(1:3) = []; smoothtempg = [smoothtempg;smoothtempg(end)*ones(3,1)];
+            
+            %FIND THE FIRST TIME AT WHICH THE GOAL PROBABILITES ARE RISING
+            %(BY EVALUATING THE DIFF...(GIVES THE SLOPE)
+            %AND THE PROBABILITIES ARE GREATER THAN THRESHOLD. THRESHOLD IS
+            %0.25 FOR POURING TASKS. 
             deltat = min(intersect(find(diff(tempg) > 0), find(tempg > 0.25))); %max goal probability above 0.25 means alpha > 0
+            
+            %FRAC DENOTES THE NORMALIZED TIME OF ASSISTANCE FOR SECOND
+            %SEGMENT. 
             frac = (goal_probabilities(seg_break+deltat, end) - goal_probabilities(seg_break, end))/(goal_probabilities(end, end) - goal_probabilities(seg_break, end));
 %             plot(goal_probabilities(:, 1:end-1));
             alpha = trim_data(alpha, false);
-%             disp(alpha(min(find(alpha(:, 1) > 0)), end)/total_time);
-          
+            
+            % store the average of the two segments. 
             alpha_all(trialnum, ph, subid) = mean([alpha(min(find(alpha(:, 1) > 0)), end)/total_time, frac]);
             
             
 %             close all;
         end
         disp(alpha_all(trialnum, ph, subid));
-        %alpha's time stamp is shared by all the ones 
-        
-%         alpha(1, :) = []; alpha(:, 2) = alpha(:, 2) - start_time;
-%         thread_times = alpha(:, 2);
-%         
-% %         goal_probabilities(1, :) = []; 
-% %         goal_probabilities = [goal_probabilities thread_times(1:size(goal_probabilities, 1))];
-%         
-%         alpha = trim_data(alpha, false);
-% %         alpha_all(trialnum, ph, subid) = sum(alpha(:, 1) > 0.0)/length(alpha(:, 1));
-%         alpha_all(trialnum, ph, subid) = alpha(min(find(alpha(:, 1) > 0)), end)/total_time;
-% %         goal_probabilities = trim_data(goal_probabilities, false);
         
 %         close all; figure;
 %         plot(goal_probabilities(:, end), goal_probabilities(:, 1:end-1)); hold on; grid on;  
         disp(n);
+        
         %remove 0's and initial mode
         assistance_requested(1, :) = [];
         cdim_conf_disamb(1, :) = [];
         cmode_conf_disamb(1, :) = [];
-%         disp(alpha_all(trialnum, ph, subid)
        
-        mode_switches(1:2, :) = []; %remove 0 and initial mode;
-        current_mode(1:2, :) = []; %remove 0 and initial mode;
+        mode_switches(1:2, :) = []; %remove 0 and initial random;
+        current_mode(1:2, :) = []; %remove 0 and initial random mode;
         
-        if strcmp(n(8:9), 'HA') %fix the double message for headarray. 
+        if strcmp(n(8:9), 'HA') %fix the double message for headarray. this is due to the double publisher in the code. 
             repeated_index = find(diff(current_mode(:, 2) - start_time) < 0.001) + 1;
             current_mode(repeated_index, :) = [];
         end
-        current_mode(:,2) = current_mode(:,2) - start_time;
+        
+        %number of mode switches = total mode switches - assisted mode
+        %switches. 
+        
         num_mode_switches(trialnum, ph, subid) = size(mode_switches,1) - size(assistance_requested, 1); % and assistance requests also triggers mode switch publisher. 
         num_assis_req(trialnum, ph, subid) = size(assistance_requested, 1);
         
-        if size(mode_switches, 1) > 0 %if user didn't press any, and there was no assistance, can happen when it is wo and the initial mode happened to be a good one.
+        if size(mode_switches, 1) > 0 % IF THERE ARE ANY MODE SWITCHES AT ALL, USER INITIATED OR ASSISTED, THIS IF BLOCK GETS ACTIVATED
             normalized_mode_switch_times = mode_switches(:, end) - start_time;
             normalized_current_mode_times = current_mode(:, end) - start_time;
             normalized_cdim_times = cdim_conf_disamb(:, end) - start_time;
@@ -177,8 +205,13 @@ for i=1:total_subjects
                 current_mode_time_stamps(trialnum, ph, subid) = {normalized_current_mode_times((setdiff(1:length(normalized_mode_switch_times), mode_switch_ignore_list)))};
                 mode_switches_all(trialnum, ph, subid) = {mode_switches(setdiff(1:size(mode_switches,1), mode_switch_ignore_list), 1)};
                 current_mode_all(trialnum, ph, subid) = {current_mode(setdiff(1:size(current_mode,1), mode_switch_ignore_list), 1)};
+               
                 %clean up repetetive user activated mode switches for
-                %joystick.
+                %joystick. this can happen when people switch into a mode
+                %and then try to switch into the same mode before moving
+                %again. the following snippets looks for repeated mode
+                %switches to the same mode, within a short time span and
+                %ignores the second one. 
                  if strcmp(n(8:9), 'J2')
                     cm_t = current_mode_time_stamps{trialnum, ph, subid};
                     cm = current_mode_all{trialnum, ph, subid};
@@ -186,7 +219,7 @@ for i=1:total_subjects
                     ms = mode_switches_all{trialnum, ph, subid}; 
                     if ~isempty(find(diff(cm) == 0))
                         ind_cm = find(diff(cm) == 0);
-                        ind_cmt = find(diff(cm_t) < 2);
+                        ind_cmt = find(diff(cm_t) < 2); %threshold for repeated button press is 2 sec. 
                         if ~isempty(intersect(ind_cm, ind_cmt))
                             cm(intersect(ind_cm, ind_cmt) + 1,:) = [];
                             cm_t(intersect(ind_cm, ind_cmt) + 1,:) = [];
@@ -212,15 +245,19 @@ for i=1:total_subjects
                 current_mode_all(trialnum, ph, subid) = {-1};
             end
             
-            if num_assis_req(trialnum, ph, subid) > 0
+            if num_assis_req(trialnum, ph, subid) > 0 %if there are assistance requests from user. 
                 assistance_req_time_stamps(trialnum, ph, subid) = {normalized_assistance_times};
                 assistance_req_mode_switch_all(trialnum, ph, subid) = {mode_switches(mode_switch_ignore_list, 1)};
                 cdim_ar_time_stamps(trialnum, ph, subid) = {normalized_cdim_times};
                 cmode_ar_time_stamps(trialnum, ph, subid) = {normalized_cmode_times};
                 cdim_ar_conf_all(trialnum, ph, subid) = {cdim_conf_disamb(:, 1:end-1)};
                 cmode_ar_conf_all(trialnum, ph, subid) = {cmode_conf_disamb(:,1:end-1)};
+                %possible correction for time taken for assistance
+                %computation. 
                 total_time_all(trialnum, ph, subid) = total_time_all(trialnum, ph, subid) - 0*length(normalized_assistance_times);
-                 ar_norm_ts(trialnum, ph, subid) = {assistance_req_time_stamps{trialnum, ph, subid}/total_time};
+                %normalized assistance times wrt to the total time of the
+                %time. 
+                ar_norm_ts(trialnum, ph, subid) = {assistance_req_time_stamps{trialnum, ph, subid}/total_time};
                  
                  %remove duplicate assistance requests for both interfaces
                 if ~isempty(diff(normalized_assistance_times))

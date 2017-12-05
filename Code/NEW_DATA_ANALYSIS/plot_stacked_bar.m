@@ -30,11 +30,14 @@ interfaces_cell_ar = {'na_po_jon','na_re_jon', 'na_po_hon', 'na_re_hon';
 % xlabel({'Disamb Manual Disamb Manual','Joystick HeadArray'})
 %  ylabel('\bf \fontsize{11} Number of Button Presses');
  
- %% average of button presses
+ %% average of button presses 
 figure;
 subplot(1,2,1);
+%button presses for joystick on and without. combine ms and na together and
+%find average, 
 bp_jon = [mean([ms_re_jon;ms_po_jon]), mean([na_re_jon;na_po_jon])];
 bp_jwo = [mean([ms_re_jwo;ms_po_jwo]), 0];
+
 dataL = [ms_re_jon+na_re_jon;ms_po_jon+na_po_jon]; 
 dataR = [ms_re_jwo; ms_po_jwo];
 
@@ -58,6 +61,7 @@ elseif p <= 0.01
 elseif p <= 0.05
     text(0.5*(y1+y2), ypos+2*yoffset, '*', 'HorizontalAlignment', 'Center', 'BackGroundcolor', 'none', 'FontSize', 15);
 end
+
 %HEADARRAY
 bp_hon = [mean([ms_re_hon; ms_po_hon]), mean([na_re_hon; na_po_hon])];
 bp_hwo = [mean([ms_re_hwo; ms_po_hwo]), 0];
@@ -92,11 +96,6 @@ xlim([0,3]);
 xlabel({'Disamb Manual Disamb Manual','Joystick HeadArray'})
  ylabel('\bf \fontsize{11} Number of Button Presses');
  legend('Mode Switch','Assistance Request', 'Location', 'north');
- 
- %%
- 
- 
- 
  
  
  %% average of button presses by task

@@ -1,4 +1,8 @@
 % clear all; clc; close all;
+
+%% THIS SCRIPT IS A COPY OF loadData.m HOWEVER IS MODIFIED TO INCLUDE PLOTTING CAPABILITIES FOR GOAL PROBABILITIES, BUTTON PRESS PATTERNS ETC. 
+% DIFFERENT CODE BLOCKS DOES DIFFERENT JOBS. USER BREAK POINTS AT THE
+% END/BEGINNING OF DIFFERENT BLOCKS TO OBTAIN THE PLOTS OF INTEREST. 
 %%
 load('trial_order_testing_8.mat');
 
@@ -19,8 +23,8 @@ total_time_all = zeros(trials_per_phase, length(phases), total_subjects);
 %requests. 
 num_assis_req = zeros(trials_per_phase, length(phases), total_subjects); %onlty for trials with 'on' mode 
 ar_norm_ts = cell(trials_per_phase, length(phases), total_subjects);
-hist_ar_norm_ts = [];
-first_disamb_req = [];
+hist_ar_norm_ts = []; %HISTOGRAM OF THE NORMALIZED ASSISTANCE TIMES. TO COMPUTE SKEWNESS OF THE ASSISTANCE TIME REQUEST. 
+first_disamb_req = []; %TIME OF FIRST DISAMB REQUEST. 
 num_mode_switches = zeros(trials_per_phase, length(phases), total_subjects);
 mode_switch_time_stamps = cell(trials_per_phase, length(phases), total_subjects);
 current_mode_time_stamps = cell(trials_per_phase, length(phases), total_subjects);
@@ -46,11 +50,15 @@ alpha_all = zeros(trials_per_phase, length(phases), total_subjects);
 
 %%
 
-
+%% WHICH BUTTON PRESS WAS THE FIRST DISAMB REQUEST. THIS WAS HARDLY USED FOR ANYTHING. 
 ha_re_av = 1; %3 -mean
 ha_po_av = 2; %4 - mean
 j2_re_av = 2; %2 -mean
 j2_po_av = 1;
+
+%%
+
+
 for i=1:total_subjects
     user = subList{i};
     trialId = trialList(i);
@@ -76,7 +84,7 @@ for i=1:total_subjects
         %alpha's time stamp is shared by all the ones 
         
         alpha(1, :) = []; alpha(:, 2) = alpha(:, 2) - start_time;
-        thread_times = alpha(:, 2);
+        thread_times = alpha(:, 2); %GET TIME STAMPS FOR ALPHA. SHARED BY ALL MESSGAES THAT WAS PUBLISHED FROM THE BLENDING THREAD. 
         
         goal_probabilities(1, :) = [];
         if strcmp(n, 'H7PH2REJ2T5') || strcmp(n, 'H8PH2REHAT5') || strcmp(n, 'H9PH1REJ2T15')
@@ -321,15 +329,17 @@ total_time_all([13,15], 1, 7) = -999;
 alpha_all([13,15], 1, 7) = -999;
 num_assis_req([13,15], 1, 7) = -999;
 
-%%
-
+%% THIS CHUNK OF CODE IS USED TO PLOT THE PATTERN OF USER INITITAED MODE SWITCHES AND DISAMB REQUESTS. THE BLACKDOTS AND THE RED DOTS. 
+%tHIS IS DONE BY RE-RUNNING THIS CHUNK OF CODE MULTIPLE TIMES WITH
+%DIFFERENT VALUES OF VARIABLE inter AND task AND CHANGING THE plt1 and plt2
+%values which determine which subplot is to be used for plotting. 
 plt1 = 2; plt2 = 2;
 % figure;
 subplot(1,2,plt1);
 hold on; grid on;
 % axis([0,1,1,20]);
 ylim([0,20]);
-inter = 'HA'; task = 'PO';
+inter = 'HA'; task = 'PO'; % which interface/task combination.
 
 for i=1:total_subjects
     user = subList{i};
@@ -353,12 +363,14 @@ for i=1:total_subjects
         end
         subid = str2double(n(2)) - 1;
         total_time = total_time_all(trialnum, ph, subid);
-        if strcmp(n(8:9), inter) && strcmp(n(6:7), task)
+        if strcmp(n(8:9), inter) && strcmp(n(6:7), task) %only plot for the interface/task combination of interest. 
             if num_assis_req(trialnum, ph, subid) > 0
              %scatter plot for assistance requests. 
+             %for each subject plot the dots slightly above each other. 
                 h1 = scatter(assistance_req_time_stamps{trialnum, ph, subid}/total_time, (i*2 + index*0.1)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
 %                 h1 = scatter(assistance_req_time_stamps{trialnum, ph, subid}, (i*2 + index*0.1)*ones(length(assistance_req_time_stamps{trialnum, ph, subid}), 1), 40, 'r', 'filled');
                 
+%               collect all data points for histogram. 
                 hist_ar_norm_ts = [hist_ar_norm_ts; ar_norm_ts{trialnum, ph, subid}]; %normalized time stamps for assistance requests.
 %                 ms = mode_switch_time_stamps{trialnum, ph, subid};
 %                 ar = assistance_req_time_stamps{trialnum, ph, subid};
@@ -374,6 +386,7 @@ for i=1:total_subjects
 
             end
             
+            %draw the lines for the trails. 
             if num_mode_switches(trialnum, ph, subid) >= 0
                 line([0, 1.0], [i*2 + index*0.1, i*2 + index*0.1], 'Color', [0.01,0.01, 0.01, 0.2], 'LineWidth', 0.001);
             else
@@ -417,9 +430,13 @@ fprintf('The skewness of assistance requests is %f\n', skewness(hist_ar_norm_ts)
 % title(strcat(inter, ',', task));
 % xlabel('\bf \fontsize{11}  First Disamb Index');
 % ylabel('\bf \fontsize{11} Hist Count');
-%%
+%% This CHUNK OF CODE IS USED FOR THE PLOTTING GOAL PROBABILITIES. 
 % close all;
- peak_conf_from_disamb = zeros(trials_per_phase, length(phases), total_subjects);
+ 
+% VARIABLE TO HOLD THE TIME DIFFERENCE FROM DISAMB REQUEST AND THE PEAK IN
+% GOAL CONFIDENCE. 
+peak_conf_from_disamb = zeros(trials_per_phase, length(phases), total_subjects);
+ 
 for i=1:total_subjects
     user = subList{i};
     trialId = trialList(i);
@@ -445,6 +462,9 @@ for i=1:total_subjects
         gp = goal_probabilities_all{trialnum, ph, subid};
         ng = size(gp, 2) - 1;
         
+        
+        %PLOT THE GOAL CONFIDENCES EVOLUTION. tHIS IS WHAT IS USED ON
+        %FIGURE 9 IN THE PAPER. 
         figure;
         plot(gp(:, end), gp(:,1:end-1), 'LineWidth', 1.5); hold on; grid on;
 %         if num_mode_switches(trialnum, ph, subid) > 0
@@ -460,7 +480,7 @@ for i=1:total_subjects
         
             ar_ts = assistance_req_time_stamps{trialnum, ph, subid};
             gp_ts = gp(:, end);
-            t_from_ar = nan(length(ar_ts), 1);
+            t_from_ar = nan(length(ar_ts), 1); % TIME OF GOAL PROBABILITY PEAK FROM THE ASSISTANCE REQUEST. 
             if length(ar_ts) > 1
                 for kk=1:length(ar_ts)-1
                     ar_ts_prev = ar_ts(kk);
@@ -502,6 +522,8 @@ for i=1:total_subjects
                 peak_conf_from_disamb(trialnum, ph, subid) = -999;
             end
             disp(t_from_ar);
+            %USE A BREAK POINT IN THE NEXT LINE TO VISUALIZE THE GOAL
+            %PROBABILITY EVOLUTION FOR EACH TRIAL. 
             close all;
         end
     end
