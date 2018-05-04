@@ -1,0 +1,267 @@
+Auro2017_Reviews
+
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+
+
+EDITOR-IN-CHIEF
+
+I have received the reviews on your manuscript, "Disambiguation of Human Intent Through Control Space Selection", which you submitted to Autonomous Robots.
+
+Based on the advice received, the manuscript requires revisions. You are encouraged to resubmit your manuscript for further review. The comments of our reviewers are attached.
+
+When preparing the revised manuscript, please consider the reviewer comments carefully and submit a list of responses to the comments. Your list of responses should be uploaded as a file in addition to your revised manuscript.
+	Each reviewer comments needs clarification. 
+
+	Might have to alter the motivating reason. We do, and it sucks. but this is likely due to bad study design, which never was about studying this. 
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+
+GuestEditor:
+
+This paper elicited an extremely broad range of opinions from the reviewers. 
+Reviewer #3 is largely satisfied with the current version of the paper (with a few suggestions for improvement). 
+Reviewer #1 expressed the opinion that the paper presents a novel and promising framework for intent disambiguation, while also suggesting significant revisions. 
+Reviewer #2 raised several important issues w.r.t. clarity and rigor, contributions relative to state of the art, and the experimental analysis. 
+
+Given the reviews below, I strongly encourage the authors to make the following revisions: 
+(1) improve the clarity and rigor of the writing
+
+	Ok can be done. Less runny style. More clarity as why certain choice can be made. 
+	More succicnt writing. Motivate different points in a better way. Especially the points that concern the development of the metric. Clarify the intuition, why this approach is better than principled approaches etc. This is closely tied with reviewer 2's points. 
+
+(2) provide comparisons with baseline techniques (the information gain and Bayesian inference methods mentioned by Reviewer #2 seem particularly relevant), 
+	
+	Tricky, this is a different paper altogether. We have done this in the RSS paper. 
+	We can provide comparision between Bayesian inference and DFT. We can pull some results from RSS paper as well? 
+
+
+(3) present a much more thorough discussion and intuition for the techniques for intent disambiguation presented in the paper (i.e., justifying the different choices made w.r.t. the
+metric used for measuring how informative and useful actions are, and the intent inference algorithm; ref. Reviewer #2's remarks on this point), 
+	
+	The focus of this paper IS about what certain aspects of the shape of the distribution matters when it comes to disambiguating. So justify them more accurately. How does each component focus on the different aspects of the 'shape' of the distribution. How is this 'more' useful than the regular info theoretic treatment. 
+
+(4) present a discussion addressing Reviewer #2's concerns regarding the experimental validation. 
+
+The reviewers have also made a number of other suggestions for strengthening the paper. The authors are strongly encouraged to take into account all of the reviewers' comments in the revised version of the paper.
+	
+	subjective metrics. We can possibly report the subjective data in a more unofficial manner. However te validation. Can't be done. Was not part of protocol. I don't plan to do new experiments for this!
+
+
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+
+Reviewer #1
+
+The paper presents a framework that integrates goal disambiguation and intent inference into robot decision making. The framework allows the robotic system to select a control mode that will maximally disambiguate human intent. Results from a pilot study show that subjects extensively requested disambiguation actions from the robot, indicating the utility of the system.
+
+Selecting the control space to disambiguate the human intent is a very interesting and novel idea. The paper does a good job motivating the problem, presenting the algorithm and describing the results. 
+
+Further analysis is required, however, for the paper to be easily reproducible and have strong impact.
+	How can this be addressed? what can be analysed more? Not sure. The design of the experiment has put considerable limitations on the analysis that can be done.  
+
+
+In particular, the intent inference algorithm of section 3.3.1, which appears to be the main contribution of this work, is appealing. I would like to see a more detailed analysis about how each term of the equation in section 3.3.2 (directedness, agreement and proximity) contributes to the goal inference. For instance, I recommend plotting the goal inference for different simulated trajectories when each of the terms is removed.
+
+	Can be done in simulation if needed. We have it already for RSS 2017 study. 
+
+The quantitative analysis of the study is extensive, and I suggest extending the discussion with subjective metrics of performance. How did users perceive the disambiguation actions of the robot? It would be interesting to discuss how the disambiguation actions affected users' perception of the robot's capabilities.
+	This requires a new protocol? Can we possibly talk about this in a informal way based on post experiment feedback. Much like how social robotics people in general report subjective metrics. Doing a full study again is impossible. Won't be able to ask the subjects once again, as memories don't last forever. 
+
+The paper states that "a higher value [of the mode of the probability distribution] implies that the robot has a good idea," however this is not always true. For instance, imagine case A: we have 10 goals, and one goal has probability 0.4, while the rest of the probability mass is uniformly distributed to the rest of the goals. And case B: we 10 goals, two of the goals have probability 0.5 and for the rest of the goals the probability is 0. Then, in case A the robot has clearly a better idea of the true goal, compared to the bimodal distribution of case B, even though the mode of B is higher. I suggest discussing assumptions and limitations in the model and whether this case appeared in the studies.
+
+	This is why mode alone can't be a good metric. All the other 'components' working togrther will be able to tell this situation apart. 
+
+In Fig. 3 the shades are not clear. One way to improve it might be to visualize only one goal and illustrate the change of confidence for one goal.
+	Can be done if needed.
+
+Fig. 4 is not clear; why is best control dimension x in the right column? I suggest simplifying it using only two goals. Also, how are the C1 and C2 specified? It appears that some information was omitted from the RSS version of this work.
+
+	That's why we said, refer to original paper. The figure caption can be modified if neede.
+
+I suggest that the authors extend their related work section with recent studies on shared autonomy (see recent survey by Javdani et al., "Shared Autonomy via Hindsight Optimization for Teleoperation and Teaming").
+
+	ok, can be done.  
+
+Overall, the paper presents a novel and promising formalism. A revised version with a more extensive analysis of the design decisions and of the study participants' sentiments has the potential of having a strong impact to the HRI and robotics community.
+
+**********************************************************
+**********************************************************
+**********************************************************
+
+
+Reviewer #2
+
+This manuscript proposes a technique for assistive robots to select a mode of operation with the objective of eliciting user commands that will be informative about her goal (they refer to this as "inverse legibility" in reference to the legibility work of Dragan and collaborators), together with an inference mechanism for the robot to reason about this intended goal based on the history of user inputs. The authors evaluate their methods on a robotic arm using two types of control interface (a 2-D joystick and a 1-D headrest control).
+
+There are multiple issues with the work presented in this paper. I will discuss them separately under the categories of clarity and rigor, contributions, and experimental analysis.
+
+
+Clarity and rigor
+
+The technical clarity and mathematical rigor are not at the level expected for a journal publication. 
+The dynamics of the system are never formally defined. The authors refer to "controllable dimensions" (presumably of the robot's state), but then seem to also use them for the control input. The language used is confusing throughout the document; given the apparent conflation of input and state dimensions, it seems likely that the authors are assuming a kinematic model of the robot's motion, but this is never stated. The robot's pose and goal pose are introduced as x_r and x_g but never defined mathematically.
+
+	ok. so this reviewer expects an MDP type of description of the model. 
+	yes, we assume kinematic model. Implicitly. We can make the language unambiguous so that there is no confusion. 
+	dynamics of the system? 
+
+Similarly, the authors define the "unit velocity vectors along the i-th control dimension", but then state that for rotational joints these velocities will be specified with respect to the robot's end effector: this seems difficult and confusing given that the mapping from joint velocities to end-effector velocities depends on the Jacobian of the kinematic chain, which is a function of the robot's current configuration, in other words, as the robot moves these "standard basis vectors" would be constantly changing. No further clarification of this is provided.
+	
+	this is a misinterpretation. we did not mean rotational joints. we meant rotational components of the twist velocity vector. This can be defined wrt to body frame or world frame. 
+
+In addition, the paper has a number of incorrect mathematical statements or equation typos that further detract from readability. In Section 3.2.2. the spatial gradient is equated to a finite difference between values, which is confusing and cannot be dimensionally correct.
+	This can be clarified. p_k at t_c is also p_k at x(t_c). This is how the spatial gradient works. I see the point of dimensionality. Maybe it is a notational issue. Gotta divide by the separation in distance for it to be dimensionally consistent. 
+
+ In Section 4, the definition of alpha for shared control is incorrect: the middle case is supposed to continuously transition from 0 to 0.7, with the values used by the authors, but instead it seems to range from 4.2 to 4.9, which does not make sense since alpha should be a number between 0 and 1.
+ 	Made an error in the formula. Already fixed. 
+
+
+Contributions
+
+The value of the claimed contributions is hard to defend. The authors propose (a) a metric for "how informative and useful" user commands would be in each of a small number of control modes, in terms of disambiguating between a small number of possible user goals, and (b) a mechanism for inferring the probability of each candidate user goal in light of control inputs provided so far. It is important to note that standard, well-established, and theoretically sound methods from statistics and information theory exist for both (a) and (b). Therefore, it would have been natural to expect the authors' proposed alternatives to present some compelling theoretical or practical advantage with respect to these methods. This is not the case.
+
+	This is what we do in our RSS paper. 
+
+For (a), the standard metric is information gain for each of the candidate control modes, which would allow the robot to minimize the expected entropy of the future distribution over user goals after observing the next user input. The authors make no mention of information gain or any information-theoretic concepts. 
+	We can do this, and we can talk about various works that attempt to do it in active inference type of problem. How can we justify the use of a heursitic approach over principled approach? Can we possibly talk about the heuristic approach sort of poking into the inner workings of how infor theoretic approaches work?
+
+Instead they propose their own four measures (supported by brief, qualitative justifications) and then combine them in a seemingly arbitrary way, expressed by (5) in the paper, with no explanation for the peculiar choice of multiplications and additions between the four quantities. 
+	Yes. This is true. The four components were 'designed' by perusing how the 'shape' of the probability distributions evolve in time. The combination of these components is also a design decision, but would reflect the fact that the proportionalities are maintained. 
+
+The authors repeatedly make erroneous claims about the resulting metric, such as "The higher it is, the easier it will be for the system to infer human's intent [sic]": given its clearly heuristic nature, there are no grounds on which to claim that higher values lead to easier inferences in any quantitative way.
+	What we meant here is that by 'designing' the metric in the way prescribed in the paper, higher values of the metric will likely result in better intent inference. This is a problem of wording it appropriately. In fact this is what we are trying to set out to understand in the experiment. 
+
+	Better inference -> Greater autonomy invovlement -> As a result better performance. The tricky part is to establish that this is indeed the causal chain of events. 	
+
+
+Crucially, given that the stated problem deals with a small number of control inputs and possible goals, it seems feasible to compute the appropriate information-theoretic measures, and it is hard to see why one would want use the authors' metric instead (presumably not for computational efficiency, since the authors report their implementation takes 2-2.5 seconds to choose the "disambiguating mode").
+
+
+	hmm ok. need to think of an alternative way to go about defending this. Can we think of it as exposing those aspects of the change in probability distribution that will give rise to disambiguation?
+
+
+
+For (b), the default approach would have been Bayesian inference of the user's intended goal, treating it as a hidden variable or, if it is expected to change during the robot's operation, as a hidden state. There is a rich body of literature doing this, which the authors cite in passing in the Related Work section, stating that Bayesian approaches are limited in practice to first-order Markov assumptions for tractability reasons. However, the authors go on to claim that "with such assumptions history is lost", which is not correct, since the entire evidence history is encoded in the belief reached so far (the belief is said to be a *sufficient statistic* for the history of observations). 
+	According to Thrun, a state is considered to be 'complete', if the prediction of the future cannot be more accurate with the knowledge of the past. Everything is encoded in the state. Temporal processes that meet this requirement is considere to be Markovian. 
+
+
+The authors then propose an alternative belief propagation law but, surprisingly after their claims about loss of information under Markov updates, their new law is also Markovian. In other words, the authors' inference mechanism encodes no more time coupling than a Markov Bayesian update
+(in both cases, the evolution of the belief at each instant is a function of the current belief and the current observation). 
+	This is not entirely correct. Because if we were unroll the DBN, then in a first order network, the connections will only be between adjacent time slices. Whereas, in a DS or an RNN, the recurrent connections establish long term connections. Fundamentally, the process under consideration, which is teleoperation is NOT markovian and does not meet markovian assumptions and as a result, information IS lost under the assumption. 
+
+On the other hand, the Bayesian update is the correct way to incorporate new evidence, as per probability calculus, whereas the authors' proposed method is once again a heuristic (in this case justified by "inspiration" from the use of dynamic field theory for human cognitive modeling). 
+	Yes, it is heuristic. Howeever for non-Markovian processes, incorporating 'memory' is essential so that there is minimal loss of information. This can be thought of as a first step towards that. A more complete approach might be to use an RNN, type system that can have even more long-term and sophisticated internal memory mappings (for DFT approach, the memory is encoded using a simple low pass filter. )
+
+Since full Bayesian updates over a small number of goals are in general straightforward to compute in real time, it is hard to see any advantages in this heuristic method.
+	When the past is incporated the state space explodes. 
+	Need to think of this. It not markovian in the sense that there is memory! Belief updating has memory in the form of the state variable. 
+	
+
+In short, from the theoretical standpoint, the paper's two claimed contributions seem to be weakly-supported heuristic alternatives to well-known principled techniques that can easily be applied to the problem under study.
+	ok. 
+
+Experimental analysis
+
+The authors do not provide any benchmarking of their proposed methods with respect to the above-mentioned standard alternatives: as a result, they do not have a practical argument to advocate the use of their two concrete algorithms.
+	How to do benchmarking. What would this involve?! Wasn't this the point of the RSS paper? It would be hard to mix up both. then the reviewers, might say that keep this unpublished and publish the new paper. 
+
+Instead, the authors focus on evaluating their proposed method for goal disambiguation against manual mode selection. Unfortunately, their results are not compelling in this aspect either. 
+First, the authors' declared motivation was that "disambiguation should allow the autonomy to step in earlier during the course of task execution", however their experiments have no such mechanism and instead users must explicitly make a "disambiguation request" that will then put them into the mode with the highest heuristic metric. The measured reductions in total button presses seem modest at best, and the authors state that "surprisingly" subjects often decided not to actually operate in this mode after making the request, which should be a strong red flag that the automation is making an inappropriate choice of control mode.
+	Can we possibly reword this. 'Surprisingly' is probably not a good way to discuss this as it can be misinterpreted. 
+
+
+Finally, the comparisons made in these experiments are hard to interpret due to apparent confounding factors resulting from the experiment design, such as the fact that users were instructed to use disambiguation at least once in trials for which it was available, or the need to cycle through modes one by one under manual switching with the headrest interface, which can incentivize users to make a disambiguation request merely as a shortcut to hopefully-the-desired-mode.
+	Can we tease this apart in the analysis. disambiguation requests that were used as a short-cut as opposed to disambiguation requests that resulted in proper mode. 
+	True! What can I say. All of this is correct and we knew this all along which is why we did the simulation based study in RSS 2018. 
+
+
+In conclusion, the methods proposed in this manuscript are hard to justify both as theoretical or practical contributions. The experimental results fail to convincingly show the usefulness of the "inverse legibility" framework, and the value of the concrete disambiguation and inference algorithms seems questionable given the existence of principled alternatives that could have been used instead, possibly with better results. 
+	There is probably a place for all types of approaches. Principled approaches could have bought us some gain. However, as we saw in the RSS study, heuristic approaches also had benefits in many scenarios. 
+
+Adding this to the lack of clarity and rigor in the formulation, I cannot recommend this paper for publication in Autonomous Robots.
+	Ok. 
+
+	Reviewer 2's comments are very well thought out. It is really hard to come up with counter arguments for the reviewers' comments. 
+
+
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+*************************************************************************************************************************************
+
+
+Reviewer #3
+
+This paper looks at assistive, shared control systems, studying how inferring human intent can improve the provided assistance. The authors propose a method to disambiguate goals and use concepts from dynamic field theory to evolve a probability distribution over said goals.  This is validated in a user study with two different interface designs.
+
+This is a very well thought out and clear paper, which I believe is fit to be published as is.  A few minor thoughts and comments that might be worth including in the final version:
+
+(1) There are a few run-on sentences throughout the work.  Please make sure all sentences are clear and concise.  Similarly, there are a few very long paragraphs that could be broken up to best present one idea at a time.
+
+	Can be done.
+(2) There are a few widows and orphans (hanging words or phrases).  For aesthetic purposes, please watch for unnecessary white space.
+	Sounds good
+
+(3) In the mathematical notation, please clearly define p_k and it's relationship to p.
+	Can be done
+
+(4) There are a lot of equations that were selected to fit the task / goals of this work, but it might be nice to add a little intuition about how you selected these parameters (and maybe what didn't work) so readers can get useful insight from your work. 
+	Got it. 
+(5) The study is a bit small and seems to be mostly from a healthy population.  How do you think this might change in practice?
+	Can give some thoughts regarding this. Individual difference. 
+(6) Can you compare your methods to some baseline techniques for intent / goal inference?  The results show how well your approach works, but doesn't give compare to baselines.
+	This is done in RSs paper. Can be added as a supplement? Maybe take reviewer #1's comments. 
+
+(7) It might be nice if Fig. 8 was readable in black and white.
+
+	Can't do!
+(8) Please discuss how this would be useful in other applications (e.g. how would this extend to cases where there are less discrete goals) so readers can gain insight and use it in their work.
+
+	Ok. that is good. applicability outside of assistive domain, outside of discrete goals. 
+	TO DISCUSS
+
+Brenna Suggestions:
+
+Shape of the distribution argument:
+
+I think this sounds like a solid justification. Can we take it one step 
+farther and claim that this heuristic investigation was the correct 
+first step to take, before exploring theoretic foundations? (If yes, we 
+could even state in the rebuttal that we agree information theory is the 
+correct framing, and already have been exploring along this path, but 
+firmly believe that a heuristic exploration was the correct first step 
+to take.)
+
+**** In general, this is not true. But heuristic approaches can help in providing a close look at the different features of the problem that makes the theoretical approach works. 
+
+
+
+(...because information theoretic measures would be the next 
+step in the development of this work. It is not as though they already 
+exist; we are the first to be using any of these approaches for the 
+purpose of intent disambiguation.)
+
+
+**** Intent disambiguation is a specific term that we use in the context of assitive manipulation. In general this is a problem of active inference. In that domain, information theoretic approaches are the norm. 
+
+
+We might need to add in at least one other way to perform intent 
+inference, that is a bayesian approach. How much work would it be to get 
+this up and running?
+
+***Dragan's work is based on trjaectories. We want a bayesian scheme that works with control commands. Can set up a dummy scenario with a few goals.
+
+Sure, this should be easy to do. It can still be a motivating factor, 
+but the main pitch can talk about how much work is done trying to 
+improve intent inference, and so here we are taking the novel approach 
+of seeing whether the selection of which subset of operational control 
+dimensions plays a role in intent disambiguation.
+
+**** This will be in the introduction as well. The need for disambiguation is also a critical section that can be modified to motivate the problem properly. 

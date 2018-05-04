@@ -1,9 +1,9 @@
 % clear all; clc; close all;
 %%
 trials = 8; %num trails for each interface
-num_sub = 8;
+num_sub = 32;
 tasks = {'r', 'p'};
-assis = {'wo', 'on'};
+assis = {'pot', 'kld'};
 interfaces = {'j', 'h'};
 interfaces_array = {'j','h','j','h';
                     'h','j','h','j';

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  4 DEC 2017 07:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  19 FEB 2018 07:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1232,9 +1232,6 @@ Overfull \vbox (0.84027pt too high) has occurred while \output is active []
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  )
 (\end occurred when \ifx on line 89 was incomplete)
 (\end occurred when \ifx on line 89 was incomplete)
@@ -1332,11 +1329,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 (\end occurred when \ifx on line 64 was incomplete)
 (\end occurred when \ifx on line 64 was incomplete) 
 Here is how much of TeX's memory you used:
- 13634 strings out of 495028
- 231571 string characters out of 6181497
- 430691 words of memory out of 5000000
+ 13628 strings out of 495028
+ 231521 string characters out of 6181497
+ 430694 words of memory out of 5000000
  16304 multiletter control sequences out of 15000+600000
- 27775 words of font info for 203 fonts, out of 8000000 for 9000
+ 27451 words of font info for 200 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,20n,51p,10427b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/deepak/.texmf-var/fo
@@ -1362,7 +1359,7 @@ sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GopinathArgallAuRo2017.pdf (16 pages, 3806387 bytes).
+Output written on GopinathArgallAuRo2017.pdf (16 pages, 3806341 bytes).
 PDF statistics:
  216 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams

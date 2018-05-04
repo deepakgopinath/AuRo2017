@@ -1,6 +1,6 @@
 clear all; close all; clc;
 %% LOAD TRIAL ORDER MAT FILES
-num_sub = 8;
+num_sub = 32;
 filename_tr = strcat('trial_order_training_', num2str(num_sub), '.mat');
 filename_te = strcat('trial_order_testing_', num2str(num_sub), '.mat');
 load(filename_tr);

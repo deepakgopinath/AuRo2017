@@ -1,4 +1,4 @@
-num_sub = 8;
+num_sub = 32;
 tpi_training = 7; %tel,tel, blending, button, button
 task_training = {'t0'};
 interfaces = {'j','h'};% 221144

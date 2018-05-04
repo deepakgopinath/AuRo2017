@@ -1,0 +1,126 @@
+Clarity and Rigor:
+	1. For component 1, rephrase "a higher value...". Emphasize that each one alone is not able to capture the entire picture, which we combine different features together to perform intent disambiguation -  DONE
+
+	2. Related work: Include reference to Javdani et al - APRIL 16
+
+	3. Reduce run-on sentences: Refer to notes on the pdf for possible reduction in run-on sentences -  APRIL 16
+
+	4. Clarify why a higher value of the metric implies etter inference. This is by design of the metric. The proportionalities are maintained by doing multiplicative combination of the 4 features - DONE, sORTA
+
+	5. Talk about how the DFT approach is more in the vein of using RNNs for intent inference. And that HRI is typically not a Markovian process. 
+
+
+Motivating Intent disambiguation and choice of metrics:
+	1. Big issue for Reivewer 2. Why heurtistic over info theoretic. If we can estabish that then can answer half of the point raised by reviewer 2 regarding contributions -  KIND OF
+
+Comparison Baselines:
+
+	1. DFT based inference, with inidivudal terms removed? - TO BE CONFIRMED BY BRENNA.
+		Should this be part of it. It is a suggestion. 
+		If we are providing comaprisons against Bayesian, then we probably don't have space to do this as well. 
+
+Experimental Analysis:
+	1. Incorporate Subjective study metrics. (reviewer 1) - APRIL 16
+	2. Reword the results to make it sound less dubious. 
+		Emphasize the exploratory part. In the discussion section talk about Brenna's point about HRI issues. etc. last apra from her email,
+	3. How to deal with the confounds? Either acknowledge it? But make it a claim about the need for transparency in HRI. 
+
+Notation:
+	1. Clarify relation between p and p_k - DONE
+	2. Clarify relation between p(t_a) and p(x_a). x_a is the robot state at time t_a. 
+
+	3. Clarify x_r and x_g in notation. Talk about the kinematic model and how the kinematics work for the case of the robotic arm. 
+		The dynamics of the system are never formally defined. The authors refer to "controllable dimensions" (presumably of the robot's state), but then seem to also use them for the control input. The language used is confusing throughout the document; given the apparent conflation of input and state dimensions, it seems likely that the authors are assuming a kinematic model of the robot's motion, but this is never stated. The robot's pose and goal pose are introduced as x_r and x_g but never defined mathematically - DONE, almost. TODO -dynamics if needed.
+
+	4. Clarify what 'controllable dimensions' are and make it distinct from the control input - DONE
+
+	5. Calrify the 'rotational joint' issue. The revciewer misinterpreted this - DONE
+
+	6. Fix spatial gradient notation. In order to do this need to establish the connection between p(t_a) and p(x_a) etc - DONE
+
+
+
+
+Discussion:
+	1. discuss the intuition there were selected for the goals. 
+		We assume discrete goals. It is agnostic to the intent inference mechanism. Greater the number of goals it is harder to disambiguate. We assume that there is one eventual goal that the user is going for. 
+
+	2. Discuss how it might generalize to a bigger population? 
+
+	3. Applicability beyond the domain of assistive robots. Continuous goals? Interesting thought. 
+
+Misc:
+
+	1. Fig. 3 better shades.
+	2. Clarify Fig 4., caption. 
+	3. Fig 8 in black and white? Probably not. 
+
+
+Incorporate text from the exprimenter dialgoue in the protocol to clarify that the users the impact of a disambiguation request and how it was supposed to help the robot help them. 
+
+
+***************************************************************************
+***************************************************************************
+***************************************************************************
+***************************************************************************
+
+Talking points for Brenna's meeting:
+
+Clarified notation and tried to reduce ambiguity. 
+
+1. Intent inference: (looking into anca's memorybased intent stuff)
+	a. Reviewer 1 wants to see what happens when we drop each of the features. 
+	b. Reviewer 2 wants comparison between Bayesian. 
+
+2. Reviewer #1, vaguesly talks about 'further analysis' is needed for reproducibility. How to address this?
+	3 different analysis:
+		Impact of Disambiguation on Task Performance:
+			The measured reductions in total button presses seem modest at best. How to defend that? How to establish its not a confound
+		Temporal distribution of Disambiguation Requests:
+			Why are we doing this? Why are we interested in this analysis? Is it just because we can? We reported skewness. Maybe comment more on the skewness
+		Onset of robot assistance:
+			We did not see very solid effects in this regard. This was reaised by Reivewer #3 saying that we were not able to achieve what we had initially set out for?
+
+
+3. Issues due to confounds: 
+	Finally, the comparisons made in these experiments are hard to interpret due to apparent confounding factors resulting from the experiment design, such as the fact that users were instructed to use disambiguation at least once in trials for which it was available, or the need to cycle through modes one by one under manual switching with the headrest interface, which can incentivize users to make a disambiguation request merely as a shortcut to hopefully-the-desired-mode.
+
+
+
+
+Brenna's arguments:
+
+Sure, this should be easy to do. It can still be a motivating factor, 
+but the main pitch can talk about how much work is done trying to 
+improve intent inference, and so here we are taking the novel approach 
+of seeing whether the selection of which subset of operational control 
+dimensions plays a role in intent disambiguation.
+
+I don't think we should get into a discussion of study design or 
+'inappropriate' control modes. Instead, I think we should just say this 
+is an example of the autonomy system and the human having different 
+motivations for their selection of control mode.
+
+Our system is not trying to select the control mode that the human wants 
+to use to reach the target (which might be motivated by any number of 
+factors, such as line of sight, ease of use, etc), and the human is not 
+selecting the control mode that best reveals their intent to the 
+autonomy system. It is indeed an HRI question to reconcile these 
+conflicting goals, and how to best do this would be beyond the scope of 
+this paper. The fact that the conflict exists is not a fault of our 
+system -- the autonomy does need to discern the human's target, and the 
+human does need to operate the robot to reach that target. The fact that 
+different control commands achieve each of these goals is not a red flag.
+
+
+Updates:
+
+1. Worked on incorporating revisions in the AuRO paper. Have cleared up some notation, rephrased the motivation a little bit. Removed some run-on sentence. Eased claims regarding Bayesina inference. 
+
+2. Started looking into implementing the memory-based prediction used in Dragan's work. That could possibl serve as a baseline for comparison. 
+3. 
+
+
+*********************************
+1. New prosthetic hand with Levi.
+2. 
