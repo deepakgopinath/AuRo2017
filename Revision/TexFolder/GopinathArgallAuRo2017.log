@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  3 MAY 2018 23:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  4 MAY 2018 22:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -160,6 +160,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
 ))
+changes-option 'final'
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -1007,25 +1008,25 @@ Package epstopdf Info: Source file: <Fig1.eps>
 (epstopdf)                    date: 2017-11-30 23:36:25
 (epstopdf)                    size: 3011293 bytes
 (epstopdf)             Output file: <Fig1-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:27
+(epstopdf)                    date: 2018-05-04 22:20:05
 (epstopdf)                    size: 1698620 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig1-eps-converted-to.pdf 
 Fig1.eps>
-(epstopdf)             \includegraphics on input line 103.
+(epstopdf)             \includegraphics on input line 102.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig1-eps-converted-to.pdf, id=1, 1659.19875pt x 1281.78876pt>
 File: Fig1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig1-eps-converted-to.pdf>
-Package pdftex.def Info: Fig1-eps-converted-to.pdf used on input line 103.
+Package pdftex.def Info: Fig1-eps-converted-to.pdf used on input line 102.
 (pdftex.def)             Requested size: 420.75302pt x 325.04265pt.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8.5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 104.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 103.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.94997> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 104.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 103.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <4.25> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 104.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 103.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -1040,18 +1041,18 @@ Package epstopdf Info: Source file: <Fig2.eps>
 (epstopdf)                    date: 2017-11-13 21:07:38
 (epstopdf)                    size: 125295 bytes
 (epstopdf)             Output file: <Fig2-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:28
+(epstopdf)                    date: 2018-05-04 22:20:05
 (epstopdf)                    size: 126768 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig2-eps-converted-to.pdf 
 Fig2.eps>
-(epstopdf)             \includegraphics on input line 123.
+(epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig2-eps-converted-to.pdf, id=27, 663.47874pt x 478.78876pt>
 File: Fig2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig2-eps-converted-to.pdf>
-Package pdftex.def Info: Fig2-eps-converted-to.pdf used on input line 123.
+Package pdftex.def Info: Fig2-eps-converted-to.pdf used on input line 122.
 (pdftex.def)             Requested size: 173.25302pt x 125.02275pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1064,18 +1065,18 @@ Package epstopdf Info: Source file: <Fig3.eps>
 (epstopdf)                    date: 2017-11-30 21:33:37
 (epstopdf)                    size: 49232 bytes
 (epstopdf)             Output file: <Fig3-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:28
+(epstopdf)                    date: 2018-05-04 22:20:06
 (epstopdf)                    size: 39004 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig3-eps-converted-to.pdf 
 Fig3.eps>
-(epstopdf)             \includegraphics on input line 173.
+(epstopdf)             \includegraphics on input line 166.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig3-eps-converted-to.pdf, id=38, 478.78876pt x 438.63875pt>
 File: Fig3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig3-eps-converted-to.pdf>
-Package pdftex.def Info: Fig3-eps-converted-to.pdf used on input line 173.
+Package pdftex.def Info: Fig3-eps-converted-to.pdf used on input line 166.
 (pdftex.def)             Requested size: 238.96417pt x 218.92393pt.
 
 
@@ -1086,21 +1087,21 @@ Package epstopdf Info: Source file: <Fig4.eps>
 (epstopdf)                    date: 2018-04-11 12:00:59
 (epstopdf)                    size: 409307 bytes
 (epstopdf)             Output file: <Fig4-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:28
+(epstopdf)                    date: 2018-05-04 22:20:06
 (epstopdf)                    size: 804666 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig4-eps-converted-to.pdf 
 Fig4.eps>
-(epstopdf)             \includegraphics on input line 226.
+(epstopdf)             \includegraphics on input line 217.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig4-eps-converted-to.pdf, id=52, 1396.21625pt x 753.81625pt>
 File: Fig4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig4-eps-converted-to.pdf>
-Package pdftex.def Info: Fig4-eps-converted-to.pdf used on input line 226.
+Package pdftex.def Info: Fig4-eps-converted-to.pdf used on input line 217.
 (pdftex.def)             Requested size: 569.2567pt x 281.47266pt.
  [6] [7 <./Fig4-eps-converted-to.pdf>] [8]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 317.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 304.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
@@ -1109,74 +1110,80 @@ Package epstopdf Info: Source file: <Fig5.eps>
 (epstopdf)                    date: 2018-05-03 20:14:14
 (epstopdf)                    size: 32305 bytes
 (epstopdf)             Output file: <Fig5-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:29
+(epstopdf)                    date: 2018-05-04 22:20:07
 (epstopdf)                    size: 14211 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig5-eps-converted-to.pdf 
 Fig5.eps>
-(epstopdf)             \includegraphics on input line 338.
+(epstopdf)             \includegraphics on input line 325.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig5-eps-converted-to.pdf, id=71, 528.97626pt x 306.14375pt>
 File: Fig5-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig5-eps-converted-to.pdf>
-Package pdftex.def Info: Fig5-eps-converted-to.pdf used on input line 338.
-(pdftex.def)             Requested size: 238.96533pt x 119.83469pt.
+Package pdftex.def Info: Fig5-eps-converted-to.pdf used on input line 325.
+(pdftex.def)             Requested size: 238.96533pt x 133.15742pt.
  [9]
+Overfull \hbox (4.17566pt too wide) in paragraph at lines 334--335
+\OT1/cmr/m/n/10 (-20) func-tion. In this ex-am-ple, the user's in-tended goal c
+hanges
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 382.
+(Font)              size <8> substituted on input line 369.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 382.
+(Font)              size <5> substituted on input line 369.
 
 [10 <./Fig5-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Fig7.eps>
 (epstopdf)                    date: 2017-11-28 20:14:42
 (epstopdf)                    size: 6490402 bytes
 (epstopdf)             Output file: <Fig7-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:31
+(epstopdf)                    date: 2018-05-04 22:20:09
 (epstopdf)                    size: 337764 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig7-eps-converted-to.pdf 
 Fig7.eps>
-(epstopdf)             \includegraphics on input line 394.
+(epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig7-eps-converted-to.pdf, id=90, 1927.2pt x 542.025pt>
 File: Fig7-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig7-eps-converted-to.pdf>
-Package pdftex.def Info: Fig7-eps-converted-to.pdf used on input line 394.
+Package pdftex.def Info: Fig7-eps-converted-to.pdf used on input line 381.
 (pdftex.def)             Requested size: 495.0pt x 139.21115pt.
 Package epstopdf Info: Source file: <Fig6.eps>
 (epstopdf)                    date: 2017-05-30 22:22:25
 (epstopdf)                    size: 310438 bytes
 (epstopdf)             Output file: <Fig6-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:31
+(epstopdf)                    date: 2018-05-04 22:20:09
 (epstopdf)                    size: 83448 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig6-eps-converted-to.pdf 
 Fig6.eps>
-(epstopdf)             \includegraphics on input line 409.
+(epstopdf)             \includegraphics on input line 396.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig6-eps-converted-to.pdf, id=91, 1144.275pt x 418.56375pt>
 File: Fig6-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig6-eps-converted-to.pdf>
-Package pdftex.def Info: Fig6-eps-converted-to.pdf used on input line 409.
+Package pdftex.def Info: Fig6-eps-converted-to.pdf used on input line 396.
 (pdftex.def)             Requested size: 238.9604pt x 86.55336pt.
 
-Overfull \hbox (8.94446pt too wide) in paragraph at lines 417--419
+Overfull \hbox (8.94446pt too wide) in paragraph at lines 404--406
 []\OT1/cmr/m/n/10 (-20) The switch-based head ar-ray con-sisted of three switch
 es
  []
 
 [11 <./Fig6-eps-converted-to.pdf>]
-Overfull \hbox (1.40538pt too wide) in paragraph at lines 440--441
+Overfull \hbox (1.40538pt too wide) in paragraph at lines 427--428
 $[]$\OT1/cmr/m/n/10 (-20) : In the sec-ond phase of train-ing, the blending-
  []
 
@@ -1184,78 +1191,77 @@ Package epstopdf Info: Source file: <Fig8.eps>
 (epstopdf)                    date: 2017-12-01 02:49:59
 (epstopdf)                    size: 34226 bytes
 (epstopdf)             Output file: <Fig8-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:32
+(epstopdf)                    date: 2018-05-04 22:20:10
 (epstopdf)                    size: 10168 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig8-eps-converted-to.pdf 
 Fig8.eps>
-(epstopdf)             \includegraphics on input line 463.
+(epstopdf)             \includegraphics on input line 450.
 Package epstopdf Info: Output file is already uptodate.
 <Fig8-eps-converted-to.pdf, id=98, 682.55pt x 371.3875pt>
 File: Fig8-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig8-eps-converted-to.pdf>
-Package pdftex.def Info: Fig8-eps-converted-to.pdf used on input line 463.
+Package pdftex.def Info: Fig8-eps-converted-to.pdf used on input line 450.
 (pdftex.def)             Requested size: 450.45181pt x 245.0995pt.
  [12 <./Fig7-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Fig9.eps>
 (epstopdf)                    date: 2017-12-01 03:02:12
 (epstopdf)                    size: 193852 bytes
 (epstopdf)             Output file: <Fig9-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:32
+(epstopdf)                    date: 2018-05-04 22:20:10
 (epstopdf)                    size: 215176 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig9-eps-converted-to.pdf 
 Fig9.eps>
-(epstopdf)             \includegraphics on input line 497.
+(epstopdf)             \includegraphics on input line 484.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig9-eps-converted-to.pdf, id=108, 716.6775pt x 541.02126pt>
 File: Fig9-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig9-eps-converted-to.pdf>
-Package pdftex.def Info: Fig9-eps-converted-to.pdf used on input line 497.
+Package pdftex.def Info: Fig9-eps-converted-to.pdf used on input line 484.
 (pdftex.def)             Requested size: 415.79819pt x 313.8916pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13 <./Fig8-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Fig11.eps>
+Package epstopdf Info: Source file: <Fig10.eps>
 (epstopdf)                    date: 2017-12-01 03:05:52
 (epstopdf)                    size: 28366 bytes
-(epstopdf)             Output file: <Fig11-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:34
-(epstopdf)                    size: 8632 bytes
-(epstopdf)             Command: <repstopdf --outfile=Fig11-eps-converted-to.pdf
- Fig11.eps>
-(epstopdf)             \includegraphics on input line 511.
-Package epstopdf Info: Output file is already uptodate.
-
-<Fig11-eps-converted-to.pdf, id=121, 619.31375pt x 447.6725pt>
-File: Fig11-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Fig11-eps-converted-to.pdf>
-Package pdftex.def Info: Fig11-eps-converted-to.pdf used on input line 511.
-(pdftex.def)             Requested size: 238.96417pt x 172.73355pt.
-Package epstopdf Info: Source file: <Fig10.eps>
-(epstopdf)                    date: 2017-12-01 04:45:12
-(epstopdf)                    size: 2099967 bytes
 (epstopdf)             Output file: <Fig10-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-03 20:33:33
-(epstopdf)                    size: 157371 bytes
+(epstopdf)                    date: 2018-05-04 22:20:11
+(epstopdf)                    size: 8632 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig10-eps-converted-to.pdf
  Fig10.eps>
-(epstopdf)             \includegraphics on input line 518.
+(epstopdf)             \includegraphics on input line 498.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig10-eps-converted-to.pdf, id=122, 619.31375pt x 257.96375pt>
+<Fig10-eps-converted-to.pdf, id=121, 619.31375pt x 447.6725pt>
 File: Fig10-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig10-eps-converted-to.pdf>
-Package pdftex.def Info: Fig10-eps-converted-to.pdf used on input line 518.
+Package pdftex.def Info: Fig10-eps-converted-to.pdf used on input line 498.
+(pdftex.def)             Requested size: 238.96417pt x 172.73355pt.
+Package epstopdf Info: Source file: <Fig11.eps>
+(epstopdf)                    date: 2017-12-01 04:45:12
+(epstopdf)                    size: 2099967 bytes
+(epstopdf)             Output file: <Fig11-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-05-04 22:20:12
+(epstopdf)                    size: 157371 bytes
+(epstopdf)             Command: <repstopdf --outfile=Fig11-eps-converted-to.pdf
+ Fig11.eps>
+(epstopdf)             \includegraphics on input line 505.
+Package epstopdf Info: Output file is already uptodate.
+
+<Fig11-eps-converted-to.pdf, id=122, 619.31375pt x 257.96375pt>
+File: Fig11-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Fig11-eps-converted-to.pdf>
+Package pdftex.def Info: Fig11-eps-converted-to.pdf used on input line 505.
 (pdftex.def)             Requested size: 396.00151pt x 164.95451pt.
- [14 <./Fig9-eps-converted-to.pdf> <./Fig11-eps-converted-to.pdf>] [15 <./Fig10
+ [14 <./Fig9-eps-converted-to.pdf> <./Fig10-eps-converted-to.pdf>] [15 <./Fig11
 -eps-converted-to.pdf>]
-(./GopinathArgallAuRo2017.bbl
-Underfull \hbox (badness 1496) in paragraph at lines 17--19
+Underfull \hbox (badness 1496) in paragraph at lines 601--603
 \OT1/cmr/m/n/8.5 (+20) inhibition type neu-ral fields. \OT1/cmr/m/it/8.5 (+20) 
 Bi-o-log-i-cal Cy-ber-net-ics
  []
@@ -1271,14 +1277,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \vbox (2.125pt too high) has occurred while \output is active []
+Overfull \vbox (1.29861pt too high) has occurred while \output is active []
 
 
-Overfull \vbox (4.20552pt too high) has occurred while \output is active []
+Overfull \vbox (3.37914pt too high) has occurred while \output is active []
 
 
 [17]
-Overfull \hbox (0.87498pt too wide) in paragraph at lines 274--277
+Overfull \hbox (0.87498pt too wide) in paragraph at lines 858--861
 \OT1/cmr/m/it/8.5 (-20) IEEE Transactions on Biomedical Engineering \OT1/cmr/m/
 n/8.5 (-20) 55(8):2050--
  []
@@ -1289,13 +1295,8 @@ Missing character: There is no œ in font cmr8!
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no  in font cmr8!
-)
 \Changes@OutFile=\write3
 \openout3 = `GopinathArgallAuRo2017.soc'.
-
-
-Overfull \vbox (1.54861pt too high) has occurred while \output is active []
-
 
 [18] (./GopinathArgallAuRo2017.aux)
 
@@ -1399,10 +1400,10 @@ LaTeX Font Warning: Size substitutions with differences
 (\end occurred when \ifx on line 64 was incomplete)
 (\end occurred when \ifx on line 64 was incomplete) 
 Here is how much of TeX's memory you used:
- 14313 strings out of 495028
- 241632 string characters out of 6181497
- 445632 words of memory out of 5000000
- 16965 multiletter control sequences out of 15000+600000
+ 14308 strings out of 495028
+ 241550 string characters out of 6181497
+ 446687 words of memory out of 5000000
+ 16963 multiletter control sequences out of 15000+600000
  27395 words of font info for 199 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,20n,51p,10427b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1429,7 +1430,7 @@ sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GopinathArgallAuRo2017.pdf (18 pages, 3833836 bytes).
+Output written on GopinathArgallAuRo2017.pdf (18 pages, 3833788 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams
